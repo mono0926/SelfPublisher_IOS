@@ -3,27 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>66DB5AD9-7382-4942-8AAC-02979445C561</string>
+	<string>5D66174C-D9FD-4129-AB4C-C31BBA7288AB</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SelfPublisher</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>C5E382F4-728B-46F4-8287-CE288A65DCBE</key>
+		<string>ssh://github.com/mono0926/SelfPublisher_IOS.git</string>
 		<key>CA815E5A-76F6-44F7-837C-2DE36164679B</key>
 		<string>ssh://bitbucket.org/mono0926/selfpublisher.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SelfPublisher/SelfPublisher.xcworkspace</string>
+	<string>SelfPublisher.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>C5E382F4-728B-46F4-8287-CE288A65DCBE</key>
+		<string>..</string>
 		<key>CA815E5A-76F6-44F7-837C-2DE36164679B</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://bitbucket.org/mono0926/selfpublisher.git</string>
+	<string>ssh://github.com/mono0926/SelfPublisher_IOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>CA815E5A-76F6-44F7-837C-2DE36164679B</string>
+	<string>C5E382F4-728B-46F4-8287-CE288A65DCBE</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -33,6 +37,14 @@
 			<string>CA815E5A-76F6-44F7-837C-2DE36164679B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SelfPublish</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C5E382F4-728B-46F4-8287-CE288A65DCBE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SelfPublisher_IOS</string>
 		</dict>
 	</array>
 </dict>
