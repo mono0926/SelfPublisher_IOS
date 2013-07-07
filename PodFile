@@ -1,4 +1,4 @@
-platform :ios, "6.0"
+platform :ios, "7.0"
 
 inhibit_all_warnings!
 
@@ -9,7 +9,8 @@ target :SelfPublisher, :exclusive => true do
   pod 'CocoaLumberjack'
   pod 'SVProgressHUD'
   pod 'SDWebImage'
-  pod 'CocoaCommonLib', :git => 'https://github.com/mono0926/CocoaCommonLib.git'
+  pod 'Mantle'
+  pod 'CocoaCommonLib', :path => '../../CocoaCommonLib'
 end
 
 # Testing framework for Test target.
