@@ -51,7 +51,13 @@
                         </connections>
                     </collectionView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="My Books" id="9XN-W7-AHZ"/>
+                    <navigationItem key="navigationItem" title="My Books" id="9XN-W7-AHZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tgw-Wg-zdq">
+                            <connections>
+                                <action selector="addTapped:" destination="Off-Ir-9eA" id="b62-fj-ds4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhT-9A-ZqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

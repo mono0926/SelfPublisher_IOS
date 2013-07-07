@@ -60,4 +60,7 @@
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:vc animated:YES completion:nil];
 }
+- (IBAction)addTapped:(id)sender {
+    
+}
 @end

@@ -36,6 +36,7 @@
 		FE72E1C3177FC82E0032F3B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A5177FC82E0032F3B3 /* UIKit.framework */; };
 		FE72E1CB177FC82E0032F3B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE72E1C9177FC82E0032F3B3 /* InfoPlist.strings */; };
 		FE72E1CD177FC82E0032F3B3 /* UIBookSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = FE72E1CC177FC82E0032F3B3 /* UIBookSpec.m */; };
+		FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */; };
 		FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE36027177FF877007C8D0B /* MonoMainViewController.m */; };
 		FEE3602B177FF8EF007C8D0B /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE3602A177FF8C1007C8D0B /* Book.storyboard */; };
 		FEE3602F177FF9A7007C8D0B /* MonoBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE3602E177FF9A7007C8D0B /* MonoBookCell.m */; };
@@ -98,6 +99,7 @@
 		FE72E1C8177FC82E0032F3B3 /* SelfPublisherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SelfPublisherTests-Info.plist"; sourceTree = "<group>"; };
 		FE72E1CA177FC82E0032F3B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE72E1CC177FC82E0032F3B3 /* UIBookSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIBookSpec.m; sourceTree = "<group>"; };
+		FED7DDA417892CC200D1ADDA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FEE36026177FF877007C8D0B /* MonoMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoMainViewController.h; sourceTree = "<group>"; };
 		FEE36027177FF877007C8D0B /* MonoMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoMainViewController.m; sourceTree = "<group>"; };
 		FEE3602A177FF8C1007C8D0B /* Book.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Book.storyboard; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				FEE360541780DCAE007C8D0B /* MonoModel.h */,
+				FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */,
 			);
 			path = CoreModel;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				FEE3604C17801070007C8D0B /* MonoChapterVIewController.m in Sources */,
 				FEE3604517800318007C8D0B /* UIModelAccessor.m in Sources */,
 				FEE3603F178002DF007C8D0B /* UIChapter.m in Sources */,
+				FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */,
 				FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +583,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Masayuki Ono (8GQJT387A3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Masayuki Ono (8GQJT387A3)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -616,7 +621,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Masayuki Ono (T2A5TG8364)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Masayuki Ono (T2A5TG8364)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -732,6 +738,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FED7DDA417892CC200D1ADDA /* Model.xcdatamodel */,
+			);
+			currentVersion = FED7DDA417892CC200D1ADDA /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FE72E196177FC82E0032F3B3 /* Project object */;
 }

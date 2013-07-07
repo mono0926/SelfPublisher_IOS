@@ -9,11 +9,10 @@ target :SelfPublisher, :exclusive => true do
   pod 'CocoaLumberjack'
   pod 'SVProgressHUD'
   pod 'SDWebImage'
-  pod 'Mantle'
+  pod 'CocoaCommonLib', :git => 'https://github.com/mono0926/CocoaCommonLib.git'
 end
 
 # Testing framework for Test target.
 target :SelfPublisherTests, :exclusive => true do
-  pod 'OCMock'
   pod 'Kiwi'
 end

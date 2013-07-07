@@ -15,4 +15,6 @@
 
 @property (nonatomic) NSArray* books;
 
+-(void)addBook;
+
 @end
