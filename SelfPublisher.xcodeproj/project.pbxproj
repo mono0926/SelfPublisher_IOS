@@ -1,0 +1,737 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40F83B5C35A34694932C81DD /* libPods-SelfPublisherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 997F13B755A14423BEFA71EC /* libPods-SelfPublisherTests.a */; };
+		D84CF061E47742DC9F68FE90 /* libPods-SelfPublisher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3531CCEE7E4FE788285662 /* libPods-SelfPublisher.a */; };
+		FE3C1018177FF724005DFE04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3C1017177FF724005DFE04 /* Main.storyboard */; };
+		FE5AA46E178237A800C99921 /* b12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA462178237A800C99921 /* b12.jpg */; };
+		FE5AA46F178237A800C99921 /* b11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA463178237A800C99921 /* b11.jpg */; };
+		FE5AA470178237A800C99921 /* b10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA464178237A800C99921 /* b10.jpg */; };
+		FE5AA471178237A800C99921 /* b9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA465178237A800C99921 /* b9.jpg */; };
+		FE5AA472178237A800C99921 /* b8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA466178237A800C99921 /* b8.jpg */; };
+		FE5AA473178237A800C99921 /* b7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA467178237A800C99921 /* b7.jpg */; };
+		FE5AA474178237A800C99921 /* b6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA468178237A800C99921 /* b6.jpg */; };
+		FE5AA475178237A800C99921 /* b5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA469178237A800C99921 /* b5.jpg */; };
+		FE5AA476178237A800C99921 /* b4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA46A178237A800C99921 /* b4.jpg */; };
+		FE5AA477178237A800C99921 /* b3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA46B178237A800C99921 /* b3.jpg */; };
+		FE5AA478178237A800C99921 /* b2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA46C178237A800C99921 /* b2.jpg */; };
+		FE5AA479178237A800C99921 /* b1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA46D178237A800C99921 /* b1.jpg */; };
+		FE5AA47B1782419A00C99921 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5AA47A1782419A00C99921 /* SenTestingKit.framework */; };
+		FE5AA47D1782442500C99921 /* MonoHogeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5AA47C1782442500C99921 /* MonoHogeSpec.m */; };
+		FE72E1A2177FC82E0032F3B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A1177FC82E0032F3B3 /* Foundation.framework */; };
+		FE72E1A4177FC82E0032F3B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A3177FC82E0032F3B3 /* CoreGraphics.framework */; };
+		FE72E1A6177FC82E0032F3B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A5177FC82E0032F3B3 /* UIKit.framework */; };
+		FE72E1AC177FC82E0032F3B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE72E1AA177FC82E0032F3B3 /* InfoPlist.strings */; };
+		FE72E1AE177FC82E0032F3B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE72E1AD177FC82E0032F3B3 /* main.m */; };
+		FE72E1B2177FC82E0032F3B3 /* MonoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE72E1B1177FC82E0032F3B3 /* MonoAppDelegate.m */; };
+		FE72E1BA177FC82E0032F3B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE72E1B9177FC82E0032F3B3 /* Images.xcassets */; };
+		FE72E1C1177FC82E0032F3B3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1C0177FC82E0032F3B3 /* XCTest.framework */; };
+		FE72E1C2177FC82E0032F3B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A1177FC82E0032F3B3 /* Foundation.framework */; };
+		FE72E1C3177FC82E0032F3B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A5177FC82E0032F3B3 /* UIKit.framework */; };
+		FE72E1CB177FC82E0032F3B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE72E1C9177FC82E0032F3B3 /* InfoPlist.strings */; };
+		FE72E1CD177FC82E0032F3B3 /* UIBookSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = FE72E1CC177FC82E0032F3B3 /* UIBookSpec.m */; };
+		FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE36027177FF877007C8D0B /* MonoMainViewController.m */; };
+		FEE3602B177FF8EF007C8D0B /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE3602A177FF8C1007C8D0B /* Book.storyboard */; };
+		FEE3602F177FF9A7007C8D0B /* MonoBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE3602E177FF9A7007C8D0B /* MonoBookCell.m */; };
+		FEE36031177FF9BD007C8D0B /* MonoBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEE36030177FF9BD007C8D0B /* MonoBookCell.xib */; };
+		FEE36035177FFA78007C8D0B /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE36034177FFA78007C8D0B /* book.png */; };
+		FEE36038177FFCB2007C8D0B /* MonoBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE36037177FFCB2007C8D0B /* MonoBookViewController.m */; };
+		FEE3603B177FFD7E007C8D0B /* MonoBookRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE3603A177FFD7E007C8D0B /* MonoBookRootViewController.m */; };
+		FEE3603F178002DF007C8D0B /* UIChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE3603E178002DF007C8D0B /* UIChapter.m */; };
+		FEE36042178002F5007C8D0B /* UIBook.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE36041178002F5007C8D0B /* UIBook.m */; };
+		FEE3604517800318007C8D0B /* UIModelAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE3604417800310007C8D0B /* UIModelAccessor.m */; };
+		FEE3604917800791007C8D0B /* UISection.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE3604817800791007C8D0B /* UISection.m */; };
+		FEE3604C17801070007C8D0B /* MonoChapterVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE3604B17801070007C8D0B /* MonoChapterVIewController.m */; };
+		FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE360511780DBA6007C8D0B /* MonoKindleActivity.m */; };
+		FEE360581780DD54007C8D0B /* amazon.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE360571780DD54007C8D0B /* amazon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE72E1C4177FC82E0032F3B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE72E196177FC82E0032F3B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE72E19D177FC82E0032F3B3;
+			remoteInfo = SelfPublisher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DE36CB625F540B3914EDE4A /* Pods-SelfPublisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfPublisher.xcconfig"; path = "Pods/Pods-SelfPublisher.xcconfig"; sourceTree = SOURCE_ROOT; };
+		41C6EE4377F341809D671DC0 /* Pods-SelfPublisherTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfPublisherTests.xcconfig"; path = "Pods/Pods-SelfPublisherTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		997F13B755A14423BEFA71EC /* libPods-SelfPublisherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelfPublisherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3531CCEE7E4FE788285662 /* libPods-SelfPublisher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelfPublisher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3C1017177FF724005DFE04 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FE5AA462178237A800C99921 /* b12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b12.jpg; sourceTree = "<group>"; };
+		FE5AA463178237A800C99921 /* b11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b11.jpg; sourceTree = "<group>"; };
+		FE5AA464178237A800C99921 /* b10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b10.jpg; sourceTree = "<group>"; };
+		FE5AA465178237A800C99921 /* b9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b9.jpg; sourceTree = "<group>"; };
+		FE5AA466178237A800C99921 /* b8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b8.jpg; sourceTree = "<group>"; };
+		FE5AA467178237A800C99921 /* b7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b7.jpg; sourceTree = "<group>"; };
+		FE5AA468178237A800C99921 /* b6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b6.jpg; sourceTree = "<group>"; };
+		FE5AA469178237A800C99921 /* b5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b5.jpg; sourceTree = "<group>"; };
+		FE5AA46A178237A800C99921 /* b4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b4.jpg; sourceTree = "<group>"; };
+		FE5AA46B178237A800C99921 /* b3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b3.jpg; sourceTree = "<group>"; };
+		FE5AA46C178237A800C99921 /* b2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b2.jpg; sourceTree = "<group>"; };
+		FE5AA46D178237A800C99921 /* b1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b1.jpg; sourceTree = "<group>"; };
+		FE5AA47A1782419A00C99921 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FE5AA47C1782442500C99921 /* MonoHogeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoHogeSpec.m; sourceTree = "<group>"; };
+		FE72E19E177FC82E0032F3B3 /* SelfPublisher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfPublisher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE72E1A1177FC82E0032F3B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FE72E1A3177FC82E0032F3B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FE72E1A5177FC82E0032F3B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FE72E1A9177FC82E0032F3B3 /* SelfPublisher-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SelfPublisher-Info.plist"; sourceTree = "<group>"; };
+		FE72E1AB177FC82E0032F3B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE72E1AD177FC82E0032F3B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE72E1AF177FC82E0032F3B3 /* SelfPublisher-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SelfPublisher-Prefix.pch"; sourceTree = "<group>"; };
+		FE72E1B0177FC82E0032F3B3 /* MonoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonoAppDelegate.h; sourceTree = "<group>"; };
+		FE72E1B1177FC82E0032F3B3 /* MonoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonoAppDelegate.m; sourceTree = "<group>"; };
+		FE72E1B9177FC82E0032F3B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FE72E1BF177FC82E0032F3B3 /* SelfPublisherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfPublisherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE72E1C0177FC82E0032F3B3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FE72E1C8177FC82E0032F3B3 /* SelfPublisherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SelfPublisherTests-Info.plist"; sourceTree = "<group>"; };
+		FE72E1CA177FC82E0032F3B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE72E1CC177FC82E0032F3B3 /* UIBookSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIBookSpec.m; sourceTree = "<group>"; };
+		FEE36026177FF877007C8D0B /* MonoMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoMainViewController.h; sourceTree = "<group>"; };
+		FEE36027177FF877007C8D0B /* MonoMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoMainViewController.m; sourceTree = "<group>"; };
+		FEE3602A177FF8C1007C8D0B /* Book.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Book.storyboard; sourceTree = "<group>"; };
+		FEE3602D177FF9A7007C8D0B /* MonoBookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoBookCell.h; sourceTree = "<group>"; };
+		FEE3602E177FF9A7007C8D0B /* MonoBookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoBookCell.m; sourceTree = "<group>"; };
+		FEE36030177FF9BD007C8D0B /* MonoBookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonoBookCell.xib; sourceTree = "<group>"; };
+		FEE36034177FFA78007C8D0B /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
+		FEE36036177FFCB2007C8D0B /* MonoBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoBookViewController.h; sourceTree = "<group>"; };
+		FEE36037177FFCB2007C8D0B /* MonoBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoBookViewController.m; sourceTree = "<group>"; };
+		FEE36039177FFD7E007C8D0B /* MonoBookRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoBookRootViewController.h; sourceTree = "<group>"; };
+		FEE3603A177FFD7E007C8D0B /* MonoBookRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoBookRootViewController.m; sourceTree = "<group>"; };
+		FEE3603D178002DF007C8D0B /* UIChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIChapter.h; sourceTree = "<group>"; };
+		FEE3603E178002DF007C8D0B /* UIChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIChapter.m; sourceTree = "<group>"; };
+		FEE36040178002F5007C8D0B /* UIBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBook.h; sourceTree = "<group>"; };
+		FEE36041178002F5007C8D0B /* UIBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBook.m; sourceTree = "<group>"; };
+		FEE3604317800310007C8D0B /* UIModelAccessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModelAccessor.h; sourceTree = "<group>"; };
+		FEE3604417800310007C8D0B /* UIModelAccessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIModelAccessor.m; sourceTree = "<group>"; };
+		FEE360461780032F007C8D0B /* MonoUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonoUI.h; sourceTree = "<group>"; };
+		FEE3604717800791007C8D0B /* UISection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISection.h; sourceTree = "<group>"; };
+		FEE3604817800791007C8D0B /* UISection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISection.m; sourceTree = "<group>"; };
+		FEE3604A17801070007C8D0B /* MonoChapterVIewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoChapterVIewController.h; sourceTree = "<group>"; };
+		FEE3604B17801070007C8D0B /* MonoChapterVIewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoChapterVIewController.m; sourceTree = "<group>"; };
+		FEE360501780DBA6007C8D0B /* MonoKindleActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoKindleActivity.h; sourceTree = "<group>"; };
+		FEE360511780DBA6007C8D0B /* MonoKindleActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoKindleActivity.m; sourceTree = "<group>"; };
+		FEE360541780DCAE007C8D0B /* MonoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonoModel.h; sourceTree = "<group>"; };
+		FEE360571780DD54007C8D0B /* amazon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amazon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE72E19B177FC82E0032F3B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE72E1A4177FC82E0032F3B3 /* CoreGraphics.framework in Frameworks */,
+				FE72E1A6177FC82E0032F3B3 /* UIKit.framework in Frameworks */,
+				FE72E1A2177FC82E0032F3B3 /* Foundation.framework in Frameworks */,
+				D84CF061E47742DC9F68FE90 /* libPods-SelfPublisher.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE72E1BC177FC82E0032F3B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE5AA47B1782419A00C99921 /* SenTestingKit.framework in Frameworks */,
+				FE72E1C1177FC82E0032F3B3 /* XCTest.framework in Frameworks */,
+				FE72E1C3177FC82E0032F3B3 /* UIKit.framework in Frameworks */,
+				FE72E1C2177FC82E0032F3B3 /* Foundation.framework in Frameworks */,
+				40F83B5C35A34694932C81DD /* libPods-SelfPublisherTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE3C1016177FF694005DFE04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEE3604F1780DB83007C8D0B /* Activity */,
+				FEE3602C177FF97A007C8D0B /* Cell */,
+				FEE36029177FF898007C8D0B /* Book */,
+				FE3C1017177FF724005DFE04 /* Main.storyboard */,
+				FEE36026177FF877007C8D0B /* MonoMainViewController.h */,
+				FEE36027177FF877007C8D0B /* MonoMainViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE72E195177FC82E0032F3B3 = {
+			isa = PBXGroup;
+			children = (
+				FE72E1A7177FC82E0032F3B3 /* SelfPublisher */,
+				FE72E1C6177FC82E0032F3B3 /* SelfPublisherTests */,
+				FE72E1A0177FC82E0032F3B3 /* Frameworks */,
+				FE72E19F177FC82E0032F3B3 /* Products */,
+				2DE36CB625F540B3914EDE4A /* Pods-SelfPublisher.xcconfig */,
+				41C6EE4377F341809D671DC0 /* Pods-SelfPublisherTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		FE72E19F177FC82E0032F3B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE72E19E177FC82E0032F3B3 /* SelfPublisher.app */,
+				FE72E1BF177FC82E0032F3B3 /* SelfPublisherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE72E1A0177FC82E0032F3B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE5AA47A1782419A00C99921 /* SenTestingKit.framework */,
+				FE72E1A1177FC82E0032F3B3 /* Foundation.framework */,
+				FE72E1A3177FC82E0032F3B3 /* CoreGraphics.framework */,
+				FE72E1A5177FC82E0032F3B3 /* UIKit.framework */,
+				FE72E1C0177FC82E0032F3B3 /* XCTest.framework */,
+				FD3531CCEE7E4FE788285662 /* libPods-SelfPublisher.a */,
+				997F13B755A14423BEFA71EC /* libPods-SelfPublisherTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE72E1A7177FC82E0032F3B3 /* SelfPublisher */ = {
+			isa = PBXGroup;
+			children = (
+				FEE360531780DC83007C8D0B /* CoreModel */,
+				FEE3603C178002B1007C8D0B /* UIModel */,
+				FEE36032177FFA47007C8D0B /* Resources */,
+				FE3C1016177FF694005DFE04 /* View */,
+				FE72E1B0177FC82E0032F3B3 /* MonoAppDelegate.h */,
+				FE72E1B1177FC82E0032F3B3 /* MonoAppDelegate.m */,
+				FE72E1B9177FC82E0032F3B3 /* Images.xcassets */,
+				FE72E1A8177FC82E0032F3B3 /* Supporting Files */,
+			);
+			path = SelfPublisher;
+			sourceTree = "<group>";
+		};
+		FE72E1A8177FC82E0032F3B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE72E1A9177FC82E0032F3B3 /* SelfPublisher-Info.plist */,
+				FE72E1AA177FC82E0032F3B3 /* InfoPlist.strings */,
+				FE72E1AD177FC82E0032F3B3 /* main.m */,
+				FE72E1AF177FC82E0032F3B3 /* SelfPublisher-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE72E1C6177FC82E0032F3B3 /* SelfPublisherTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE72E1CC177FC82E0032F3B3 /* UIBookSpec.m */,
+				FE72E1C7177FC82E0032F3B3 /* Supporting Files */,
+				FE5AA47C1782442500C99921 /* MonoHogeSpec.m */,
+			);
+			path = SelfPublisherTests;
+			sourceTree = "<group>";
+		};
+		FE72E1C7177FC82E0032F3B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE72E1C8177FC82E0032F3B3 /* SelfPublisherTests-Info.plist */,
+				FE72E1C9177FC82E0032F3B3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FEE36029177FF898007C8D0B /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				FEE3602A177FF8C1007C8D0B /* Book.storyboard */,
+				FEE36039177FFD7E007C8D0B /* MonoBookRootViewController.h */,
+				FEE3603A177FFD7E007C8D0B /* MonoBookRootViewController.m */,
+				FEE36036177FFCB2007C8D0B /* MonoBookViewController.h */,
+				FEE36037177FFCB2007C8D0B /* MonoBookViewController.m */,
+				FEE3604A17801070007C8D0B /* MonoChapterVIewController.h */,
+				FEE3604B17801070007C8D0B /* MonoChapterVIewController.m */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		FEE3602C177FF97A007C8D0B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FEE3602D177FF9A7007C8D0B /* MonoBookCell.h */,
+				FEE3602E177FF9A7007C8D0B /* MonoBookCell.m */,
+				FEE36030177FF9BD007C8D0B /* MonoBookCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FEE36032177FFA47007C8D0B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEE36033177FFA57007C8D0B /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FEE36033177FFA57007C8D0B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FE5AA462178237A800C99921 /* b12.jpg */,
+				FE5AA463178237A800C99921 /* b11.jpg */,
+				FE5AA464178237A800C99921 /* b10.jpg */,
+				FE5AA465178237A800C99921 /* b9.jpg */,
+				FE5AA466178237A800C99921 /* b8.jpg */,
+				FE5AA467178237A800C99921 /* b7.jpg */,
+				FE5AA468178237A800C99921 /* b6.jpg */,
+				FE5AA469178237A800C99921 /* b5.jpg */,
+				FE5AA46A178237A800C99921 /* b4.jpg */,
+				FE5AA46B178237A800C99921 /* b3.jpg */,
+				FE5AA46C178237A800C99921 /* b2.jpg */,
+				FE5AA46D178237A800C99921 /* b1.jpg */,
+				FEE360571780DD54007C8D0B /* amazon.png */,
+				FEE36034177FFA78007C8D0B /* book.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		FEE3603C178002B1007C8D0B /* UIModel */ = {
+			isa = PBXGroup;
+			children = (
+				FEE3603D178002DF007C8D0B /* UIChapter.h */,
+				FEE3603E178002DF007C8D0B /* UIChapter.m */,
+				FEE36040178002F5007C8D0B /* UIBook.h */,
+				FEE36041178002F5007C8D0B /* UIBook.m */,
+				FEE3604317800310007C8D0B /* UIModelAccessor.h */,
+				FEE3604417800310007C8D0B /* UIModelAccessor.m */,
+				FEE360461780032F007C8D0B /* MonoUI.h */,
+				FEE3604717800791007C8D0B /* UISection.h */,
+				FEE3604817800791007C8D0B /* UISection.m */,
+			);
+			path = UIModel;
+			sourceTree = "<group>";
+		};
+		FEE3604F1780DB83007C8D0B /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				FEE360501780DBA6007C8D0B /* MonoKindleActivity.h */,
+				FEE360511780DBA6007C8D0B /* MonoKindleActivity.m */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		FEE360531780DC83007C8D0B /* CoreModel */ = {
+			isa = PBXGroup;
+			children = (
+				FEE360541780DCAE007C8D0B /* MonoModel.h */,
+			);
+			path = CoreModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE72E19D177FC82E0032F3B3 /* SelfPublisher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE72E1D0177FC82E0032F3B3 /* Build configuration list for PBXNativeTarget "SelfPublisher" */;
+			buildPhases = (
+				20BC366FB80144E2B464203A /* Check Pods Manifest.lock */,
+				FE72E19A177FC82E0032F3B3 /* Sources */,
+				FE72E19B177FC82E0032F3B3 /* Frameworks */,
+				FE72E19C177FC82E0032F3B3 /* Resources */,
+				58139B1117164FA99CBDB7C5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SelfPublisher;
+			productName = SelfPublisher;
+			productReference = FE72E19E177FC82E0032F3B3 /* SelfPublisher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE72E1BE177FC82E0032F3B3 /* SelfPublisherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE72E1D3177FC82E0032F3B3 /* Build configuration list for PBXNativeTarget "SelfPublisherTests" */;
+			buildPhases = (
+				4C7FF5DBADB848B4AE06E1A1 /* Check Pods Manifest.lock */,
+				FE72E1BB177FC82E0032F3B3 /* Sources */,
+				FE72E1BC177FC82E0032F3B3 /* Frameworks */,
+				FE72E1BD177FC82E0032F3B3 /* Resources */,
+				586A5689FAAD44B3BE34F7BE /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE72E1C5177FC82E0032F3B3 /* PBXTargetDependency */,
+			);
+			name = SelfPublisherTests;
+			productName = SelfPublisherTests;
+			productReference = FE72E1BF177FC82E0032F3B3 /* SelfPublisherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE72E196177FC82E0032F3B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Mono;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = mono;
+				TargetAttributes = {
+					FE72E1BE177FC82E0032F3B3 = {
+						TestTargetID = FE72E19D177FC82E0032F3B3;
+					};
+				};
+			};
+			buildConfigurationList = FE72E199177FC82E0032F3B3 /* Build configuration list for PBXProject "SelfPublisher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE72E195177FC82E0032F3B3;
+			productRefGroup = FE72E19F177FC82E0032F3B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE72E19D177FC82E0032F3B3 /* SelfPublisher */,
+				FE72E1BE177FC82E0032F3B3 /* SelfPublisherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE72E19C177FC82E0032F3B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE5AA476178237A800C99921 /* b4.jpg in Resources */,
+				FE5AA475178237A800C99921 /* b5.jpg in Resources */,
+				FE5AA479178237A800C99921 /* b1.jpg in Resources */,
+				FE5AA473178237A800C99921 /* b7.jpg in Resources */,
+				FE5AA470178237A800C99921 /* b10.jpg in Resources */,
+				FEE36031177FF9BD007C8D0B /* MonoBookCell.xib in Resources */,
+				FE3C1018177FF724005DFE04 /* Main.storyboard in Resources */,
+				FE5AA472178237A800C99921 /* b8.jpg in Resources */,
+				FEE36035177FFA78007C8D0B /* book.png in Resources */,
+				FE5AA471178237A800C99921 /* b9.jpg in Resources */,
+				FE5AA46E178237A800C99921 /* b12.jpg in Resources */,
+				FE5AA477178237A800C99921 /* b3.jpg in Resources */,
+				FEE3602B177FF8EF007C8D0B /* Book.storyboard in Resources */,
+				FE5AA478178237A800C99921 /* b2.jpg in Resources */,
+				FEE360581780DD54007C8D0B /* amazon.png in Resources */,
+				FE5AA46F178237A800C99921 /* b11.jpg in Resources */,
+				FE5AA474178237A800C99921 /* b6.jpg in Resources */,
+				FE72E1BA177FC82E0032F3B3 /* Images.xcassets in Resources */,
+				FE72E1AC177FC82E0032F3B3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE72E1BD177FC82E0032F3B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE72E1CB177FC82E0032F3B3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20BC366FB80144E2B464203A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		4C7FF5DBADB848B4AE06E1A1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		58139B1117164FA99CBDB7C5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-SelfPublisher-resources.sh\"\n";
+		};
+		586A5689FAAD44B3BE34F7BE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-SelfPublisherTests-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE72E19A177FC82E0032F3B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE3603B177FFD7E007C8D0B /* MonoBookRootViewController.m in Sources */,
+				FEE36038177FFCB2007C8D0B /* MonoBookViewController.m in Sources */,
+				FE72E1AE177FC82E0032F3B3 /* main.m in Sources */,
+				FEE3602F177FF9A7007C8D0B /* MonoBookCell.m in Sources */,
+				FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */,
+				FEE36042178002F5007C8D0B /* UIBook.m in Sources */,
+				FEE3604917800791007C8D0B /* UISection.m in Sources */,
+				FE72E1B2177FC82E0032F3B3 /* MonoAppDelegate.m in Sources */,
+				FEE3604C17801070007C8D0B /* MonoChapterVIewController.m in Sources */,
+				FEE3604517800318007C8D0B /* UIModelAccessor.m in Sources */,
+				FEE3603F178002DF007C8D0B /* UIChapter.m in Sources */,
+				FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE72E1BB177FC82E0032F3B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE5AA47D1782442500C99921 /* MonoHogeSpec.m in Sources */,
+				FE72E1CD177FC82E0032F3B3 /* UIBookSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE72E1C5177FC82E0032F3B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE72E19D177FC82E0032F3B3 /* SelfPublisher */;
+			targetProxy = FE72E1C4177FC82E0032F3B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE72E1AA177FC82E0032F3B3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE72E1AB177FC82E0032F3B3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FE72E1C9177FC82E0032F3B3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE72E1CA177FC82E0032F3B3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE72E1CE177FC82E0032F3B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Masayuki Ono (8GQJT387A3)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FE72E1CF177FC82E0032F3B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE72E1D1177FC82E0032F3B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DE36CB625F540B3914EDE4A /* Pods-SelfPublisher.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SelfPublisher/SelfPublisher-Prefix.pch";
+				INFOPLIST_FILE = "SelfPublisher/SelfPublisher-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FE72E1D2177FC82E0032F3B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DE36CB625F540B3914EDE4A /* Pods-SelfPublisher.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SelfPublisher/SelfPublisher-Prefix.pch";
+				INFOPLIST_FILE = "SelfPublisher/SelfPublisher-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FE72E1D4177FC82E0032F3B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41C6EE4377F341809D671DC0 /* Pods-SelfPublisherTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SelfPublisher.app/SelfPublisher";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SelfPublisher/SelfPublisher-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SelfPublisherTests/SelfPublisherTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FE72E1D5177FC82E0032F3B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41C6EE4377F341809D671DC0 /* Pods-SelfPublisherTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SelfPublisher.app/SelfPublisher";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SelfPublisher/SelfPublisher-Prefix.pch";
+				INFOPLIST_FILE = "SelfPublisherTests/SelfPublisherTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE72E199177FC82E0032F3B3 /* Build configuration list for PBXProject "SelfPublisher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE72E1CE177FC82E0032F3B3 /* Debug */,
+				FE72E1CF177FC82E0032F3B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE72E1D0177FC82E0032F3B3 /* Build configuration list for PBXNativeTarget "SelfPublisher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE72E1D1177FC82E0032F3B3 /* Debug */,
+				FE72E1D2177FC82E0032F3B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE72E1D3177FC82E0032F3B3 /* Build configuration list for PBXNativeTarget "SelfPublisherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE72E1D4177FC82E0032F3B3 /* Debug */,
+				FE72E1D5177FC82E0032F3B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE72E196177FC82E0032F3B3 /* Project object */;
+}

@@ -1,0 +1,17 @@
+platform :ios, "6.0"
+
+target :SelfPublisher, :exclusive => true do
+  pod 'BlocksKit'
+  pod 'RestKit'
+  pod 'Syringe'
+  pod 'CocoaLumberjack'
+  pod 'SVProgressHUD'
+  pod 'SDWebImage'
+  pod 'Mantle'
+end
+
+# Testing framework for Test target.
+target :SelfPublisherTests, :exclusive => true do
+  pod 'OCMock'
+  pod 'Kiwi'
+end

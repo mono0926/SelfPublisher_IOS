@@ -1,0 +1,79 @@
+PODS:
+  - AFNetworking (1.3.1)
+  - BlocksKit (1.8.2):
+    - libffi
+  - CocoaLumberjack (1.6.2)
+  - Kiwi (2.2)
+  - libextobjc/EXTKeyPathCoding (0.2.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.2.5):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.2.5)
+  - libffi (3.0.13)
+  - libwebp (0.3.0-rc7):
+    - libwebp/dec
+    - libwebp/dsp
+    - libwebp/utils
+    - libwebp/webp
+  - libwebp/dec (0.3.0-rc7)
+  - libwebp/dsp (0.3.0-rc7)
+  - libwebp/utils (0.3.0-rc7)
+  - libwebp/webp (0.3.0-rc7)
+  - Mantle (1.1):
+    - libextobjc/EXTKeyPathCoding
+    - libextobjc/EXTScope
+  - OCMock (2.2)
+  - RestKit (0.20.2):
+    - RestKit/Core
+  - RestKit/Core (0.20.2):
+    - RestKit/CoreData
+    - RestKit/Network
+    - RestKit/ObjectMapping
+  - RestKit/CoreData (0.20.2)
+  - RestKit/Network (0.20.2):
+    - AFNetworking (~> 1.3.0)
+    - RestKit/ObjectMapping
+    - RestKit/Support
+    - SOCKit
+  - RestKit/ObjectMapping (0.20.2)
+  - RestKit/Support (0.20.2):
+    - TransitionKit (= 1.1.1)
+  - SDWebImage (3.3):
+    - libwebp
+    - SDWebImage/MapKit
+  - SDWebImage/MapKit (3.3):
+    - libwebp
+  - SOCKit (1.1)
+  - SVProgressHUD (0.9)
+  - Syringe (0.9)
+  - TransitionKit (1.1.1)
+
+DEPENDENCIES:
+  - BlocksKit
+  - CocoaLumberjack
+  - Kiwi
+  - Mantle
+  - OCMock
+  - RestKit
+  - SDWebImage
+  - SVProgressHUD
+  - Syringe
+
+SPEC CHECKSUMS:
+  AFNetworking: 9ec8aafb9269236a7630bd8d9838ce2ba30fa2a0
+  BlocksKit: 7396526b0816734103f6133fbb1a520c8b04e80c
+  CocoaLumberjack: d73e1e317ced14ab930797dda6c17156ff17aaa1
+  Kiwi: db174bba4ee8068b15d7122f1b22fb64b7c1d378
+  libextobjc: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
+  libffi: 64ef39353e747bb2b25e1026afd96a157bf9231c
+  libwebp: 40517fa1fd3716eded73b4696c45fc0b66e4b414
+  Mantle: aba2facc6ee8f97512a94768dc57c82b7802948c
+  OCMock: 5300ae6b75398fc3ae6cbf9102191333d35f6852
+  RestKit: e511651e916245fa4becfb0e8f966a1fa021fcd4
+  SDWebImage: 79a8bac9ccf85b269100b294f7b43684dab8bf8a
+  SOCKit: ed67aeeca4a697b63a933229e53f4670d5b9300f
+  SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8
+  Syringe: 6655445fda3daec38b4645c57ef9bf75ddda60f6
+  TransitionKit: 3b3836af6887d16a0834fa35031028792d1d5c0c
+
+COCOAPODS: 0.20.2
