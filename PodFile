@@ -10,7 +10,7 @@ target :SelfPublisher, :exclusive => true do
   pod 'SVProgressHUD'
   pod 'SDWebImage'
   pod 'Mantle'
-  pod 'CocoaCommonLib', :path => '../../CocoaCommonLib'
+  pod 'CocoaCommonLib', :path => '../CocoaCommonLib'
 end
 
 # Testing framework for Test target.
