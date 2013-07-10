@@ -11,4 +11,5 @@
 
 @interface UISection : MTLModel<MTLJSONSerializing>
 @property (nonatomic, readonly) NSString* caption;
+@property (nonatomic, readonly) NSString* body;
 @end
