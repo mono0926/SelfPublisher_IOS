@@ -126,6 +126,12 @@
 		FEE360511780DBA6007C8D0B /* MonoKindleActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoKindleActivity.m; sourceTree = "<group>"; };
 		FEE360541780DCAE007C8D0B /* MonoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonoModel.h; sourceTree = "<group>"; };
 		FEE360571780DD54007C8D0B /* amazon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amazon.png; sourceTree = "<group>"; };
+		FEE9BB9E178EED3200812C8D /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		FEE9BB9F178EED3200812C8D /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		FEE9BBA0178EED3200812C8D /* Section.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
+		FEE9BBA1178EED3200812C8D /* Section.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
+		FEE9BBA2178EED3300812C8D /* Chapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
+		FEE9BBA3178EED3300812C8D /* Chapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +337,12 @@
 			children = (
 				FEE360541780DCAE007C8D0B /* MonoModel.h */,
 				FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */,
+				FEE9BB9E178EED3200812C8D /* Book.h */,
+				FEE9BB9F178EED3200812C8D /* Book.m */,
+				FEE9BBA0178EED3200812C8D /* Section.h */,
+				FEE9BBA1178EED3200812C8D /* Section.m */,
+				FEE9BBA2178EED3300812C8D /* Chapter.h */,
+				FEE9BBA3178EED3300812C8D /* Chapter.m */,
 			);
 			path = CoreModel;
 			sourceTree = "<group>";
