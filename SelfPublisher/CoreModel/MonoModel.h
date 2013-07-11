@@ -9,3 +9,5 @@
 #import <BlocksKit/BlocksKit.h>
 #import "Mantle.h"
 #import "Syringe.h"
+#import "ModelManager.h"
+#import "NSManagedObjectContext+MN.h"

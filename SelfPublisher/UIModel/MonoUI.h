@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 mono. All rights reserved.
 //
 
+#import "MonoModel.h"
 #import "Mantle.h"
 #import "Syringe.h"
 #import "UIChapter.h"

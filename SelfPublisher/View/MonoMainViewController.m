@@ -10,6 +10,7 @@
 #import "MonoBookCell.h"
 #import "MonoUI.h"
 #import "MonoBookViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface MonoMainViewController ()
 
@@ -34,6 +35,7 @@
     _modelAccessor = inject(UIModelAccessor);
     [self.collectionView registerClass:[MonoBookCell class] forCellWithReuseIdentifier:@"MonoBookCell"];
     self.collectionView.alwaysBounceVertical = YES;
+    
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
