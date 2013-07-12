@@ -7,10 +7,12 @@
 //
 
 #import "Profile.h"
+#import "Book.h"
 
 
 @implementation Profile
 
 @dynamic name;
+@dynamic books;
 
 @end

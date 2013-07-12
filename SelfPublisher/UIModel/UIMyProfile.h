@@ -7,7 +7,7 @@
 //
 
 #import "UIProfile.h"
+@class MyProfile;
 
 @interface UIMyProfile : UIProfile
-
 @end

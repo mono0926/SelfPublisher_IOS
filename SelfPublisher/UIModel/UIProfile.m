@@ -7,7 +7,22 @@
 //
 
 #import "UIProfile.h"
+#import "MonoUI.h"
+@interface UIProfile ()
+@property (nonatomic) Profile* profile;
+@end
 
 @implementation UIProfile
+- (id)initWithProfile:(Profile*)profile
+{
+    self = [super init];
+    if (self) {
+        _profile = profile;
+    }
+    return self;
+}
 
+-(NSString *)name {
+    return _profile.name;
+}
 @end

@@ -24,7 +24,7 @@
     }
     MyProfile* cMyProfile = self.moc.myProfile;
     if (cMyProfile) {
-        _myProfile = [UIMyProfile new];
+        _myProfile = [[UIMyProfile alloc]initWithProfile:cMyProfile];
         return _myProfile;
     }
     return nil;
@@ -46,8 +46,13 @@
     if (_books) {
         return _books;
     }
-    _books = [self createSampleBooks];
-    return _books;
+    
+    NSArray* cBooks = [self.moc fetch:@"Book"];
+    if (cBooks.count == 0) {
+        _books = [self createSampleBooks];
+        return _books;
+    }
+    return nil;
 }
 
 -(NSArray*) createSampleBooks {

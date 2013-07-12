@@ -7,6 +7,12 @@
 //
 
 #import "UIMyProfile.h"
+#import "MonoUI.h"
+
+
+@interface UIMyProfile ()
+@end
+
 
 @implementation UIMyProfile
 

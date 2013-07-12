@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) UIChapter* selectedChapter;
+@property (weak, nonatomic) IBOutlet UITextField *authorTextField;
 @end
 
 @implementation MonoBookViewController {
@@ -32,18 +33,30 @@
 {
     [super viewDidLoad];
     self.title = self.book.title;
+    self.authorTextField.text = self.modelAccessor.myProfile.name;
 }
 
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) {
+        return 1;
+    }
     return self.book.chapters.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 0) {
+        
+        UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"AddChapterCell" forIndexPath:indexPath];
+        cell.imageView.image = [UIImage imageNamed:@"addChapter.png"];
+        return cell;
+    }
+    
     UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"ChapterCell" forIndexPath:indexPath];
     UIChapter* chapter = self.book.chapters[indexPath.row];
     cell.textLabel.text = chapter.caption;
@@ -51,6 +64,11 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        self.selectedChapter = nil;
+        [self performSegueWithIdentifier:@"showChapter" sender:self];
+        return;
+    }
     self.selectedChapter = self.book.chapters[indexPath.row];
     [self performSegueWithIdentifier:@"showChapter" sender:self];
 }

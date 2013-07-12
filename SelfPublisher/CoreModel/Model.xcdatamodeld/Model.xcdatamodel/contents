@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3381.3" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Book" representedClassName="Book" syncable="YES">
-        <attribute name="author" attributeType="String" minValueString="1" maxValueString="32" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="author" maxCount="1" deletionRule="Nullify" destinationEntity="Profile" inverseName="books" inverseEntity="Profile" syncable="YES"/>
         <relationship name="chpaters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Chapter" inverseName="book" inverseEntity="Chapter" syncable="YES"/>
     </entity>
     <entity name="Chapter" representedClassName="Chapter" syncable="YES">
@@ -14,6 +14,7 @@
     <entity name="MyProfile" representedClassName="MyProfile" parentEntity="Profile" syncable="YES"/>
     <entity name="Profile" representedClassName="Profile" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Book" inverseName="author" inverseEntity="Book" syncable="YES"/>
     </entity>
     <entity name="Section" representedClassName="Section" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,8 +24,8 @@
     <elements>
         <element name="Book" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Chapter" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Section" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Profile" positionX="0" positionY="0" width="0" height="0"/>
         <element name="MyProfile" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Profile" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Section" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

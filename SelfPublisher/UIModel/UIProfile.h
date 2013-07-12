@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Profile;
 
 @interface UIProfile : NSObject
-
+@property (nonatomic, readonly) NSString* name;
+- (id)initWithProfile:(Profile*)profile;
 @end

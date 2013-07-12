@@ -64,6 +64,9 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 - (IBAction)addTapped:(id)sender {
-    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Book" bundle:nil];
+    UINavigationController *vc = [sb instantiateInitialViewController];
+    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 @end
