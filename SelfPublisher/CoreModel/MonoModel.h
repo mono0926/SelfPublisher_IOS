@@ -11,3 +11,10 @@
 #import "Syringe.h"
 #import "ModelManager.h"
 #import "NSManagedObjectContext+MN.h"
+#import "NSManagedObjectContext+SP.h"
+// entity
+#import "Book.h"
+#import "Chapter.h"
+#import "Section.h"
+#import "Profile.h"
+#import "MyProfile.h"

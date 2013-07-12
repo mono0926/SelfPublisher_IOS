@@ -10,9 +10,11 @@
 #import "Syringe.h"
 @class UIChapter;
 @class UIBook;
+@class UIMyProfile;
 
 @interface UIModelAccessor : NSObject<Injectable>
 
+@property (nonatomic) UIMyProfile* myProfile;
 @property (nonatomic) NSArray* books;
 
 -(void)addBook;

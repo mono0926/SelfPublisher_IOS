@@ -33,6 +33,11 @@
 {
     [super viewDidLoad];
     _modelAccessor = inject(UIModelAccessor);
+    
+    if (!_modelAccessor.myProfile) {
+        [self performSegueWithIdentifier:@"registration" sender:self];
+    }
+    
     [self.collectionView registerClass:[MonoBookCell class] forCellWithReuseIdentifier:@"MonoBookCell"];
     self.collectionView.alwaysBounceVertical = YES;
     

@@ -11,6 +11,10 @@
         <relationship name="book" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="chpaters" inverseEntity="Book" syncable="YES"/>
         <relationship name="sections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Section" inverseName="chapter" inverseEntity="Section" syncable="YES"/>
     </entity>
+    <entity name="MyProfile" representedClassName="MyProfile" parentEntity="Profile" syncable="YES"/>
+    <entity name="Profile" representedClassName="Profile" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Section" representedClassName="Section" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="caption" attributeType="String" syncable="YES"/>
@@ -20,5 +24,7 @@
         <element name="Book" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Chapter" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Section" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Profile" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MyProfile" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

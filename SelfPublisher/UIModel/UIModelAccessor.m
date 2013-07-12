@@ -9,9 +9,25 @@
 #import "UIModelAccessor.h"
 #import "MonoUI.h"
 
+@interface UIModelAccessor ()
+@property (nonatomic, readonly) NSManagedObjectContext* moc;
+@end
 
 @implementation UIModelAccessor {
     NSArray* _books;
+    UIMyProfile* _myProfile;
+}
+
+-(UIMyProfile *)myProfile {
+    if (_myProfile) {
+        return _myProfile;
+    }
+    MyProfile* cMyProfile = self.moc.myProfile;
+    if (cMyProfile) {
+        _myProfile = [UIMyProfile new];
+        return _myProfile;
+    }
+    return nil;
 }
 
 -(NSArray *)books {
@@ -38,5 +54,10 @@
 
 -(void)addBook {
     
+}
+
+
+-(NSManagedObjectContext*)moc {
+    return [inject(ModelManager) managedObjectContext];
 }
 @end
