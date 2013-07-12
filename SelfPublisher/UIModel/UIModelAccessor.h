@@ -17,6 +17,7 @@
 @property (nonatomic) UIMyProfile* myProfile;
 @property (nonatomic) NSArray* books;
 
+-(void)createMyProfile:(NSString*)name result:(void(^)(UIMyProfile*))result;
 -(void)addBook;
 
 @end

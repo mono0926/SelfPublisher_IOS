@@ -51,6 +51,7 @@
 		FEE3604C17801070007C8D0B /* MonoChapterVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE3604B17801070007C8D0B /* MonoChapterVIewController.m */; };
 		FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE360511780DBA6007C8D0B /* MonoKindleActivity.m */; };
 		FEE360581780DD54007C8D0B /* amazon.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE360571780DD54007C8D0B /* amazon.png */; };
+		FEE70AD7179028FC00C6DF8F /* UIViewController+SP.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE70AD6179028FC00C6DF8F /* UIViewController+SP.m */; };
 		FEEF2754178FAE2B0056B4CF /* MyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF2753178FAE2B0056B4CF /* MyProfile.m */; };
 		FEEF2757178FAE910056B4CF /* UIProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF2756178FAE8B0056B4CF /* UIProfile.m */; };
 		FEEF275A178FAEA20056B4CF /* UIMyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF2759178FAEA20056B4CF /* UIMyProfile.m */; };
@@ -132,6 +133,8 @@
 		FEE360511780DBA6007C8D0B /* MonoKindleActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoKindleActivity.m; sourceTree = "<group>"; };
 		FEE360541780DCAE007C8D0B /* MonoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonoModel.h; sourceTree = "<group>"; };
 		FEE360571780DD54007C8D0B /* amazon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amazon.png; sourceTree = "<group>"; };
+		FEE70AD5179028FC00C6DF8F /* UIViewController+SP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SP.h"; sourceTree = "<group>"; };
+		FEE70AD6179028FC00C6DF8F /* UIViewController+SP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SP.m"; sourceTree = "<group>"; };
 		FEE9BB9E178EED3200812C8D /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		FEE9BB9F178EED3200812C8D /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		FEE9BBA0178EED3200812C8D /* Section.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
@@ -182,6 +185,7 @@
 		FE3C1016177FF694005DFE04 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FEE70AC2179027B000C6DF8F /* Utils */,
 				FEE3604F1780DB83007C8D0B /* Activity */,
 				FEE3602C177FF97A007C8D0B /* Cell */,
 				FEE36029177FF898007C8D0B /* Book */,
@@ -374,6 +378,15 @@
 				FEEF2760178FAFD60056B4CF /* Profile.m */,
 			);
 			path = CoreModel;
+			sourceTree = "<group>";
+		};
+		FEE70AC2179027B000C6DF8F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FEE70AD5179028FC00C6DF8F /* UIViewController+SP.h */,
+				FEE70AD6179028FC00C6DF8F /* UIViewController+SP.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		FEEF275B178FAF1E0056B4CF /* Utils */ = {
@@ -577,6 +590,7 @@
 				FEE3604C17801070007C8D0B /* MonoChapterVIewController.m in Sources */,
 				FEE3604517800318007C8D0B /* UIModelAccessor.m in Sources */,
 				FEE3603F178002DF007C8D0B /* UIChapter.m in Sources */,
+				FEE70AD7179028FC00C6DF8F /* UIViewController+SP.m in Sources */,
 				FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */,
 				FEEF2754178FAE2B0056B4CF /* MyProfile.m in Sources */,
 				FEEF2764178FB1A50056B4CF /* RegistrationViewController.m in Sources */,

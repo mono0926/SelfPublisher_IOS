@@ -16,9 +16,7 @@
 
 @end
 
-@implementation MonoMainViewController {
-    UIModelAccessor* _modelAccessor;
-}
+@implementation MonoMainViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,9 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _modelAccessor = inject(UIModelAccessor);
-    
-    if (!_modelAccessor.myProfile) {
+    if (!self.modelAccessor.myProfile) {
         [self performSegueWithIdentifier:@"registration" sender:self];
     }
     
@@ -49,12 +45,12 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _modelAccessor.books.count;
+    return self.modelAccessor.books.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MonoBookCell* cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"MonoBookCell" forIndexPath:indexPath];
-    cell.book = _modelAccessor.books[indexPath.row];
+    cell.book = self.modelAccessor.books[indexPath.row];
     cell.image = [UIImage imageNamed:[NSString stringWithFormat:@"b%d.jpg", indexPath.row + 1]];
     return cell;
 }
@@ -63,7 +59,7 @@
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Book" bundle:nil];
     UINavigationController *vc = [sb instantiateInitialViewController];
     MonoBookViewController* monoVC = vc.viewControllers[0];
-    monoVC.book = _modelAccessor.books[indexPath.row];
+    monoVC.book = self.modelAccessor.books[indexPath.row];
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:vc animated:YES completion:nil];
 }

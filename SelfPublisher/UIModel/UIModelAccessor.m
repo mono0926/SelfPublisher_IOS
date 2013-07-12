@@ -30,6 +30,18 @@
     return nil;
 }
 
+-(void)createMyProfile:(NSString*)name result:(void(^)(UIMyProfile*))result {
+    [self.moc performBlock:^{
+        MyProfile* myProfile = self.moc.createMyProfile;
+        if (myProfile) {
+            myProfile.name = name;
+            if ([self.moc save:nil]) {
+                result(self.myProfile);
+            }
+        }
+    }];
+}
+
 -(NSArray *)books {
     if (_books) {
         return _books;

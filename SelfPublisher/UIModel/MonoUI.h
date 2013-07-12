@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 mono. All rights reserved.
 //
 
+#import "UIViewController+SP.h"
 #import "UIModelAccessor.h"
 #import "MonoModel.h"
 #import "Mantle.h"
