@@ -69,21 +69,10 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 1;
-    }
     return self.book.chapterList.numberOfItems;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.section == 0) {
-        
-        UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"AddChapterCell" forIndexPath:indexPath];
-        cell.imageView.image = [UIImage imageNamed:@"addChapter.png"];
-        return cell;
-    }
-    
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {    
     UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"ChapterCell" forIndexPath:indexPath];
     UIChapter* chapter = [self.book.chapterList entityAtIndex:indexPath.row];
     cell.textLabel.text = chapter.caption;
@@ -92,7 +81,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    self.selectedChapter = indexPath.section == 0 ? nil : [self.book.chapterList entityAtIndex:indexPath.row];
+    self.selectedChapter = [self.book.chapterList entityAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"showChapter" sender:self];
 }
 
@@ -115,6 +104,10 @@
     NSArray* myActivityItems = @[[[MonoKindleActivity alloc]initWithBook:self.book]];
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:nil applicationActivities:myActivityItems];
     [self presentViewController:activityController animated:YES completion:nil];
+}
+- (IBAction)addNewChapterTapped:(id)sender {
+    _selectedChapter = nil;
+    [self performSegueWithIdentifier:@"showChapter" sender:self];
 }
 
 - (IBAction)doneTapped:(id)sender {
