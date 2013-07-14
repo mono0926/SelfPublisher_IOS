@@ -71,7 +71,7 @@
     if (section == 0) {
         return 1;
     }
-    return self.book.chapters.count;
+    return self.book.chapterList.numberOfItems;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -84,14 +84,14 @@
     }
     
     UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"ChapterCell" forIndexPath:indexPath];
-    UIChapter* chapter = self.book.chapters[indexPath.row];
+    UIChapter* chapter = [self.book.chapterList entityAtIndex:indexPath.row];
     cell.textLabel.text = chapter.caption;
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    self.selectedChapter = indexPath.section == 0 ? nil : self.book.chapters[indexPath.row];
+    self.selectedChapter = indexPath.section == 0 ? nil : [self.book.chapterList entityAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"showChapter" sender:self];
 }
 

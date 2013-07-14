@@ -2,7 +2,7 @@
 //  Chapter.m
 //  SelfPublisher
 //
-//  Created by mono on 7/11/13.
+//  Created by mono on 7/14/13.
 //  Copyright (c) 2013 mono. All rights reserved.
 //
 
@@ -13,9 +13,7 @@
 
 @implementation Chapter
 
-@dynamic caption;
-@dynamic body;
-@dynamic sections;
 @dynamic book;
+@dynamic sections;
 
 @end

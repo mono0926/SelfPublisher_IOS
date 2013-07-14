@@ -16,8 +16,8 @@
 @end
 
 @implementation UIBook {
-    NSArray* _chapters;
     Book* _book;
+    UIModelList* _chapterList;
 }
 
 - (id)initWithBook:(Book*)book {
@@ -45,24 +45,34 @@
     }];
 }
 
+-(NSString *)author {
+    return _book.author.name;
+}
+
 -(NSString *)title {
     return _book.title;
 }
 
 
 -(NSArray *)chapters {
-    if (_chapters) {
-        return _chapters;
-    }
-    _chapters = [self createSampleChapters];
-    return _chapters;
+    return self.chapterList.allEntities;
 }
 
--(NSArray*) createSampleChapters {
-    UIChapter* c1 = [[UIChapter alloc]init];
-    UIChapter* c2 = [[UIChapter alloc]init];
-    UIChapter* c3 = [[UIChapter alloc]init];
-    return @[c1, c2, c3];
+-(UIModelList *)chapterList {
+    if (_chapterList) {
+        return _chapterList;
+    }
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Chapter"];
+    NSSortDescriptor* sortDiscripter1 = [[NSSortDescriptor alloc]initWithKey:@"caption"
+                                                                   ascending:YES];
+    request.sortDescriptors = @[sortDiscripter1];
+
+    _chapterList = [[UIModelList alloc]initWithManagedObjectContext:_book.managedObjectContext
+                                                            request:request
+                                                        sectionName:nil
+                                                          cacheName:nil
+                                                           delegate:nil];
+    return _chapterList;
 }
 
 +(NSDictionary *)JSONKeyPathsByPropertyKey {

@@ -11,13 +11,13 @@
 @class UIChapter;
 @class UIBook;
 @class UIMyProfile;
+@class UIModelList;
 
 @interface UIModelAccessor : NSObject<Injectable>
 
 @property (nonatomic) UIMyProfile* myProfile;
-@property (nonatomic) NSArray* books;
+@property (nonatomic) UIModelList* bookList;
 
 -(void)createMyProfile:(NSString*)name result:(void(^)(UIMyProfile*))result;
--(void)addBook;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  Section.h
+//  SectionBase.h
 //  SelfPublisher
 //
 //  Created by mono on 7/14/13.
@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Chapter;
 
-@interface Section : NSManagedObject
+@interface SectionBase : NSManagedObject
 
-@property (nonatomic, retain) Chapter *chapter;
+@property (nonatomic, retain) NSString * body;
+@property (nonatomic, retain) NSString * caption;
 
 @end

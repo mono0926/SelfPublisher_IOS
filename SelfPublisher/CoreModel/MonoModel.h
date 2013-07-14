@@ -16,6 +16,7 @@
 // entity
 #import "Book.h"
 #import "Chapter.h"
+#import "Chapter+Methods.h"
 #import "Section.h"
 #import "Profile.h"
 #import "MyProfile.h"

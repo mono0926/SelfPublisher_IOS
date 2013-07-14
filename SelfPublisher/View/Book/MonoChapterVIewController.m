@@ -51,7 +51,7 @@
         }];
     }];
     [alert addButtonWithTitle:@"Cancel" handler:^{
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }];
     [alert show];
 }

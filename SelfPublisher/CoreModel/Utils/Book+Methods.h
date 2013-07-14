@@ -1,17 +1,13 @@
 //
-//  Section.m
+//  Book+Methods.h
 //  SelfPublisher
 //
 //  Created by mono on 7/14/13.
 //  Copyright (c) 2013 mono. All rights reserved.
 //
 
-#import "Section.h"
-#import "Chapter.h"
+#import "Book.h"
 
-
-@implementation Section
-
-@dynamic chapter;
-
+@interface Book (Methods)
+@property (nonatomic, readonly) id uiModel;
 @end

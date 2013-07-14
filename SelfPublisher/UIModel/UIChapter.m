@@ -13,18 +13,18 @@
 @property (nonatomic) NSString* caption;
 @property (nonatomic) NSString* body;
 @property (nonatomic) NSArray* sections;
+@property (nonatomic, readonly) Chapter* chapter;
 @end
 
 @implementation UIChapter {
     NSArray* _sections;
-    Chapter* _chapter;
+    UIModelList* _sectionList;
 }
 
 - (id)initWithChapter:(Chapter*)chapter
 {
-    self = [super init];
+    self = [super initWithSectionBase:chapter];
     if (self) {
-        _chapter = chapter;
     }
     return self;
 }
@@ -51,20 +51,37 @@
     }];
 }
 
+-(Chapter *)chapter {
+    return (Chapter*)_sectionBase;
+}
+
 -(NSString *)caption {
-    return _chapter.caption;
+    return self.chapter.caption;
 }
 
 -(NSString *)body {
-    return @"Ichiro Suzuki (鈴木 一朗 Suzuki Ichirō?), usually known simply as Ichiro (イチロー Ichirō?) (born October 22, 1973), is a Japanese-born professional baseball outfielder who currently plays for the New York Yankees. Originally a player in Japan's Nippon Professional Baseball (NPB), Ichiro moved to the United States in 2001 to play in MLB for the Seattle Mariners, with whom he spent 11 seasons. Ichiro has established a number of batting records, including MLB's single-season record for hits with 262. He had 10 consecutive 200-hit seasons, the longest streak by any player, surpassing Wee Willie Keeler's streak of eight.[1]Before playing in the MLB, Ichiro played nine years for the Orix Blue Wave in Japan's Pacific League. Posted by Orix after the 2000 season, Ichiro became Seattle's right fielder. The first Japanese-born position player to be signed to the major leagues,[2] Ichiro led the American League (AL) in batting average and stolen bases en route to being named AL Rookie of the Year and AL Most Valuable Player (MVP).Ichiro is the first MLB player to enter the Japanese Baseball Hall of Fame (The Golden Players Club). He is a ten-time All-Star and won the 2007 All-Star Game MVP Award for a three-hit performance that included the event's first-ever inside-the-park home run. Ichiro won a Gold Glove Award in each of his first ten years in the major leagues, and has had seven hitting streaks of 20 or more games, with a high of 27.";
+    return self.chapter.body;
 }
 
 -(NSArray *)sections {
-    if (_sections) {
-        return _sections;
+    return self.sectionList.allEntities;
+}
+
+-(UIModelList *)sectionList {
+    if (_sectionList) {
+        return _sectionList;
     }
-    _sections = [self createSampleSections];
-    return _sections;
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Section"];
+    NSSortDescriptor* sortDiscripter1 = [[NSSortDescriptor alloc]initWithKey:@"caption"
+                                                                   ascending:YES];
+    request.sortDescriptors = @[sortDiscripter1];
+    
+    _sectionList = [[UIModelList alloc]initWithManagedObjectContext:self.chapter.managedObjectContext
+                                                            request:request
+                                                        sectionName:nil
+                                                          cacheName:nil
+                                                           delegate:nil];
+    return _sectionList;
 }
 
 -(NSArray*) createSampleSections {

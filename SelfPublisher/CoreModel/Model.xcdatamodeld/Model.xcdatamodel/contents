@@ -5,9 +5,7 @@
         <relationship name="author" maxCount="1" deletionRule="Nullify" destinationEntity="Profile" inverseName="books" inverseEntity="Profile" syncable="YES"/>
         <relationship name="chapters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Chapter" inverseName="book" inverseEntity="Chapter" syncable="YES"/>
     </entity>
-    <entity name="Chapter" representedClassName="Chapter" syncable="YES">
-        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="caption" attributeType="String" syncable="YES"/>
+    <entity name="Chapter" representedClassName="Chapter" parentEntity="SectionBase" syncable="YES">
         <relationship name="book" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="chapters" inverseEntity="Book" syncable="YES"/>
         <relationship name="sections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Section" inverseName="chapter" inverseEntity="Section" syncable="YES"/>
     </entity>
@@ -16,10 +14,12 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Book" inverseName="author" inverseEntity="Book" syncable="YES"/>
     </entity>
-    <entity name="Section" representedClassName="Section" syncable="YES">
+    <entity name="Section" representedClassName="Section" parentEntity="SectionBase" syncable="YES">
+        <relationship name="chapter" maxCount="1" deletionRule="Nullify" destinationEntity="Chapter" inverseName="sections" inverseEntity="Chapter" syncable="YES"/>
+    </entity>
+    <entity name="SectionBase" representedClassName="SectionBase" isAbstract="YES" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="caption" attributeType="String" syncable="YES"/>
-        <relationship name="chapter" maxCount="1" deletionRule="Nullify" destinationEntity="Chapter" inverseName="sections" inverseEntity="Chapter" syncable="YES"/>
     </entity>
     <elements>
         <element name="Book" positionX="0" positionY="0" width="0" height="0"/>
@@ -27,5 +27,6 @@
         <element name="MyProfile" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Profile" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Section" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SectionBase" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

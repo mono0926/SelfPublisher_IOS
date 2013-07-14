@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Mantle.h"
+#import "UISectionBase.h"
 
-@interface UISection : MTLModel<MTLJSONSerializing>
+@interface UISection : UISectionBase
 @property (nonatomic, readonly) NSString* caption;
 @property (nonatomic, readonly) NSString* body;
 @end

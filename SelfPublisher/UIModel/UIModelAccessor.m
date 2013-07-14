@@ -14,7 +14,7 @@
 @end
 
 @implementation UIModelAccessor {
-    NSArray* _books;
+    UIModelList* _bookList;
     UIMyProfile* _myProfile;
 }
 
@@ -42,39 +42,22 @@
     }];
 }
 
--(NSArray *)books {
-    if (_books) {
-        return _books;
+-(UIModelList *)bookList {
+    if (_bookList) {
+        return _bookList;
     }
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Book"];
+    NSSortDescriptor* sortDiscripter1 = [[NSSortDescriptor alloc]initWithKey:@"title"
+                                                                   ascending:YES];
+    request.sortDescriptors = @[sortDiscripter1];
     
-    NSArray* cBooks = [self.moc fetch:@"Book"];
-    if (cBooks.count == 0) {
-        _books = [self createSampleBooks];
-        return _books;
-    }
-    return [cBooks map:^id(Book* book) {
-        return [[UIBook alloc]initWithBook:book];
-    }];
+    _bookList = [[UIModelList alloc]initWithManagedObjectContext:self.moc
+                                                            request:request
+                                                        sectionName:nil
+                                                          cacheName:nil
+                                                           delegate:nil];
+    return _bookList;
 }
-
--(NSArray*) createSampleBooks {
-    UIBook* b1 = [[UIBook alloc]init];
-    UIBook* b2 = [[UIBook alloc]init];
-    UIBook* b3 = [[UIBook alloc]init];
-    UIBook* b4 = [[UIBook alloc]init];
-    UIBook* b5 = [[UIBook alloc]init];
-    UIBook* b6 = [[UIBook alloc]init];
-    UIBook* b7 = [[UIBook alloc]init];
-    UIBook* b8 = [[UIBook alloc]init];
-    UIBook* b9 = [[UIBook alloc]init];
-    UIBook* b10 = [[UIBook alloc]init];
-    return @[b1, b2, b3, b4, b5, b6, b7, b8, b9, b10];
-}
-
--(void)addBook {
-    
-}
-
 
 -(NSManagedObjectContext*)moc {
     return [inject(ModelManager) managedObjectContext];

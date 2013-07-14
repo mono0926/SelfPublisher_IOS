@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Mantle.h"
+#import "UISectionBase.h"
 @class UIBook;
 @class UIChapter;
 @class Chapter;
-@interface UIChapter : MTLModel<MTLJSONSerializing>
+@class UIModelList;
+@interface UIChapter : UISectionBase
 - (id)initWithChapter:(Chapter*)chapter;
 +(void)createWithUIBook:(UIBook*)uiBook caption:(NSString*)caption resultBlock:(void (^)(UIChapter*, NSError*))resultBlock;
-@property (nonatomic, readonly) NSString* caption;
-@property (nonatomic, readonly) NSString* body;
 @property (nonatomic, readonly) NSArray* sections;
+@property (nonatomic, readonly) UIModelList* sectionList;
 @end
