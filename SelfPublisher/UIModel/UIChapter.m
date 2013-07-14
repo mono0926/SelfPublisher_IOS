@@ -17,10 +17,42 @@
 
 @implementation UIChapter {
     NSArray* _sections;
+    Chapter* _chapter;
+}
+
+- (id)initWithChapter:(Chapter*)chapter
+{
+    self = [super init];
+    if (self) {
+        _chapter = chapter;
+    }
+    return self;
+}
+
++(void)createWithUIBook:(UIBook*)uiBook caption:(NSString*)caption resultBlock:(void (^)(UIChapter*, NSError*))resultBlock {
+    ModelManager* manager = inject(ModelManager);
+    NSManagedObjectContext* moc = manager.managedObjectContext;
+    [moc performBlock:^{
+        Chapter* chapter = [moc createObject:@"Chapter"];
+        chapter.caption = caption;
+        NSError* error = nil;
+        Book* book = (Book*)[moc existingObjectWithID:uiBook.objectID error:&error];
+        if (error) {            
+            resultBlock(NO, error);
+            return;
+        }
+        chapter.book = book;
+        if ([moc save:&error]) {
+            UIChapter* uiChapter = [[UIChapter alloc] initWithChapter:chapter];
+            resultBlock(uiChapter, nil);
+            return;
+        }
+        resultBlock(NO, error);
+    }];
 }
 
 -(NSString *)caption {
-    return @"Introduction";
+    return _chapter.caption;
 }
 
 -(NSString *)body {

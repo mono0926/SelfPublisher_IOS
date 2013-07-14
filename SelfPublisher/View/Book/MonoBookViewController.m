@@ -98,7 +98,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showChapter"]) {
         MonoChapterVIewController* vc = segue.destinationViewController;
-        vc.chapter = self.selectedChapter;
+        [vc setBook:_book chapter:self.selectedChapter];
     }
 }
 - (IBAction)actionTapped:(id)sender {

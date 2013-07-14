@@ -80,4 +80,7 @@
     return jsonString;
 }
 
+-(NSManagedObjectID *)objectID {
+    return _book.objectID;
+}
 @end

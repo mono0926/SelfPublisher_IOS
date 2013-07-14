@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 @class UIChapter;
+@class UIBook;
 @interface MonoChapterVIewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic) UIChapter* chapter;
+@property (nonatomic, readonly) UIChapter* chapter;
+@property (nonatomic, readonly) UIBook* book;
+-(void)setBook:(UIBook *)book chapter:(UIChapter*)chapter;
 @end

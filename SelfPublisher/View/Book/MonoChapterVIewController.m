@@ -20,7 +20,40 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.bodyTextView.text = self.chapter.body;
+    self.title = _chapter.caption ?: @"";
+    self.bodyTextView.text = _chapter.body;
+}
+
+-(void)setBook:(UIBook *)book chapter:(UIChapter *)chapter {
+    _book = book;
+    _chapter = chapter;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    if (!_chapter) {
+        [self showInputTitleView];
+    }
+}
+
+-(void)showInputTitleView {
+    __weak UIAlertView* alert = [UIAlertView alertViewWithTitle:@"Input Chapter's caption."];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert addButtonWithTitle:@"OK" handler:^{
+        UITextField* tf = [alert textFieldAtIndex:0];
+        [UIChapter createWithUIBook:_book caption:tf.text resultBlock:^(UIChapter *chapter, NSError *error) {
+            if (chapter) {
+                _chapter = chapter;
+                self.title = _chapter.caption;
+                return;
+            }
+            [SVProgressHUD showErrorWithStatus:error.description];
+            [self showInputTitleView];
+        }];
+    }];
+    [alert addButtonWithTitle:@"Cancel" handler:^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alert show];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

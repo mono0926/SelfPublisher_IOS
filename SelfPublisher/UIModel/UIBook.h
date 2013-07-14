@@ -17,5 +17,6 @@
 @property (nonatomic, readonly) NSString* author;
 @property (nonatomic, readonly) NSArray* chapters;
 @property (nonatomic, readonly) NSString* jsonString;
+@property (nonatomic, readonly) NSManagedObjectID* objectID;
 
 @end
