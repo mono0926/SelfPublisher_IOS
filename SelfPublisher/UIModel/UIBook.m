@@ -50,7 +50,6 @@
 +(NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{};
 }
-
 +(NSValueTransformer*)chaptersJSONTransformer {
     return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:UIChapter.class];
 }

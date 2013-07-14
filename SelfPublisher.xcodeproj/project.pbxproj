@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40F83B5C35A34694932C81DD /* libPods-SelfPublisherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 997F13B755A14423BEFA71EC /* libPods-SelfPublisherTests.a */; };
+		4E9363C1124C47108381B6E2 /* libPods-SelfPublisherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 997F13B755A14423BEFA71EC /* libPods-SelfPublisherTests.a */; };
 		D84CF061E47742DC9F68FE90 /* libPods-SelfPublisher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3531CCEE7E4FE788285662 /* libPods-SelfPublisher.a */; };
 		FE3C1018177FF724005DFE04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3C1017177FF724005DFE04 /* Main.storyboard */; };
 		FE5AA46E178237A800C99921 /* b12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA462178237A800C99921 /* b12.jpg */; };
@@ -22,8 +22,6 @@
 		FE5AA477178237A800C99921 /* b3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA46B178237A800C99921 /* b3.jpg */; };
 		FE5AA478178237A800C99921 /* b2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA46C178237A800C99921 /* b2.jpg */; };
 		FE5AA479178237A800C99921 /* b1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA46D178237A800C99921 /* b1.jpg */; };
-		FE5AA47B1782419A00C99921 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5AA47A1782419A00C99921 /* SenTestingKit.framework */; };
-		FE5AA47D1782442500C99921 /* MonoHogeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5AA47C1782442500C99921 /* MonoHogeSpec.m */; };
 		FE72E1A2177FC82E0032F3B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A1177FC82E0032F3B3 /* Foundation.framework */; };
 		FE72E1A4177FC82E0032F3B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A3177FC82E0032F3B3 /* CoreGraphics.framework */; };
 		FE72E1A6177FC82E0032F3B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A5177FC82E0032F3B3 /* UIKit.framework */; };
@@ -31,11 +29,6 @@
 		FE72E1AE177FC82E0032F3B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE72E1AD177FC82E0032F3B3 /* main.m */; };
 		FE72E1B2177FC82E0032F3B3 /* MonoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE72E1B1177FC82E0032F3B3 /* MonoAppDelegate.m */; };
 		FE72E1BA177FC82E0032F3B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE72E1B9177FC82E0032F3B3 /* Images.xcassets */; };
-		FE72E1C1177FC82E0032F3B3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1C0177FC82E0032F3B3 /* XCTest.framework */; };
-		FE72E1C2177FC82E0032F3B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A1177FC82E0032F3B3 /* Foundation.framework */; };
-		FE72E1C3177FC82E0032F3B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A5177FC82E0032F3B3 /* UIKit.framework */; };
-		FE72E1CB177FC82E0032F3B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE72E1C9177FC82E0032F3B3 /* InfoPlist.strings */; };
-		FE72E1CD177FC82E0032F3B3 /* UIBookSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = FE72E1CC177FC82E0032F3B3 /* UIBookSpec.m */; };
 		FEBBD8F517902EE100DAFCC9 /* addChapter.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBBD8F417902EE100DAFCC9 /* addChapter.png */; };
 		FEBBD8F8179032A000DAFCC9 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBBD8F7179032A000DAFCC9 /* Book.m */; };
 		FEBBD8FB179032A100DAFCC9 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBBD8FA179032A100DAFCC9 /* Profile.m */; };
@@ -60,10 +53,14 @@
 		FEEF275A178FAEA20056B4CF /* UIMyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF2759178FAEA20056B4CF /* UIMyProfile.m */; };
 		FEEF275E178FAF5D0056B4CF /* NSManagedObjectContext+SP.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF275D178FAF5D0056B4CF /* NSManagedObjectContext+SP.m */; };
 		FEEF2764178FB1A50056B4CF /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF2763178FB1A50056B4CF /* RegistrationViewController.m */; };
+		FEF9282717927D7C00241297 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5AA47A1782419A00C99921 /* SenTestingKit.framework */; };
+		FEF9282817927D7C00241297 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A1177FC82E0032F3B3 /* Foundation.framework */; };
+		FEF9282917927D7C00241297 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A5177FC82E0032F3B3 /* UIKit.framework */; };
+		FEF9282F17927D7C00241297 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF9282D17927D7C00241297 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FE72E1C4177FC82E0032F3B3 /* PBXContainerItemProxy */ = {
+		FEF9283317927D7C00241297 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FE72E196177FC82E0032F3B3 /* Project object */;
 			proxyType = 1;
@@ -91,7 +88,6 @@
 		FE5AA46C178237A800C99921 /* b2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b2.jpg; sourceTree = "<group>"; };
 		FE5AA46D178237A800C99921 /* b1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b1.jpg; sourceTree = "<group>"; };
 		FE5AA47A1782419A00C99921 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		FE5AA47C1782442500C99921 /* MonoHogeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoHogeSpec.m; sourceTree = "<group>"; };
 		FE72E19E177FC82E0032F3B3 /* SelfPublisher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfPublisher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE72E1A1177FC82E0032F3B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FE72E1A3177FC82E0032F3B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,11 +99,7 @@
 		FE72E1B0177FC82E0032F3B3 /* MonoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonoAppDelegate.h; sourceTree = "<group>"; };
 		FE72E1B1177FC82E0032F3B3 /* MonoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonoAppDelegate.m; sourceTree = "<group>"; };
 		FE72E1B9177FC82E0032F3B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FE72E1BF177FC82E0032F3B3 /* SelfPublisherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfPublisherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE72E1C0177FC82E0032F3B3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		FE72E1C8177FC82E0032F3B3 /* SelfPublisherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SelfPublisherTests-Info.plist"; sourceTree = "<group>"; };
-		FE72E1CA177FC82E0032F3B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FE72E1CC177FC82E0032F3B3 /* UIBookSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIBookSpec.m; sourceTree = "<group>"; };
 		FEBBD8F417902EE100DAFCC9 /* addChapter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addChapter.png; sourceTree = "<group>"; };
 		FEBBD8F6179032A000DAFCC9 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		FEBBD8F7179032A000DAFCC9 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
@@ -156,6 +148,11 @@
 		FEEF275D178FAF5D0056B4CF /* NSManagedObjectContext+SP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+SP.m"; sourceTree = "<group>"; };
 		FEEF2762178FB1A50056B4CF /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		FEEF2763178FB1A50056B4CF /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		FEF9282617927D7C00241297 /* SelfPublisherTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfPublisherTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEF9282C17927D7C00241297 /* SelfPublisherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SelfPublisherTests-Info.plist"; sourceTree = "<group>"; };
+		FEF9282E17927D7C00241297 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FEF9283217927D7C00241297 /* SelfPublisherTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SelfPublisherTests-Prefix.pch"; sourceTree = "<group>"; };
+		FEFA5F6917927A9F005C34D5 /* libPods-SelfPublisherTests-Kiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-SelfPublisherTests-Kiwi.a"; path = "Pods/build/Debug-iphoneos/libPods-SelfPublisherTests-Kiwi.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,15 +167,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE72E1BC177FC82E0032F3B3 /* Frameworks */ = {
+		FEF9282317927D7C00241297 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE5AA47B1782419A00C99921 /* SenTestingKit.framework in Frameworks */,
-				FE72E1C1177FC82E0032F3B3 /* XCTest.framework in Frameworks */,
-				FE72E1C3177FC82E0032F3B3 /* UIKit.framework in Frameworks */,
-				FE72E1C2177FC82E0032F3B3 /* Foundation.framework in Frameworks */,
-				40F83B5C35A34694932C81DD /* libPods-SelfPublisherTests.a in Frameworks */,
+				FEF9282717927D7C00241297 /* SenTestingKit.framework in Frameworks */,
+				FEF9282917927D7C00241297 /* UIKit.framework in Frameworks */,
+				FEF9282817927D7C00241297 /* Foundation.framework in Frameworks */,
+				4E9363C1124C47108381B6E2 /* libPods-SelfPublisherTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				FE72E1A7177FC82E0032F3B3 /* SelfPublisher */,
-				FE72E1C6177FC82E0032F3B3 /* SelfPublisherTests */,
+				FEF9282A17927D7C00241297 /* SelfPublisherTests */,
 				FE72E1A0177FC82E0032F3B3 /* Frameworks */,
 				FE72E19F177FC82E0032F3B3 /* Products */,
 				2DE36CB625F540B3914EDE4A /* Pods-SelfPublisher.xcconfig */,
@@ -217,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				FE72E19E177FC82E0032F3B3 /* SelfPublisher.app */,
-				FE72E1BF177FC82E0032F3B3 /* SelfPublisherTests.xctest */,
+				FEF9282617927D7C00241297 /* SelfPublisherTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +221,7 @@
 		FE72E1A0177FC82E0032F3B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEFA5F6917927A9F005C34D5 /* libPods-SelfPublisherTests-Kiwi.a */,
 				FE5AA47A1782419A00C99921 /* SenTestingKit.framework */,
 				FE72E1A1177FC82E0032F3B3 /* Foundation.framework */,
 				FE72E1A3177FC82E0032F3B3 /* CoreGraphics.framework */,
@@ -258,25 +255,6 @@
 				FE72E1AA177FC82E0032F3B3 /* InfoPlist.strings */,
 				FE72E1AD177FC82E0032F3B3 /* main.m */,
 				FE72E1AF177FC82E0032F3B3 /* SelfPublisher-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FE72E1C6177FC82E0032F3B3 /* SelfPublisherTests */ = {
-			isa = PBXGroup;
-			children = (
-				FE72E1CC177FC82E0032F3B3 /* UIBookSpec.m */,
-				FE72E1C7177FC82E0032F3B3 /* Supporting Files */,
-				FE5AA47C1782442500C99921 /* MonoHogeSpec.m */,
-			);
-			path = SelfPublisherTests;
-			sourceTree = "<group>";
-		};
-		FE72E1C7177FC82E0032F3B3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FE72E1C8177FC82E0032F3B3 /* SelfPublisherTests-Info.plist */,
-				FE72E1C9177FC82E0032F3B3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -402,6 +380,24 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		FEF9282A17927D7C00241297 /* SelfPublisherTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEF9282B17927D7C00241297 /* Supporting Files */,
+			);
+			path = SelfPublisherTests;
+			sourceTree = "<group>";
+		};
+		FEF9282B17927D7C00241297 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEF9282C17927D7C00241297 /* SelfPublisherTests-Info.plist */,
+				FEF9282D17927D7C00241297 /* InfoPlist.strings */,
+				FEF9283217927D7C00241297 /* SelfPublisherTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,25 +420,25 @@
 			productReference = FE72E19E177FC82E0032F3B3 /* SelfPublisher.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FE72E1BE177FC82E0032F3B3 /* SelfPublisherTests */ = {
+		FEF9282517927D7C00241297 /* SelfPublisherTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE72E1D3177FC82E0032F3B3 /* Build configuration list for PBXNativeTarget "SelfPublisherTests" */;
+			buildConfigurationList = FEF9283517927D7C00241297 /* Build configuration list for PBXNativeTarget "SelfPublisherTests" */;
 			buildPhases = (
-				4C7FF5DBADB848B4AE06E1A1 /* Check Pods Manifest.lock */,
-				FE72E1BB177FC82E0032F3B3 /* Sources */,
-				FE72E1BC177FC82E0032F3B3 /* Frameworks */,
-				FE72E1BD177FC82E0032F3B3 /* Resources */,
-				586A5689FAAD44B3BE34F7BE /* Copy Pods Resources */,
+				F37971AF4AB841ECA1403486 /* Check Pods Manifest.lock */,
+				FEF9282217927D7C00241297 /* Sources */,
+				FEF9282317927D7C00241297 /* Frameworks */,
+				FEF9282417927D7C00241297 /* Resources */,
+				237EB219AE74428687C69459 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FE72E1C5177FC82E0032F3B3 /* PBXTargetDependency */,
+				FEF9283417927D7C00241297 /* PBXTargetDependency */,
 			);
 			name = SelfPublisherTests;
 			productName = SelfPublisherTests;
-			productReference = FE72E1BF177FC82E0032F3B3 /* SelfPublisherTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			productReference = FEF9282617927D7C00241297 /* SelfPublisherTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -454,7 +450,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = mono;
 				TargetAttributes = {
-					FE72E1BE177FC82E0032F3B3 = {
+					FEF9282517927D7C00241297 = {
 						TestTargetID = FE72E19D177FC82E0032F3B3;
 					};
 				};
@@ -473,7 +469,7 @@
 			projectRoot = "";
 			targets = (
 				FE72E19D177FC82E0032F3B3 /* SelfPublisher */,
-				FE72E1BE177FC82E0032F3B3 /* SelfPublisherTests */,
+				FEF9282517927D7C00241297 /* SelfPublisherTests */,
 			);
 		};
 /* End PBXProject section */
@@ -506,11 +502,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE72E1BD177FC82E0032F3B3 /* Resources */ = {
+		FEF9282417927D7C00241297 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE72E1CB177FC82E0032F3B3 /* InfoPlist.strings in Resources */,
+				FEF9282F17927D7C00241297 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,19 +527,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 		};
-		4C7FF5DBADB848B4AE06E1A1 /* Check Pods Manifest.lock */ = {
+		237EB219AE74428687C69459 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-SelfPublisherTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		58139B1117164FA99CBDB7C5 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -559,19 +556,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-SelfPublisher-resources.sh\"\n";
 		};
-		586A5689FAAD44B3BE34F7BE /* Copy Pods Resources */ = {
+		F37971AF4AB841ECA1403486 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-SelfPublisherTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -604,22 +602,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE72E1BB177FC82E0032F3B3 /* Sources */ = {
+		FEF9282217927D7C00241297 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE5AA47D1782442500C99921 /* MonoHogeSpec.m in Sources */,
-				FE72E1CD177FC82E0032F3B3 /* UIBookSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FE72E1C5177FC82E0032F3B3 /* PBXTargetDependency */ = {
+		FEF9283417927D7C00241297 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FE72E19D177FC82E0032F3B3 /* SelfPublisher */;
-			targetProxy = FE72E1C4177FC82E0032F3B3 /* PBXContainerItemProxy */;
+			targetProxy = FEF9283317927D7C00241297 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -632,10 +628,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		FE72E1C9177FC82E0032F3B3 /* InfoPlist.strings */ = {
+		FEF9282D17927D7C00241297 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FE72E1CA177FC82E0032F3B3 /* en */,
+				FEF9282E17927D7C00241297 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -741,7 +737,7 @@
 			};
 			name = Release;
 		};
-		FE72E1D4177FC82E0032F3B3 /* Debug */ = {
+		FEF9283617927D7C00241297 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41C6EE4377F341809D671DC0 /* Pods-SelfPublisherTests.xcconfig */;
 			buildSettings = {
@@ -752,7 +748,7 @@
 					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SelfPublisher/SelfPublisher-Prefix.pch";
+				GCC_PREFIX_HEADER = "SelfPublisherTests/SelfPublisherTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -760,11 +756,11 @@
 				INFOPLIST_FILE = "SelfPublisherTests/SelfPublisherTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		FE72E1D5177FC82E0032F3B3 /* Release */ = {
+		FEF9283717927D7C00241297 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41C6EE4377F341809D671DC0 /* Pods-SelfPublisherTests.xcconfig */;
 			buildSettings = {
@@ -775,11 +771,11 @@
 					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SelfPublisher/SelfPublisher-Prefix.pch";
+				GCC_PREFIX_HEADER = "SelfPublisherTests/SelfPublisherTests-Prefix.pch";
 				INFOPLIST_FILE = "SelfPublisherTests/SelfPublisherTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -804,11 +800,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE72E1D3177FC82E0032F3B3 /* Build configuration list for PBXNativeTarget "SelfPublisherTests" */ = {
+		FEF9283517927D7C00241297 /* Build configuration list for PBXNativeTarget "SelfPublisherTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE72E1D4177FC82E0032F3B3 /* Debug */,
-				FE72E1D5177FC82E0032F3B3 /* Release */,
+				FEF9283617927D7C00241297 /* Debug */,
+				FEF9283717927D7C00241297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
