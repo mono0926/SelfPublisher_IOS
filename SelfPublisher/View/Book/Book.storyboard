@@ -120,28 +120,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="100" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tez-CT-OxH">
-                                <rect key="frame" x="0.0" y="34" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.94181577620967749" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore mag</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Body" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6O-eV-CC0">
-                                <rect key="frame" x="10" y="5" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sections" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcf-8a-jeA">
-                                <rect key="frame" x="10" y="137" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oWJ-Ra-tj3">
-                                <rect key="frame" x="0.0" y="166" width="320" height="338"/>
+                                <rect key="frame" x="0.0" y="154" width="320" height="350"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -161,7 +148,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1z-JJ-OqR">
-                                <rect key="frame" x="280" y="68" width="32" height="32"/>
+                                <rect key="frame" x="278" y="34" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" image="ArrowHead-Right.png">
@@ -172,9 +159,29 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aWj-Wf-fdv" kind="push" id="fh7-sK-L06"/>
+                                    <segue destination="aWj-Wf-fdv" kind="push" identifier="toBodySegue" id="fh7-sK-L06"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgD-aa-Bmr">
+                                <rect key="frame" x="10" y="108" width="300" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="　　　Add New Section">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewChapterTapped:" destination="X9N-XJ-vtn" eventType="touchUpInside" id="0hM-1F-KvT"/>
+                                    <action selector="addNewSectionTapped:" destination="f42-zO-i1Y" eventType="touchUpInside" id="H0r-mi-Th1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addChapter.png" translatesAutoresizingMaskIntoConstraints="NO" id="GVW-Fd-ra1">
+                                <rect key="frame" x="15" y="114" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -183,21 +190,22 @@
                     <connections>
                         <outlet property="bodyTextView" destination="tez-CT-OxH" id="rf9-my-2qd"/>
                         <outlet property="tableView" destination="oWJ-Ra-tj3" id="99x-Y0-tES"/>
+                        <segue destination="aWj-Wf-fdv" kind="push" identifier="showSection" id="MNW-3F-vMh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXy-ij-fGq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="968" y="190"/>
         </scene>
-        <!--View Controller - Body of Introduction-->
+        <!--Body View Controller - Body of Introduction-->
         <scene sceneID="TSg-N7-zzd">
             <objects>
-                <viewController id="aWj-Wf-fdv" sceneMemberID="viewController">
+                <viewController id="aWj-Wf-fdv" customClass="BodyViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Slv-3f-gdb">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-gC-3ea">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-gC-3ea">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -207,9 +215,19 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PV6-gC-3ea" firstAttribute="leading" secondItem="Slv-3f-gdb" secondAttribute="leading" id="Szp-U7-0Mw"/>
+                            <constraint firstItem="PV6-gC-3ea" firstAttribute="trailing" secondItem="Slv-3f-gdb" secondAttribute="trailing" id="cpq-Tj-HBC"/>
+                            <constraint firstItem="PV6-gC-3ea" firstAttribute="bottom" secondItem="Slv-3f-gdb" secondAttribute="bottom" id="ku0-HR-Hwg"/>
+                            <constraint firstItem="PV6-gC-3ea" firstAttribute="top" secondItem="Slv-3f-gdb" secondAttribute="top" id="vYV-GT-lIT"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Body of Introduction" id="KtF-ny-WQ4"/>
+                    <connections>
+                        <outlet property="bodyTextField" destination="PV6-gC-3ea" id="TYV-Hz-tt5"/>
+                        <outlet property="bottomSpaceConstraint" destination="ku0-HR-Hwg" id="DBC-hz-HWF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABA-Xk-XBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,31 +239,12 @@
         <image name="addChapter.png" width="22.504688262939453" height="22.504688262939453"/>
         <image name="b1.jpg" width="100" height="141"/>
     </resources>
-    <classes>
-        <class className="MonoBookRootViewController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MonoBookRootViewController.h"/>
-        </class>
-        <class className="MonoBookViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MonoBookViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="actionTapped:"/>
-                <relationship kind="action" name="addNewChapterTapped:"/>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="outlet" name="authorLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="MonoChapterVIewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MonoChapterVIewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bodyTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="MNW-3F-vMh"/>
+    </inferredMetricsTieBreakers>
 </document>

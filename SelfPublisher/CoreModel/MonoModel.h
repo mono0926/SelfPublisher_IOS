@@ -15,8 +15,10 @@
 #import "NSManagedObjectContext+SP.h"
 // entity
 #import "Book.h"
+#import "Book+Methods.h"
 #import "Chapter.h"
 #import "Chapter+Methods.h"
 #import "Section.h"
+#import "Section+Methods.h"
 #import "Profile.h"
 #import "MyProfile.h"

@@ -35,12 +35,14 @@
 		FE75925B17928E410018D4AB /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75925A17928E410018D4AB /* Book.m */; };
 		FE75925D179294830018D4AB /* edit_body.png in Resources */ = {isa = PBXBuildFile; fileRef = FE75925C179294830018D4AB /* edit_body.png */; };
 		FE7592611792950E0018D4AB /* ArrowHead-Right.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7592601792950E0018D4AB /* ArrowHead-Right.png */; };
-		FE75926417929B9B0018D4AB /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75926317929B9B0018D4AB /* Section.m */; };
 		FE75926717929B9C0018D4AB /* SectionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75926617929B9C0018D4AB /* SectionBase.m */; };
 		FE75926A17929B9C0018D4AB /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75926917929B9C0018D4AB /* Chapter.m */; };
 		FE75926D17929BE60018D4AB /* UISectionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75926C17929BE60018D4AB /* UISectionBase.m */; };
 		FE7592941792C0240018D4AB /* Chapter+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592931792C0240018D4AB /* Chapter+Methods.m */; };
 		FE7592B61792C3540018D4AB /* Book+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592B51792C3540018D4AB /* Book+Methods.m */; };
+		FE7592D817935F100018D4AB /* BodyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592D717935F100018D4AB /* BodyViewController.m */; };
+		FE7592DB17936BAC0018D4AB /* Section+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592DA17936BAC0018D4AB /* Section+Methods.m */; };
+		FE7592DE17936C320018D4AB /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592DD17936C320018D4AB /* Section.m */; };
 		FEBBD8F517902EE100DAFCC9 /* addChapter.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBBD8F417902EE100DAFCC9 /* addChapter.png */; };
 		FEBBD8FB179032A100DAFCC9 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBBD8FA179032A100DAFCC9 /* Profile.m */; };
 		FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */; };
@@ -119,8 +121,6 @@
 		FE75925A17928E410018D4AB /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		FE75925C179294830018D4AB /* edit_body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit_body.png; sourceTree = "<group>"; };
 		FE7592601792950E0018D4AB /* ArrowHead-Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ArrowHead-Right.png"; sourceTree = "<group>"; };
-		FE75926217929B9B0018D4AB /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
-		FE75926317929B9B0018D4AB /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
 		FE75926517929B9B0018D4AB /* SectionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionBase.h; sourceTree = "<group>"; };
 		FE75926617929B9C0018D4AB /* SectionBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionBase.m; sourceTree = "<group>"; };
 		FE75926817929B9C0018D4AB /* Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
@@ -131,6 +131,12 @@
 		FE7592931792C0240018D4AB /* Chapter+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Chapter+Methods.m"; sourceTree = "<group>"; };
 		FE7592B41792C3540018D4AB /* Book+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Book+Methods.h"; sourceTree = "<group>"; };
 		FE7592B51792C3540018D4AB /* Book+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Book+Methods.m"; sourceTree = "<group>"; };
+		FE7592D617935F100018D4AB /* BodyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyViewController.h; sourceTree = "<group>"; };
+		FE7592D717935F100018D4AB /* BodyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyViewController.m; sourceTree = "<group>"; };
+		FE7592D917936BAC0018D4AB /* Section+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Section+Methods.h"; sourceTree = "<group>"; };
+		FE7592DA17936BAC0018D4AB /* Section+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Section+Methods.m"; sourceTree = "<group>"; };
+		FE7592DC17936C320018D4AB /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
+		FE7592DD17936C320018D4AB /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
 		FEBBD8F417902EE100DAFCC9 /* addChapter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addChapter.png; sourceTree = "<group>"; };
 		FEBBD8F9179032A100DAFCC9 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		FEBBD8FA179032A100DAFCC9 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
@@ -302,6 +308,8 @@
 				FEE36037177FFCB2007C8D0B /* MonoBookViewController.m */,
 				FEE3604A17801070007C8D0B /* MonoChapterVIewController.h */,
 				FEE3604B17801070007C8D0B /* MonoChapterVIewController.m */,
+				FE7592D617935F100018D4AB /* BodyViewController.h */,
+				FE7592D717935F100018D4AB /* BodyViewController.m */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -393,12 +401,12 @@
 				FEBBD8FA179032A100DAFCC9 /* Profile.m */,
 				FE75925917928E410018D4AB /* Book.h */,
 				FE75925A17928E410018D4AB /* Book.m */,
-				FE75926217929B9B0018D4AB /* Section.h */,
-				FE75926317929B9B0018D4AB /* Section.m */,
 				FE75926817929B9C0018D4AB /* Chapter.h */,
 				FE75926917929B9C0018D4AB /* Chapter.m */,
 				FE75926517929B9B0018D4AB /* SectionBase.h */,
 				FE75926617929B9C0018D4AB /* SectionBase.m */,
+				FE7592DC17936C320018D4AB /* Section.h */,
+				FE7592DD17936C320018D4AB /* Section.m */,
 			);
 			path = CoreModel;
 			sourceTree = "<group>";
@@ -421,6 +429,8 @@
 				FE7592931792C0240018D4AB /* Chapter+Methods.m */,
 				FE7592B41792C3540018D4AB /* Book+Methods.h */,
 				FE7592B51792C3540018D4AB /* Book+Methods.m */,
+				FE7592D917936BAC0018D4AB /* Section+Methods.h */,
+				FE7592DA17936BAC0018D4AB /* Section+Methods.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -635,12 +645,14 @@
 				FE72E1AE177FC82E0032F3B3 /* main.m in Sources */,
 				FEEF275E178FAF5D0056B4CF /* NSManagedObjectContext+SP.m in Sources */,
 				FE75926D17929BE60018D4AB /* UISectionBase.m in Sources */,
+				FE7592DE17936C320018D4AB /* Section.m in Sources */,
 				FEE3602F177FF9A7007C8D0B /* MonoBookCell.m in Sources */,
 				FE7592B61792C3540018D4AB /* Book+Methods.m in Sources */,
 				FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */,
 				FEEF2757178FAE910056B4CF /* UIProfile.m in Sources */,
 				FEE36042178002F5007C8D0B /* UIBook.m in Sources */,
 				FEE3604917800791007C8D0B /* UISection.m in Sources */,
+				FE7592D817935F100018D4AB /* BodyViewController.m in Sources */,
 				FE72E1B2177FC82E0032F3B3 /* MonoAppDelegate.m in Sources */,
 				FEE3604C17801070007C8D0B /* MonoChapterVIewController.m in Sources */,
 				FEBBD8FB179032A100DAFCC9 /* Profile.m in Sources */,
@@ -648,12 +660,12 @@
 				FE75926717929B9C0018D4AB /* SectionBase.m in Sources */,
 				FE7592941792C0240018D4AB /* Chapter+Methods.m in Sources */,
 				FEE3603F178002DF007C8D0B /* UIChapter.m in Sources */,
+				FE7592DB17936BAC0018D4AB /* Section+Methods.m in Sources */,
 				FEE70AD7179028FC00C6DF8F /* UIViewController+SP.m in Sources */,
 				FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */,
 				FEEF2754178FAE2B0056B4CF /* MyProfile.m in Sources */,
 				FE75926A17929B9C0018D4AB /* Chapter.m in Sources */,
 				FEEF2764178FB1A50056B4CF /* RegistrationViewController.m in Sources */,
-				FE75926417929B9B0018D4AB /* Section.m in Sources */,
 				FE75925B17928E410018D4AB /* Book.m in Sources */,
 				FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */,
 			);

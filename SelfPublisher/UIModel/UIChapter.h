@@ -17,4 +17,5 @@
 +(void)createWithUIBook:(UIBook*)uiBook caption:(NSString*)caption resultBlock:(void (^)(UIChapter*, NSError*))resultBlock;
 @property (nonatomic, readonly) NSArray* sections;
 @property (nonatomic, readonly) UIModelList* sectionList;
+@property (nonatomic, readonly) NSManagedObjectID* objectID;
 @end

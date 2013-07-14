@@ -43,7 +43,7 @@
         }
         chapter.book = book;
         if ([moc save:&error]) {
-            UIChapter* uiChapter = [[UIChapter alloc] initWithChapter:chapter];
+            UIChapter* uiChapter = [chapter uiModel];
             resultBlock(uiChapter, nil);
             return;
         }
@@ -53,14 +53,6 @@
 
 -(Chapter *)chapter {
     return (Chapter*)_sectionBase;
-}
-
--(NSString *)caption {
-    return self.chapter.caption;
-}
-
--(NSString *)body {
-    return self.chapter.body;
 }
 
 -(NSArray *)sections {
@@ -97,5 +89,9 @@
 
 +(NSValueTransformer*)sectionsJSONTransformer {
     return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:UISection.class];
+}
+
+-(NSManagedObjectID *)objectID {
+    return _sectionBase.objectID;
 }
 @end

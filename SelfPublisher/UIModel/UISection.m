@@ -7,6 +7,7 @@
 //
 
 #import "UISection.h"
+#import "MonoUI.h"
 
 
 @interface UISection ()
@@ -14,11 +15,30 @@
 @end
 
 @implementation UISection
--(NSString *)caption {
-    return @"sample section caption.";
-}
 
 +(NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{};
+}
+
++(void)createWithUIChapter:(UIChapter*)uiChapter caption:(NSString*)caption resultBlock:(void (^)(UISection*, NSError*))resultBlock {
+    ModelManager* manager = inject(ModelManager);
+    NSManagedObjectContext* moc = manager.managedObjectContext;
+    [moc performBlock:^{
+        Section* section = [moc createObject:@"Section"];
+        section.caption = caption;
+        NSError* error = nil;
+        Chapter* chapter = (Chapter*)[moc existingObjectWithID:uiChapter.objectID error:&error];
+        if (error) {
+            resultBlock(NO, error);
+            return;
+        }
+        section.chapter = chapter;
+        if ([moc save:&error]) {
+            UISection* uiSection = [section uiModel];
+            resultBlock(uiSection, nil);
+            return;
+        }
+        resultBlock(NO, error);
+    }];
 }
 @end

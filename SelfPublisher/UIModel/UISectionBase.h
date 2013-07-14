@@ -16,4 +16,7 @@
 - (id)initWithSectionBase:(SectionBase*)sectionBase;
 @property (nonatomic, readonly) NSString* caption;
 @property (nonatomic, readonly) NSString* body;
+
+-(void)saveCaption:(NSString*)caption body:(NSString*)body errorBlock:(void(^)(NSError*))errorBlock;
+-(NSError*)saveCaption:(NSString*)caption body:(NSString*)body;
 @end

@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "UISectionBase.h"
+@class  UISection;
+@class UIChapter;
 
 @interface UISection : UISectionBase
 @property (nonatomic, readonly) NSString* caption;
 @property (nonatomic, readonly) NSString* body;
++(void)createWithUIChapter:(UIChapter*)uiChapter caption:(NSString*)caption resultBlock:(void (^)(UISection*, NSError*))resultBlock;
 @end

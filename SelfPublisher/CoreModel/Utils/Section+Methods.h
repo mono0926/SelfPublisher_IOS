@@ -1,5 +1,5 @@
 //
-//  Section.m
+//  Section+Methods.h
 //  SelfPublisher
 //
 //  Created by mono on 7/15/13.
@@ -7,11 +7,7 @@
 //
 
 #import "Section.h"
-#import "Chapter.h"
 
-
-@implementation Section
-
-@dynamic chapter;
-
+@interface Section (Methods)
+@property (nonatomic, readonly) id uiModel;
 @end

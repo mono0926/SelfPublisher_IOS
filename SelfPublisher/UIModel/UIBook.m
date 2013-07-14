@@ -37,7 +37,7 @@
         book.author = moc.myProfile;
         NSError* error = nil;
         if ([moc save:&error]) {
-            UIBook* uiBook = [[UIBook alloc] initWithBook:book];
+            UIBook* uiBook = [book uiModel];
             resultBlock(uiBook, nil);
             return;
         }
