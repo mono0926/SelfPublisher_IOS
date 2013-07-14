@@ -15,6 +15,10 @@
 
 @implementation RegistrationViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [_nameTextField becomeFirstResponder];
+}
+
 - (IBAction)registerTapped:(id)sender {
      [self.modelAccessor createMyProfile:_nameTextField.text result:^(UIMyProfile *myProfile) {
          if (myProfile) {

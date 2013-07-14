@@ -7,6 +7,7 @@
 //
 
 #import <BlocksKit/BlocksKit.h>
+#import "MNCommonModel.h"
 #import "Mantle.h"
 #import "Syringe.h"
 #import "ModelManager.h"

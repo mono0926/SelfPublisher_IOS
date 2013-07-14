@@ -15,7 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) UIChapter* selectedChapter;
-@property (weak, nonatomic) IBOutlet UITextField *authorTextField;
+@property (weak, nonatomic) IBOutlet UILabel *authorLabel;
 @end
 
 @implementation MonoBookViewController {
@@ -32,10 +32,36 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = self.book.title;
-    self.authorTextField.text = self.modelAccessor.myProfile.name;
+    self.title = self.book.title ?: @"";
+    self.authorLabel.text = self.modelAccessor.myProfile.name;
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    if (!_book) {
+        [self showInputTitleView];
+    }
+}
+
+-(void)showInputTitleView {
+    __weak UIAlertView* alert = [UIAlertView alertViewWithTitle:@"Input Book's Title."];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert addButtonWithTitle:@"OK" handler:^{
+        UITextField* tf = [alert textFieldAtIndex:0];        
+        [UIBook createWithTitle:tf.text resultBlock:^(UIBook *book, NSError *error) {
+            if (book) {
+                _book = book;
+                self.title = _book.title;
+                return;
+            }
+            [SVProgressHUD showErrorWithStatus:error.description];
+            [self showInputTitleView];
+        }];
+    }];
+    [alert addButtonWithTitle:@"Cancel" handler:^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alert show];
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
@@ -64,12 +90,8 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        self.selectedChapter = nil;
-        [self performSegueWithIdentifier:@"showChapter" sender:self];
-        return;
-    }
-    self.selectedChapter = self.book.chapters[indexPath.row];
+    
+    self.selectedChapter = indexPath.section == 0 ? nil : self.book.chapters[indexPath.row];
     [self performSegueWithIdentifier:@"showChapter" sender:self];
 }
 

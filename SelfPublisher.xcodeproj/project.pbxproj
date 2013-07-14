@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E9363C1124C47108381B6E2 /* libPods-SelfPublisherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 997F13B755A14423BEFA71EC /* libPods-SelfPublisherTests.a */; };
 		D84CF061E47742DC9F68FE90 /* libPods-SelfPublisher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3531CCEE7E4FE788285662 /* libPods-SelfPublisher.a */; };
+		FE226360179280A800BDA527 /* UIBookSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = FE22635F179280A800BDA527 /* UIBookSpec.m */; };
 		FE3C1018177FF724005DFE04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3C1017177FF724005DFE04 /* Main.storyboard */; };
 		FE5AA46E178237A800C99921 /* b12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA462178237A800C99921 /* b12.jpg */; };
 		FE5AA46F178237A800C99921 /* b11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE5AA463178237A800C99921 /* b11.jpg */; };
@@ -29,8 +30,12 @@
 		FE72E1AE177FC82E0032F3B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE72E1AD177FC82E0032F3B3 /* main.m */; };
 		FE72E1B2177FC82E0032F3B3 /* MonoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE72E1B1177FC82E0032F3B3 /* MonoAppDelegate.m */; };
 		FE72E1BA177FC82E0032F3B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE72E1B9177FC82E0032F3B3 /* Images.xcassets */; };
+		FE759257179288190018D4AB /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = FE759255179288190018D4AB /* user.png */; };
+		FE759258179288190018D4AB /* user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE759256179288190018D4AB /* user@2x.png */; };
+		FE75925B17928E410018D4AB /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75925A17928E410018D4AB /* Book.m */; };
+		FE75925D179294830018D4AB /* edit_body.png in Resources */ = {isa = PBXBuildFile; fileRef = FE75925C179294830018D4AB /* edit_body.png */; };
+		FE7592611792950E0018D4AB /* ArrowHead-Right.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7592601792950E0018D4AB /* ArrowHead-Right.png */; };
 		FEBBD8F517902EE100DAFCC9 /* addChapter.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBBD8F417902EE100DAFCC9 /* addChapter.png */; };
-		FEBBD8F8179032A000DAFCC9 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBBD8F7179032A000DAFCC9 /* Book.m */; };
 		FEBBD8FB179032A100DAFCC9 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBBD8FA179032A100DAFCC9 /* Profile.m */; };
 		FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */; };
 		FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE36027177FF877007C8D0B /* MonoMainViewController.m */; };
@@ -74,6 +79,8 @@
 		41C6EE4377F341809D671DC0 /* Pods-SelfPublisherTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfPublisherTests.xcconfig"; path = "Pods/Pods-SelfPublisherTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		997F13B755A14423BEFA71EC /* libPods-SelfPublisherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelfPublisherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3531CCEE7E4FE788285662 /* libPods-SelfPublisher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelfPublisher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE22635F179280A800BDA527 /* UIBookSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBookSpec.m; sourceTree = "<group>"; };
+		FE226361179280DD00BDA527 /* MonoTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonoTest.h; sourceTree = "<group>"; };
 		FE3C1017177FF724005DFE04 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FE5AA462178237A800C99921 /* b12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b12.jpg; sourceTree = "<group>"; };
 		FE5AA463178237A800C99921 /* b11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b11.jpg; sourceTree = "<group>"; };
@@ -100,9 +107,13 @@
 		FE72E1B1177FC82E0032F3B3 /* MonoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonoAppDelegate.m; sourceTree = "<group>"; };
 		FE72E1B9177FC82E0032F3B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE72E1C0177FC82E0032F3B3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FE759255179288190018D4AB /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		FE759256179288190018D4AB /* user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user@2x.png"; sourceTree = "<group>"; };
+		FE75925917928E410018D4AB /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		FE75925A17928E410018D4AB /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		FE75925C179294830018D4AB /* edit_body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit_body.png; sourceTree = "<group>"; };
+		FE7592601792950E0018D4AB /* ArrowHead-Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ArrowHead-Right.png"; sourceTree = "<group>"; };
 		FEBBD8F417902EE100DAFCC9 /* addChapter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addChapter.png; sourceTree = "<group>"; };
-		FEBBD8F6179032A000DAFCC9 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
-		FEBBD8F7179032A000DAFCC9 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		FEBBD8F9179032A100DAFCC9 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		FEBBD8FA179032A100DAFCC9 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		FED7DDA417892CC200D1ADDA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -181,18 +192,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE22635E1792808100BDA527 /* UIModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE22635F179280A800BDA527 /* UIBookSpec.m */,
+			);
+			path = UIModel;
+			sourceTree = "<group>";
+		};
 		FE3C1016177FF694005DFE04 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FEE70AC2179027B000C6DF8F /* Utils */,
-				FEE3604F1780DB83007C8D0B /* Activity */,
-				FEE3602C177FF97A007C8D0B /* Cell */,
-				FEE36029177FF898007C8D0B /* Book */,
 				FE3C1017177FF724005DFE04 /* Main.storyboard */,
 				FEE36026177FF877007C8D0B /* MonoMainViewController.h */,
 				FEE36027177FF877007C8D0B /* MonoMainViewController.m */,
 				FEEF2762178FB1A50056B4CF /* RegistrationViewController.h */,
 				FEEF2763178FB1A50056B4CF /* RegistrationViewController.m */,
+				FEE70AC2179027B000C6DF8F /* Utils */,
+				FEE3604F1780DB83007C8D0B /* Activity */,
+				FEE3602C177FF97A007C8D0B /* Cell */,
+				FEE36029177FF898007C8D0B /* Book */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +313,10 @@
 		FEE36033177FFA57007C8D0B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FE7592601792950E0018D4AB /* ArrowHead-Right.png */,
+				FE75925C179294830018D4AB /* edit_body.png */,
+				FE759255179288190018D4AB /* user.png */,
+				FE759256179288190018D4AB /* user@2x.png */,
 				FEBBD8F417902EE100DAFCC9 /* addChapter.png */,
 				FE5AA462178237A800C99921 /* b12.jpg */,
 				FE5AA463178237A800C99921 /* b11.jpg */,
@@ -354,10 +377,10 @@
 				FEE9BBA3178EED3300812C8D /* Chapter.m */,
 				FEEF2752178FAE2B0056B4CF /* MyProfile.h */,
 				FEEF2753178FAE2B0056B4CF /* MyProfile.m */,
-				FEBBD8F6179032A000DAFCC9 /* Book.h */,
-				FEBBD8F7179032A000DAFCC9 /* Book.m */,
 				FEBBD8F9179032A100DAFCC9 /* Profile.h */,
 				FEBBD8FA179032A100DAFCC9 /* Profile.m */,
+				FE75925917928E410018D4AB /* Book.h */,
+				FE75925A17928E410018D4AB /* Book.m */,
 			);
 			path = CoreModel;
 			sourceTree = "<group>";
@@ -383,7 +406,9 @@
 		FEF9282A17927D7C00241297 /* SelfPublisherTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE22635E1792808100BDA527 /* UIModel */,
 				FEF9282B17927D7C00241297 /* Supporting Files */,
+				FE226361179280DD00BDA527 /* MonoTest.h */,
 			);
 			path = SelfPublisherTests;
 			sourceTree = "<group>";
@@ -490,6 +515,8 @@
 				FE5AA472178237A800C99921 /* b8.jpg in Resources */,
 				FEE36035177FFA78007C8D0B /* book.png in Resources */,
 				FE5AA471178237A800C99921 /* b9.jpg in Resources */,
+				FE759257179288190018D4AB /* user.png in Resources */,
+				FE75925D179294830018D4AB /* edit_body.png in Resources */,
 				FE5AA46E178237A800C99921 /* b12.jpg in Resources */,
 				FE5AA477178237A800C99921 /* b3.jpg in Resources */,
 				FEE3602B177FF8EF007C8D0B /* Book.storyboard in Resources */,
@@ -499,6 +526,8 @@
 				FE5AA474178237A800C99921 /* b6.jpg in Resources */,
 				FE72E1BA177FC82E0032F3B3 /* Images.xcassets in Resources */,
 				FE72E1AC177FC82E0032F3B3 /* InfoPlist.strings in Resources */,
+				FE7592611792950E0018D4AB /* ArrowHead-Right.png in Resources */,
+				FE759258179288190018D4AB /* user@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,7 +626,7 @@
 				FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */,
 				FEEF2754178FAE2B0056B4CF /* MyProfile.m in Sources */,
 				FEEF2764178FB1A50056B4CF /* RegistrationViewController.m in Sources */,
-				FEBBD8F8179032A000DAFCC9 /* Book.m in Sources */,
+				FE75925B17928E410018D4AB /* Book.m in Sources */,
 				FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +635,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE226360179280A800BDA527 /* UIBookSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

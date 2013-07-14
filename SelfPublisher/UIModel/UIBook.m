@@ -17,18 +17,36 @@
 
 @implementation UIBook {
     NSArray* _chapters;
+    Book* _book;
 }
-- (id)init
-{
+
+- (id)initWithBook:(Book*)book {
     self = [super init];
     if (self) {
-        
+        _book = book;
     }
     return self;
 }
 
++(void)createWithTitle:(NSString*)title resultBlock:(void (^)(UIBook*, NSError*))resultBlock {
+    ModelManager* manager = inject(ModelManager);
+    NSManagedObjectContext* moc = manager.managedObjectContext;
+    [moc performBlock:^{
+        Book* book = [moc createObject:@"Book"];
+        book.title = title;
+        book.author = moc.myProfile;
+        NSError* error = nil;
+        if ([moc save:&error]) {
+            UIBook* uiBook = [[UIBook alloc] initWithBook:book];
+            resultBlock(uiBook, nil);
+            return;
+        }
+        resultBlock(NO, error);
+    }];
+}
+
 -(NSString *)title {
-    return @"Sample";
+    return _book.title;
 }
 
 
@@ -52,6 +70,14 @@
 }
 +(NSValueTransformer*)chaptersJSONTransformer {
     return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:UIChapter.class];
+}
+
+-(NSString *)jsonString {
+    MTLJSONAdapter *adapter = [[MTLJSONAdapter alloc] initWithModel:self];
+    NSDictionary*jsonDict = adapter.JSONDictionary;
+    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:0 error:nil];
+    NSString* jsonString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
+    return jsonString;
 }
 
 @end

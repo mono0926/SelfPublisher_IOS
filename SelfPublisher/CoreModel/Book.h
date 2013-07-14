@@ -2,7 +2,7 @@
 //  Book.h
 //  SelfPublisher
 //
-//  Created by mono on 7/12/13.
+//  Created by mono on 7/14/13.
 //  Copyright (c) 2013 mono. All rights reserved.
 //
 
@@ -14,15 +14,15 @@
 @interface Book : NSManagedObject
 
 @property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSSet *chpaters;
 @property (nonatomic, retain) Profile *author;
+@property (nonatomic, retain) NSSet *chapters;
 @end
 
 @interface Book (CoreDataGeneratedAccessors)
 
-- (void)addChpatersObject:(Chapter *)value;
-- (void)removeChpatersObject:(Chapter *)value;
-- (void)addChpaters:(NSSet *)values;
-- (void)removeChpaters:(NSSet *)values;
+- (void)addChaptersObject:(Chapter *)value;
+- (void)removeChaptersObject:(Chapter *)value;
+- (void)addChapters:(NSSet *)values;
+- (void)removeChapters:(NSSet *)values;
 
 @end

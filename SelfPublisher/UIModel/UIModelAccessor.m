@@ -52,7 +52,9 @@
         _books = [self createSampleBooks];
         return _books;
     }
-    return nil;
+    return [cBooks map:^id(Book* book) {
+        return [[UIBook alloc]initWithBook:book];
+    }];
 }
 
 -(NSArray*) createSampleBooks {

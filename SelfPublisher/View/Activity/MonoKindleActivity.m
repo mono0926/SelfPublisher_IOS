@@ -42,10 +42,7 @@
 
 -(void)performActivity {
     
-    MTLJSONAdapter *adapter = [[MTLJSONAdapter alloc] initWithModel:self.book];
-    NSDictionary*jsonDict = adapter.JSONDictionary;
-    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:0 error:nil];
-    NSString* jsonString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
+    NSString* jsonString = self.book.jsonString;
 
     NSData *requestData =
     [jsonString dataUsingEncoding:NSUTF8StringEncoding];
