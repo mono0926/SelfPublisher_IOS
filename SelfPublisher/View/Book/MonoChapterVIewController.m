@@ -21,8 +21,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = _chapter.caption ?: @"";
-    self.bodyTextView.text = _chapter.body;
 }
 
 -(void)setBook:(UIBook *)book chapter:(UIChapter *)chapter {
@@ -37,6 +35,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    self.title = _chapter.caption ?: @"";
     self.bodyTextView.text = _chapter.body;
 }
 

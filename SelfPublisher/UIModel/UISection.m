@@ -12,6 +12,7 @@
 
 @interface UISection ()
 @property (nonatomic) NSString* caption;
+@property (nonatomic) NSString* body;
 @end
 
 @implementation UISection

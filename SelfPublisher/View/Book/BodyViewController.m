@@ -36,16 +36,15 @@
     _sectionBase = sectionBase;
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-    
-    if (_sectionBase) {
-        [self configureTitleAndBody];
-    } else {
+
+-(void)viewDidAppear:(BOOL)animated {
+    if (!_sectionBase) {
         [self showInputTitleView];
     }
-    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self configureTitleAndBody];
     [self observeKeyboard];
 }
 
