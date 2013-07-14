@@ -36,10 +36,11 @@
 }
 
 -(void)showInputTitleView {
-    __weak UIAlertView* alert = [UIAlertView alertViewWithTitle:@"Input Chapter's caption."];
+    UIAlertView* alert = [UIAlertView alertViewWithTitle:@"Enter Chapter's caption."];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    __weak UIAlertView* weakAlert = alert;
     [alert addButtonWithTitle:@"OK" handler:^{
-        UITextField* tf = [alert textFieldAtIndex:0];
+        UITextField* tf = [weakAlert textFieldAtIndex:0];
         [UIChapter createWithUIBook:_book caption:tf.text resultBlock:^(UIChapter *chapter, NSError *error) {
             if (chapter) {
                 _chapter = chapter;

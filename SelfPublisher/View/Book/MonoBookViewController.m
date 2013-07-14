@@ -43,10 +43,11 @@
 }
 
 -(void)showInputTitleView {
-    __weak UIAlertView* alert = [UIAlertView alertViewWithTitle:@"Input Book's Title."];
+    UIAlertView* alert = [UIAlertView alertViewWithTitle:@"Enter Book's Title."];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    __weak UIAlertView* weakAlert = alert;
     [alert addButtonWithTitle:@"OK" handler:^{
-        UITextField* tf = [alert textFieldAtIndex:0];        
+        UITextField* tf = [weakAlert textFieldAtIndex:0];        
         [UIBook createWithTitle:tf.text resultBlock:^(UIBook *book, NSError *error) {
             if (book) {
                 _book = book;
