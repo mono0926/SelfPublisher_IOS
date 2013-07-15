@@ -14,6 +14,7 @@
 @interface Book : NSManagedObject
 
 @property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSData * epub;
 @property (nonatomic, retain) Profile *author;
 @property (nonatomic, retain) NSSet *chapters;
 @end

@@ -24,8 +24,13 @@
     self = [super init];
     if (self) {
         _book = book;
+        [_book addObserver:self forKeyPath:@"epub" options:NSKeyValueObservingOptionNew context:nil];
     }
     return self;
+}
+
+-(void)dealloc {
+    [_book removeObserver:self forKeyPath:@"epub"];
 }
 
 +(void)createWithTitle:(NSString*)title resultBlock:(void (^)(UIBook*, NSError*))resultBlock {
@@ -76,6 +81,32 @@
     return _chapterList;
 }
 
+-(void)convertToEpub:(void(^)(NSString*, NSError*))resultBlock {
+    NSString* jsonString = [NSString stringWithFormat:@"=%@", self.jsonString];    
+    NSData *requestData =[jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://apps.mono-comp.com/SelfPublish/api/values"]
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:[NSString stringWithFormat:@"%d",
+                       [requestData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody: requestData];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue new]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               NSString* r = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                               NSData* bookData = [NSData dataFromBase64String:r];
+                               [_book.managedObjectContext performBlock:^{
+                                   _book.epub = bookData;
+                                   [_book.managedObjectContext save:nil];
+                                   resultBlock(r, connectionError);
+                               }];
+                               
+//                               [bookData writeToFile:@"/Users/mono/Desktop/aaa.epub" atomically:YES];
+                           }];
+}
+
 +(NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{};
 }
@@ -93,5 +124,17 @@
 
 -(NSManagedObjectID *)objectID {
     return _book.objectID;
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if (object == _book && [keyPath isEqualToString:@"epub"] && _book.epub) {
+        [self willChangeValueForKey:@"epubPath"];        
+        NSData* epubData = _book.epub;
+        NSString* tmpDir = NSTemporaryDirectory();
+        NSString* path = [tmpDir stringByAppendingString:@"a.epub"];
+        [epubData writeToFile:path atomically:YES];
+        _epubPath = path;
+        [self didChangeValueForKey:@"epubPath"];
+    }
 }
 @end

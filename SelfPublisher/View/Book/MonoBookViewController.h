@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/NSFetchedResultsController.h>
 @class UIBook;
-@interface MonoBookViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
+@interface MonoBookViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, UIDocumentInteractionControllerDelegate>
 @property (nonatomic) UIBook* book;
 @end

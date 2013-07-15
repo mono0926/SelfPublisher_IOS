@@ -16,9 +16,12 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) UIChapter* selectedChapter;
 @property (weak, nonatomic) IBOutlet UILabel *authorLabel;
+@property (weak, nonatomic) IBOutlet UIButton *kindleButton;
+@property (weak, nonatomic) IBOutlet UIButton *iBooksButton;
 @end
 
 @implementation MonoBookViewController {
+    UIDocumentInteractionController* _documentInteractionController;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,6 +38,11 @@
     self.title = self.book.title ?: @"";
     self.authorLabel.text = self.modelAccessor.myProfile.name;
 }
+-(void)viewWillAppear:(BOOL)animated {
+    _book.chapterList.delegate = self;
+    [self.tableView reloadData];
+    [_book addObserver:self forKeyPath:@"epubPath" options:NSKeyValueObservingOptionNew context:nil];
+}
 
 -(void)viewDidAppear:(BOOL)animated {
     if (!_book) {
@@ -42,13 +50,10 @@
     }
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    _book.chapterList.delegate = self;
-    [self.tableView reloadData];
-}
 
 -(void)viewWillDisappear:(BOOL)animated {
     _book.chapterList.delegate = nil;
+    [_book removeObserver:self forKeyPath:@"epubPath"];
 }
 
 -(void)showInputTitleView {
@@ -137,5 +142,27 @@
 
 - (IBAction)closeTapped:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)openEpub {
+    NSURL *url = [NSURL fileURLWithPath:_book.epubPath];
+    _documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:url];
+    _documentInteractionController.delegate = self;
+    
+    BOOL isValid;
+    isValid = [_documentInteractionController presentOpenInMenuFromRect:self.view.frame inView:self.view animated:YES];
+    if (!isValid) {
+        NSLog(@"データを開けるアプリケーションが見つかりません。");
+    }
+}
+- (IBAction)iBooksTapped:(id)sender {
+    [self openEpub];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if (object == _book && [keyPath isEqualToString:@"epubPath"]) {
+        _iBooksButton.enabled = YES;
+        return;
+    }
 }
 @end

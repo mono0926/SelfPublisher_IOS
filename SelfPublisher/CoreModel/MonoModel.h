@@ -8,6 +8,7 @@
 
 #import <BlocksKit/BlocksKit.h>
 #import "MNCommonModel.h"
+#import "MKNetworkKit.h"
 #import "Mantle.h"
 #import "Syringe.h"
 #import "ModelManager.h"

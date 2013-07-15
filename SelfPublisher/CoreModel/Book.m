@@ -14,6 +14,7 @@
 @implementation Book
 
 @dynamic title;
+@dynamic epub;
 @dynamic author;
 @dynamic chapters;
 
