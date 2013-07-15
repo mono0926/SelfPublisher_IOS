@@ -17,7 +17,6 @@
 @end
 
 @implementation MonoMainViewController
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -31,7 +30,12 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    self.modelAccessor.bookList.delegate = self;
     [self.collectionView reloadData];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    self.modelAccessor.bookList.delegate = nil;
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -63,5 +67,18 @@
     UINavigationController *vc = [sb instantiateInitialViewController];
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+#pragma mark - Table view delegate
+
+-(void)controllerDidChangeContent:(NSFetchedResultsController *)controller{
+    [self.collectionView reloadData];
+}
+-(void)controllerWillChangeContent:(NSFetchedResultsController *)controller{}
+-(void)controller:(NSFetchedResultsController *)controller
+  didChangeObject:(id)anObject
+      atIndexPath:(NSIndexPath *)indexPath
+    forChangeType:(NSFetchedResultsChangeType)type
+     newIndexPath:(NSIndexPath *)newIndexPath {
 }
 @end

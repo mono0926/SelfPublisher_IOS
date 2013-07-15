@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/NSFetchedResultsController.h>
 @class UIChapter;
 @class UIBook;
-@interface MonoChapterVIewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface MonoChapterVIewController : UIViewController<UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
 @property (nonatomic, readonly) UIChapter* chapter;
 @property (nonatomic, readonly) UIBook* book;
 -(void)setBook:(UIBook *)book chapter:(UIChapter*)chapter;

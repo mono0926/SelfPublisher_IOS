@@ -18,6 +18,6 @@
 @property (nonatomic) UIMyProfile* myProfile;
 @property (nonatomic) UIModelList* bookList;
 
--(void)createMyProfile:(NSString*)name result:(void(^)(UIMyProfile*))result;
+-(void)createMyProfile:(NSString*)name accessToken:(NSString*)accessToken result:(void(^)(UIMyProfile*))result;
 
 @end

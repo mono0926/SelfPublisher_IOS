@@ -63,6 +63,7 @@
         return _chapterList;
     }
     NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Chapter"];
+    request.predicate = [NSPredicate predicateWithFormat:@"book == %@", _book];
     NSSortDescriptor* sortDiscripter1 = [[NSSortDescriptor alloc]initWithKey:@"caption"
                                                                    ascending:YES];
     request.sortDescriptors = @[sortDiscripter1];

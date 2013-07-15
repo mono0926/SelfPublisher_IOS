@@ -9,7 +9,9 @@
         <relationship name="book" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="chapters" inverseEntity="Book" syncable="YES"/>
         <relationship name="sections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Section" inverseName="chapter" inverseEntity="Section" syncable="YES"/>
     </entity>
-    <entity name="MyProfile" representedClassName="MyProfile" parentEntity="Profile" syncable="YES"/>
+    <entity name="MyProfile" representedClassName="MyProfile" parentEntity="Profile" syncable="YES">
+        <attribute name="accessToken" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Profile" representedClassName="Profile" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Book" inverseName="author" inverseEntity="Book" syncable="YES"/>

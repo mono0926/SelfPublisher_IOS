@@ -32,19 +32,20 @@
 		FE72E1BA177FC82E0032F3B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE72E1B9177FC82E0032F3B3 /* Images.xcassets */; };
 		FE759257179288190018D4AB /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = FE759255179288190018D4AB /* user.png */; };
 		FE759258179288190018D4AB /* user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE759256179288190018D4AB /* user@2x.png */; };
-		FE75925B17928E410018D4AB /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75925A17928E410018D4AB /* Book.m */; };
 		FE75925D179294830018D4AB /* edit_body.png in Resources */ = {isa = PBXBuildFile; fileRef = FE75925C179294830018D4AB /* edit_body.png */; };
 		FE7592611792950E0018D4AB /* ArrowHead-Right.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7592601792950E0018D4AB /* ArrowHead-Right.png */; };
-		FE75926717929B9C0018D4AB /* SectionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75926617929B9C0018D4AB /* SectionBase.m */; };
-		FE75926A17929B9C0018D4AB /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75926917929B9C0018D4AB /* Chapter.m */; };
 		FE75926D17929BE60018D4AB /* UISectionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75926C17929BE60018D4AB /* UISectionBase.m */; };
 		FE7592941792C0240018D4AB /* Chapter+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592931792C0240018D4AB /* Chapter+Methods.m */; };
 		FE7592B61792C3540018D4AB /* Book+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592B51792C3540018D4AB /* Book+Methods.m */; };
 		FE7592D817935F100018D4AB /* BodyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592D717935F100018D4AB /* BodyViewController.m */; };
 		FE7592DB17936BAC0018D4AB /* Section+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592DA17936BAC0018D4AB /* Section+Methods.m */; };
-		FE7592DE17936C320018D4AB /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592DD17936C320018D4AB /* Section.m */; };
+		FEAE1B8C1793BEA0008E0DAA /* MyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */; };
+		FEAE1B8F1793BEA0008E0DAA /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B8E1793BEA0008E0DAA /* Profile.m */; };
+		FEAE1B921793BEA1008E0DAA /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B911793BEA1008E0DAA /* Section.m */; };
+		FEAE1B951793BEA1008E0DAA /* SectionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B941793BEA1008E0DAA /* SectionBase.m */; };
+		FEAE1B981793BEA1008E0DAA /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B971793BEA1008E0DAA /* Chapter.m */; };
+		FEAE1B9B1793BEA1008E0DAA /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B9A1793BEA1008E0DAA /* Book.m */; };
 		FEBBD8F517902EE100DAFCC9 /* addChapter.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBBD8F417902EE100DAFCC9 /* addChapter.png */; };
-		FEBBD8FB179032A100DAFCC9 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBBD8FA179032A100DAFCC9 /* Profile.m */; };
 		FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */; };
 		FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE36027177FF877007C8D0B /* MonoMainViewController.m */; };
 		FEE3602B177FF8EF007C8D0B /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE3602A177FF8C1007C8D0B /* Book.storyboard */; };
@@ -61,7 +62,6 @@
 		FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE360511780DBA6007C8D0B /* MonoKindleActivity.m */; };
 		FEE360581780DD54007C8D0B /* amazon.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE360571780DD54007C8D0B /* amazon.png */; };
 		FEE70AD7179028FC00C6DF8F /* UIViewController+SP.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE70AD6179028FC00C6DF8F /* UIViewController+SP.m */; };
-		FEEF2754178FAE2B0056B4CF /* MyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF2753178FAE2B0056B4CF /* MyProfile.m */; };
 		FEEF2757178FAE910056B4CF /* UIProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF2756178FAE8B0056B4CF /* UIProfile.m */; };
 		FEEF275A178FAEA20056B4CF /* UIMyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF2759178FAEA20056B4CF /* UIMyProfile.m */; };
 		FEEF275E178FAF5D0056B4CF /* NSManagedObjectContext+SP.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF275D178FAF5D0056B4CF /* NSManagedObjectContext+SP.m */; };
@@ -117,14 +117,8 @@
 		FE72E1C0177FC82E0032F3B3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FE759255179288190018D4AB /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		FE759256179288190018D4AB /* user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user@2x.png"; sourceTree = "<group>"; };
-		FE75925917928E410018D4AB /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
-		FE75925A17928E410018D4AB /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		FE75925C179294830018D4AB /* edit_body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit_body.png; sourceTree = "<group>"; };
 		FE7592601792950E0018D4AB /* ArrowHead-Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ArrowHead-Right.png"; sourceTree = "<group>"; };
-		FE75926517929B9B0018D4AB /* SectionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionBase.h; sourceTree = "<group>"; };
-		FE75926617929B9C0018D4AB /* SectionBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionBase.m; sourceTree = "<group>"; };
-		FE75926817929B9C0018D4AB /* Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
-		FE75926917929B9C0018D4AB /* Chapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
 		FE75926B17929BE60018D4AB /* UISectionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISectionBase.h; sourceTree = "<group>"; };
 		FE75926C17929BE60018D4AB /* UISectionBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISectionBase.m; sourceTree = "<group>"; };
 		FE7592921792C0240018D4AB /* Chapter+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Chapter+Methods.h"; sourceTree = "<group>"; };
@@ -135,11 +129,19 @@
 		FE7592D717935F100018D4AB /* BodyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyViewController.m; sourceTree = "<group>"; };
 		FE7592D917936BAC0018D4AB /* Section+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Section+Methods.h"; sourceTree = "<group>"; };
 		FE7592DA17936BAC0018D4AB /* Section+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Section+Methods.m"; sourceTree = "<group>"; };
-		FE7592DC17936C320018D4AB /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
-		FE7592DD17936C320018D4AB /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
+		FEAE1B8A1793BEA0008E0DAA /* MyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfile.h; sourceTree = "<group>"; };
+		FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfile.m; sourceTree = "<group>"; };
+		FEAE1B8D1793BEA0008E0DAA /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		FEAE1B8E1793BEA0008E0DAA /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		FEAE1B901793BEA1008E0DAA /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
+		FEAE1B911793BEA1008E0DAA /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
+		FEAE1B931793BEA1008E0DAA /* SectionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionBase.h; sourceTree = "<group>"; };
+		FEAE1B941793BEA1008E0DAA /* SectionBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionBase.m; sourceTree = "<group>"; };
+		FEAE1B961793BEA1008E0DAA /* Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
+		FEAE1B971793BEA1008E0DAA /* Chapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
+		FEAE1B991793BEA1008E0DAA /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		FEAE1B9A1793BEA1008E0DAA /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		FEBBD8F417902EE100DAFCC9 /* addChapter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addChapter.png; sourceTree = "<group>"; };
-		FEBBD8F9179032A100DAFCC9 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
-		FEBBD8FA179032A100DAFCC9 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		FED7DDA417892CC200D1ADDA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FEE36026177FF877007C8D0B /* MonoMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoMainViewController.h; sourceTree = "<group>"; };
 		FEE36027177FF877007C8D0B /* MonoMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoMainViewController.m; sourceTree = "<group>"; };
@@ -169,8 +171,6 @@
 		FEE360571780DD54007C8D0B /* amazon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amazon.png; sourceTree = "<group>"; };
 		FEE70AD5179028FC00C6DF8F /* UIViewController+SP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SP.h"; sourceTree = "<group>"; };
 		FEE70AD6179028FC00C6DF8F /* UIViewController+SP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SP.m"; sourceTree = "<group>"; };
-		FEEF2752178FAE2B0056B4CF /* MyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfile.h; sourceTree = "<group>"; };
-		FEEF2753178FAE2B0056B4CF /* MyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfile.m; sourceTree = "<group>"; };
 		FEEF2755178FAE8B0056B4CF /* UIProfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIProfile.h; sourceTree = "<group>"; };
 		FEEF2756178FAE8B0056B4CF /* UIProfile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIProfile.m; sourceTree = "<group>"; };
 		FEEF2758178FAEA20056B4CF /* UIMyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMyProfile.h; sourceTree = "<group>"; };
@@ -395,18 +395,18 @@
 				FEEF275B178FAF1E0056B4CF /* Utils */,
 				FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */,
 				FEE360541780DCAE007C8D0B /* MonoModel.h */,
-				FEEF2752178FAE2B0056B4CF /* MyProfile.h */,
-				FEEF2753178FAE2B0056B4CF /* MyProfile.m */,
-				FEBBD8F9179032A100DAFCC9 /* Profile.h */,
-				FEBBD8FA179032A100DAFCC9 /* Profile.m */,
-				FE75925917928E410018D4AB /* Book.h */,
-				FE75925A17928E410018D4AB /* Book.m */,
-				FE75926817929B9C0018D4AB /* Chapter.h */,
-				FE75926917929B9C0018D4AB /* Chapter.m */,
-				FE75926517929B9B0018D4AB /* SectionBase.h */,
-				FE75926617929B9C0018D4AB /* SectionBase.m */,
-				FE7592DC17936C320018D4AB /* Section.h */,
-				FE7592DD17936C320018D4AB /* Section.m */,
+				FEAE1B8A1793BEA0008E0DAA /* MyProfile.h */,
+				FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */,
+				FEAE1B8D1793BEA0008E0DAA /* Profile.h */,
+				FEAE1B8E1793BEA0008E0DAA /* Profile.m */,
+				FEAE1B901793BEA1008E0DAA /* Section.h */,
+				FEAE1B911793BEA1008E0DAA /* Section.m */,
+				FEAE1B931793BEA1008E0DAA /* SectionBase.h */,
+				FEAE1B941793BEA1008E0DAA /* SectionBase.m */,
+				FEAE1B961793BEA1008E0DAA /* Chapter.h */,
+				FEAE1B971793BEA1008E0DAA /* Chapter.m */,
+				FEAE1B991793BEA1008E0DAA /* Book.h */,
+				FEAE1B9A1793BEA1008E0DAA /* Book.m */,
 			);
 			path = CoreModel;
 			sourceTree = "<group>";
@@ -639,34 +639,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEAE1B981793BEA1008E0DAA /* Chapter.m in Sources */,
 				FEE3603B177FFD7E007C8D0B /* MonoBookRootViewController.m in Sources */,
 				FEEF275A178FAEA20056B4CF /* UIMyProfile.m in Sources */,
 				FEE36038177FFCB2007C8D0B /* MonoBookViewController.m in Sources */,
 				FE72E1AE177FC82E0032F3B3 /* main.m in Sources */,
 				FEEF275E178FAF5D0056B4CF /* NSManagedObjectContext+SP.m in Sources */,
 				FE75926D17929BE60018D4AB /* UISectionBase.m in Sources */,
-				FE7592DE17936C320018D4AB /* Section.m in Sources */,
+				FEAE1B921793BEA1008E0DAA /* Section.m in Sources */,
 				FEE3602F177FF9A7007C8D0B /* MonoBookCell.m in Sources */,
 				FE7592B61792C3540018D4AB /* Book+Methods.m in Sources */,
 				FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */,
 				FEEF2757178FAE910056B4CF /* UIProfile.m in Sources */,
+				FEAE1B9B1793BEA1008E0DAA /* Book.m in Sources */,
 				FEE36042178002F5007C8D0B /* UIBook.m in Sources */,
+				FEAE1B951793BEA1008E0DAA /* SectionBase.m in Sources */,
+				FEAE1B8C1793BEA0008E0DAA /* MyProfile.m in Sources */,
 				FEE3604917800791007C8D0B /* UISection.m in Sources */,
 				FE7592D817935F100018D4AB /* BodyViewController.m in Sources */,
 				FE72E1B2177FC82E0032F3B3 /* MonoAppDelegate.m in Sources */,
 				FEE3604C17801070007C8D0B /* MonoChapterVIewController.m in Sources */,
-				FEBBD8FB179032A100DAFCC9 /* Profile.m in Sources */,
 				FEE3604517800318007C8D0B /* UIModelAccessor.m in Sources */,
-				FE75926717929B9C0018D4AB /* SectionBase.m in Sources */,
+				FEAE1B8F1793BEA0008E0DAA /* Profile.m in Sources */,
 				FE7592941792C0240018D4AB /* Chapter+Methods.m in Sources */,
 				FEE3603F178002DF007C8D0B /* UIChapter.m in Sources */,
 				FE7592DB17936BAC0018D4AB /* Section+Methods.m in Sources */,
 				FEE70AD7179028FC00C6DF8F /* UIViewController+SP.m in Sources */,
 				FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */,
-				FEEF2754178FAE2B0056B4CF /* MyProfile.m in Sources */,
-				FE75926A17929B9C0018D4AB /* Chapter.m in Sources */,
 				FEEF2764178FB1A50056B4CF /* RegistrationViewController.m in Sources */,
-				FE75925B17928E410018D4AB /* Book.m in Sources */,
 				FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

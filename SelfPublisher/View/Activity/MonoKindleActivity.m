@@ -42,19 +42,17 @@
 
 -(void)performActivity {
     
-    NSString* jsonString = self.book.jsonString;
+    NSString* jsonString = [NSString stringWithFormat:@"=%@", self.book.jsonString];
 
-    NSData *requestData =
-    [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *requestData =[jsonString dataUsingEncoding:NSUTF8StringEncoding];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@""]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://apps.mono-comp.com/SelfPublish/api/values"]
                             cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     
     //HTTPメソッドは"POST"
     [request setHTTPMethod:@"POST"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setValue:@"application/json"
-   forHTTPHeaderField:@"Content-Type"];
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:[NSString stringWithFormat:@"%d",
                        [requestData length]] forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody: requestData];
@@ -66,7 +64,7 @@
     //HTTPリクエスト送信
     NSData *result = [NSURLConnection sendSynchronousRequest:request
                                            returningResponse:&resp error:&err];
-    
+    NSString* r = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
     
     [self activityDidFinish:YES];
 }

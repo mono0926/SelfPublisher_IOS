@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/NSFetchedResultsController.h>
 
-@interface MonoMainViewController : UICollectionViewController
+@interface MonoMainViewController : UICollectionViewController<NSFetchedResultsControllerDelegate>
 
 @end

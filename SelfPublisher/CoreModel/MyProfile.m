@@ -2,7 +2,7 @@
 //  MyProfile.m
 //  SelfPublisher
 //
-//  Created by mono on 7/12/13.
+//  Created by mono on 7/15/13.
 //  Copyright (c) 2013 mono. All rights reserved.
 //
 
@@ -11,5 +11,6 @@
 
 @implementation MyProfile
 
+@dynamic accessToken;
 
 @end

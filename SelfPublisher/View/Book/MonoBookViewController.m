@@ -42,6 +42,15 @@
     }
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    _book.chapterList.delegate = self;
+    [self.tableView reloadData];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    _book.chapterList.delegate = nil;
+}
+
 -(void)showInputTitleView {
     UIAlertView* alert = [UIAlertView alertViewWithTitle:@"Enter Book's Title."];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
@@ -65,7 +74,7 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -111,6 +120,22 @@
 }
 
 - (IBAction)doneTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+#pragma mark - Table view delegate
+
+-(void)controllerDidChangeContent:(NSFetchedResultsController *)controller{
+    [self.tableView reloadData];
+}
+-(void)controllerWillChangeContent:(NSFetchedResultsController *)controller{}
+-(void)controller:(NSFetchedResultsController *)controller
+  didChangeObject:(id)anObject
+      atIndexPath:(NSIndexPath *)indexPath
+    forChangeType:(NSFetchedResultsChangeType)type
+     newIndexPath:(NSIndexPath *)newIndexPath {
+}
+
+- (IBAction)closeTapped:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

@@ -46,6 +46,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     [self configureTitleAndBody];
     [self observeKeyboard];
+    [_bodyTextField becomeFirstResponder];
 }
 
 -(void)configureTitleAndBody {

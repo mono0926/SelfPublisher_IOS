@@ -30,11 +30,12 @@
     return nil;
 }
 
--(void)createMyProfile:(NSString*)name result:(void(^)(UIMyProfile*))result {
+-(void)createMyProfile:(NSString*)name accessToken:(NSString*)accessToken result:(void(^)(UIMyProfile*))result {
     [self.moc performBlock:^{
         MyProfile* myProfile = self.moc.createMyProfile;
         if (myProfile) {
             myProfile.name = name;
+            myProfile.accessToken = accessToken;
             if ([self.moc save:nil]) {
                 result(self.myProfile);
             }

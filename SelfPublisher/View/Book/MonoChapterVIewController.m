@@ -37,6 +37,12 @@
 -(void)viewWillAppear:(BOOL)animated {
     self.title = _chapter.caption ?: @"";
     self.bodyTextView.text = _chapter.body;
+    _chapter.sectionList.delegate = self;
+    [self.tableView reloadData];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    _chapter.sectionList.delegate = nil;
 }
 
 -(void)showInputTitleView {
@@ -75,7 +81,6 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     _selectedSection = [self.chapter.sectionList entityAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"showSection" sender:nil];
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -98,5 +103,20 @@
     _selectedSection = nil;
     [self performSegueWithIdentifier:@"showSection" sender:nil];
 }
+#pragma mark - Table view delegate
 
+-(void)controllerDidChangeContent:(NSFetchedResultsController *)controller{
+    [self.tableView reloadData];
+}
+-(void)controllerWillChangeContent:(NSFetchedResultsController *)controller{}
+-(void)controller:(NSFetchedResultsController *)controller
+  didChangeObject:(id)anObject
+      atIndexPath:(NSIndexPath *)indexPath
+    forChangeType:(NSFetchedResultsChangeType)type
+     newIndexPath:(NSIndexPath *)newIndexPath {
+}
+
+- (IBAction)closeTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

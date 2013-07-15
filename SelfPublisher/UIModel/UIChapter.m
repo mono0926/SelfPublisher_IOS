@@ -59,11 +59,12 @@
     return self.sectionList.allEntities;
 }
 
--(UIModelList *)sectionList {
+-(UIModelList *)sectionList {    
     if (_sectionList) {
         return _sectionList;
     }
     NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Section"];
+    request.predicate = [NSPredicate predicateWithFormat:@"chapter == %@", self.chapter];
     NSSortDescriptor* sortDiscripter1 = [[NSSortDescriptor alloc]initWithKey:@"caption"
                                                                    ascending:YES];
     request.sortDescriptors = @[sortDiscripter1];
