@@ -50,7 +50,7 @@
 }
 
 -(void)configureTitleAndBody {
-    self.title = [NSString stringWithFormat:@"Body of %@", _sectionBase.caption];
+    self.title = _sectionBase.caption ? [NSString stringWithFormat:@"Body of %@", _sectionBase.caption] : @"";
     _bodyTextField.text = _sectionBase.body ?: @"";
 }
 
