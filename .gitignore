@@ -132,3 +132,5 @@ build/
 #CocoaPods
 Podfile.lock
 Pods/
+*.xcworkspace
+project.xcworkspace
