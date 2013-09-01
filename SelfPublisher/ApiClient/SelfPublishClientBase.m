@@ -10,9 +10,11 @@
 #import "AppSettings.h"
 
 @implementation SelfPublishClientBase
-- (id)init
+- (id)initWithPath:(NSString*)path accessToken:(NSString*)accessToken
 {
-    self = [super initWithBaseUrl:AppSettings.baseUrl];
+    self = [super initWithBaseUrl:AppSettings.baseUrl
+                             path:path
+                      accessToken:accessToken];
     if (self) {
     }
     return self;

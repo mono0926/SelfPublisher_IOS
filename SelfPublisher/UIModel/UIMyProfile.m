@@ -11,9 +11,19 @@
 
 
 @interface UIMyProfile ()
+@property (nonatomic) NSString* accessToken;
 @end
 
-
 @implementation UIMyProfile
+
+-(NSString *)accessToken
+{
+    return self.myProfile.accessToken;
+}
+
+-(MyProfile*)myProfile
+{
+    return (MyProfile*)_profile;
+}
 
 @end

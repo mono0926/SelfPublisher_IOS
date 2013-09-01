@@ -11,6 +11,15 @@
 #import "MonoUI.h"
 @implementation UserClient
 
+-(id)init
+{
+    UIModelAccessor* modelAccesor = inject(UIModelAccessor);
+    self = [super initWithPath:@"users" accessToken:modelAccesor.myProfile.accessToken];
+    if (self) {
+    }
+    return self;
+}
+
 -(void)registerWithName:(NSString*)name
         completionBlock:(void (^)(NSString* accessToken, NSError* error)) completionBlock
 {
