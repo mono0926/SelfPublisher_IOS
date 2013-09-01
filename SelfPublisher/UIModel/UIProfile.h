@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Mantle.h"
 @class Profile;
 
-@interface UIProfile : NSObject
+@interface UIProfile : MTLModel<MTLJSONSerializing>
+{
+    Profile* _profile;
+}
 @property (nonatomic, readonly) NSString* name;
 - (id)initWithProfile:(Profile*)profile;
 @end

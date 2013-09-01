@@ -43,12 +43,15 @@
 		FE8EC9A117D2C5EC00B48F6B /* UserClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8EC9A017D2C5EC00B48F6B /* UserClient.m */; };
 		FE8ECA1117D2D2E800B48F6B /* SelfPublishClientBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */; };
 		FE8ECA1417D2DED100B48F6B /* BookClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA1317D2DED100B48F6B /* BookClient.m */; };
+		FE8ECA3617D2F6DC00B48F6B /* Profile+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA3517D2F6DC00B48F6B /* Profile+Methods.m */; };
+		FE8ECA5517D3089C00B48F6B /* MonoIBooksActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA5417D3089C00B48F6B /* MonoIBooksActivity.m */; };
+		FE8ECA5817D3090800B48F6B /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA5717D3090800B48F6B /* Book.m */; };
+		FE8ECA5A17D30CA200B48F6B /* ibooks.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8ECA5917D30CA200B48F6B /* ibooks.png */; };
 		FEAE1B8C1793BEA0008E0DAA /* MyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */; };
 		FEAE1B8F1793BEA0008E0DAA /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B8E1793BEA0008E0DAA /* Profile.m */; };
 		FEAE1B921793BEA1008E0DAA /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B911793BEA1008E0DAA /* Section.m */; };
 		FEAE1B951793BEA1008E0DAA /* SectionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B941793BEA1008E0DAA /* SectionBase.m */; };
 		FEAE1B981793BEA1008E0DAA /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B971793BEA1008E0DAA /* Chapter.m */; };
-		FEAE1C081793D4FB008E0DAA /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1C071793D4FB008E0DAA /* Book.m */; };
 		FEAE1C0A1793D88D008E0DAA /* epub.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAE1C091793D88D008E0DAA /* epub.png */; };
 		FEBBD8F517902EE100DAFCC9 /* addChapter.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBBD8F417902EE100DAFCC9 /* addChapter.png */; };
 		FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */; };
@@ -143,6 +146,13 @@
 		FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfPublishClientBase.m; sourceTree = "<group>"; };
 		FE8ECA1217D2DED100B48F6B /* BookClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookClient.h; sourceTree = "<group>"; };
 		FE8ECA1317D2DED100B48F6B /* BookClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookClient.m; sourceTree = "<group>"; };
+		FE8ECA3417D2F6DC00B48F6B /* Profile+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Profile+Methods.h"; sourceTree = "<group>"; };
+		FE8ECA3517D2F6DC00B48F6B /* Profile+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Profile+Methods.m"; sourceTree = "<group>"; };
+		FE8ECA5317D3089C00B48F6B /* MonoIBooksActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoIBooksActivity.h; sourceTree = "<group>"; };
+		FE8ECA5417D3089C00B48F6B /* MonoIBooksActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoIBooksActivity.m; sourceTree = "<group>"; };
+		FE8ECA5617D3090800B48F6B /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		FE8ECA5717D3090800B48F6B /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		FE8ECA5917D30CA200B48F6B /* ibooks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ibooks.png; sourceTree = "<group>"; };
 		FEAE1B8A1793BEA0008E0DAA /* MyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfile.h; sourceTree = "<group>"; };
 		FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfile.m; sourceTree = "<group>"; };
 		FEAE1B8D1793BEA0008E0DAA /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
@@ -153,8 +163,6 @@
 		FEAE1B941793BEA1008E0DAA /* SectionBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionBase.m; sourceTree = "<group>"; };
 		FEAE1B961793BEA1008E0DAA /* Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
 		FEAE1B971793BEA1008E0DAA /* Chapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
-		FEAE1C061793D4FB008E0DAA /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
-		FEAE1C071793D4FB008E0DAA /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		FEAE1C091793D88D008E0DAA /* epub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epub.png; sourceTree = "<group>"; };
 		FEBBD8F417902EE100DAFCC9 /* addChapter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addChapter.png; sourceTree = "<group>"; };
 		FED7DDA417892CC200D1ADDA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -317,9 +325,9 @@
 		FE8EC99B17D2C5B400B48F6B /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				FE8EC9A217D2C5FE00B48F6B /* ApiClient.h */,
 				FE8ECA0F17D2D2E800B48F6B /* SelfPublishClientBase.h */,
 				FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */,
-				FE8EC9A217D2C5FE00B48F6B /* ApiClient.h */,
 				FE8EC99F17D2C5EC00B48F6B /* UserClient.h */,
 				FE8EC9A017D2C5EC00B48F6B /* UserClient.m */,
 				FE8ECA1217D2DED100B48F6B /* BookClient.h */,
@@ -384,6 +392,7 @@
 				FE5AA46C178237A800C99921 /* b2.jpg */,
 				FE5AA46D178237A800C99921 /* b1.jpg */,
 				FEE360571780DD54007C8D0B /* amazon.png */,
+				FE8ECA5917D30CA200B48F6B /* ibooks.png */,
 				FEE36034177FFA78007C8D0B /* book.png */,
 			);
 			path = Images;
@@ -416,6 +425,8 @@
 			children = (
 				FEE360501780DBA6007C8D0B /* MonoKindleActivity.h */,
 				FEE360511780DBA6007C8D0B /* MonoKindleActivity.m */,
+				FE8ECA5317D3089C00B48F6B /* MonoIBooksActivity.h */,
+				FE8ECA5417D3089C00B48F6B /* MonoIBooksActivity.m */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -436,8 +447,8 @@
 				FEAE1B941793BEA1008E0DAA /* SectionBase.m */,
 				FEAE1B961793BEA1008E0DAA /* Chapter.h */,
 				FEAE1B971793BEA1008E0DAA /* Chapter.m */,
-				FEAE1C061793D4FB008E0DAA /* Book.h */,
-				FEAE1C071793D4FB008E0DAA /* Book.m */,
+				FE8ECA5617D3090800B48F6B /* Book.h */,
+				FE8ECA5717D3090800B48F6B /* Book.m */,
 			);
 			path = CoreModel;
 			sourceTree = "<group>";
@@ -464,6 +475,8 @@
 				FE7592B51792C3540018D4AB /* Book+Methods.m */,
 				FE7592D917936BAC0018D4AB /* Section+Methods.h */,
 				FE7592DA17936BAC0018D4AB /* Section+Methods.m */,
+				FE8ECA3417D2F6DC00B48F6B /* Profile+Methods.h */,
+				FE8ECA3517D2F6DC00B48F6B /* Profile+Methods.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -581,6 +594,7 @@
 				FEE36035177FFA78007C8D0B /* book.png in Resources */,
 				FE5AA471178237A800C99921 /* b9.jpg in Resources */,
 				FE759257179288190018D4AB /* user.png in Resources */,
+				FE8ECA5A17D30CA200B48F6B /* ibooks.png in Resources */,
 				FE75925D179294830018D4AB /* edit_body.png in Resources */,
 				FE5AA46E178237A800C99921 /* b12.jpg in Resources */,
 				FE5AA477178237A800C99921 /* b3.jpg in Resources */,
@@ -678,6 +692,7 @@
 				FEEF275A178FAEA20056B4CF /* UIMyProfile.m in Sources */,
 				FE8ECA1417D2DED100B48F6B /* BookClient.m in Sources */,
 				FEE36038177FFCB2007C8D0B /* MonoBookViewController.m in Sources */,
+				FE8ECA5817D3090800B48F6B /* Book.m in Sources */,
 				FE72E1AE177FC82E0032F3B3 /* main.m in Sources */,
 				FE8EC9A117D2C5EC00B48F6B /* UserClient.m in Sources */,
 				FEEF275E178FAF5D0056B4CF /* NSManagedObjectContext+SP.m in Sources */,
@@ -685,11 +700,11 @@
 				FEAE1B921793BEA1008E0DAA /* Section.m in Sources */,
 				FE8EC99A17D2BF1F00B48F6B /* AppSettings.m in Sources */,
 				FEE3602F177FF9A7007C8D0B /* MonoBookCell.m in Sources */,
+				FE8ECA3617D2F6DC00B48F6B /* Profile+Methods.m in Sources */,
 				FE7592B61792C3540018D4AB /* Book+Methods.m in Sources */,
 				FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */,
 				FE8ECA1117D2D2E800B48F6B /* SelfPublishClientBase.m in Sources */,
 				FEEF2757178FAE910056B4CF /* UIProfile.m in Sources */,
-				FEAE1C081793D4FB008E0DAA /* Book.m in Sources */,
 				FEE36042178002F5007C8D0B /* UIBook.m in Sources */,
 				FEAE1B951793BEA1008E0DAA /* SectionBase.m in Sources */,
 				FEAE1B8C1793BEA0008E0DAA /* MyProfile.m in Sources */,
@@ -703,6 +718,7 @@
 				FEE3603F178002DF007C8D0B /* UIChapter.m in Sources */,
 				FE7592DB17936BAC0018D4AB /* Section+Methods.m in Sources */,
 				FEE70AD7179028FC00C6DF8F /* UIViewController+SP.m in Sources */,
+				FE8ECA5517D3089C00B48F6B /* MonoIBooksActivity.m in Sources */,
 				FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */,
 				FEEF2764178FB1A50056B4CF /* RegistrationViewController.m in Sources */,
 				FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */,

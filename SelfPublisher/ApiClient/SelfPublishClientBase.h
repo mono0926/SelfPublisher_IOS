@@ -10,5 +10,6 @@
 #import <Syringe/Syringe.h>
 
 @interface SelfPublishClientBase : JSONClientBase<Injectable>
-
+- (id)initWithPath:(NSString*)path
+       accessToken:(NSString*)accessToken;
 @end
