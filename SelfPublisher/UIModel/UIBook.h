@@ -12,7 +12,7 @@
 @class UIModelList;
 @interface UIBook : MTLModel<MTLJSONSerializing>
 - (id)initWithBook:(Book*)book;
--(void)convertToEpub:(void(^)(NSString*, NSError*))resultBlock;
+-(void)convertToEpub:(void(^)(NSError*))resultBlock;
 +(void)createWithTitle:(NSString*)title resultBlock:(void (^)(UIBook*, NSError*))resultBlock;
 
 @property (nonatomic, readonly) NSString* title;

@@ -39,6 +39,10 @@
 		FE7592B61792C3540018D4AB /* Book+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592B51792C3540018D4AB /* Book+Methods.m */; };
 		FE7592D817935F100018D4AB /* BodyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592D717935F100018D4AB /* BodyViewController.m */; };
 		FE7592DB17936BAC0018D4AB /* Section+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592DA17936BAC0018D4AB /* Section+Methods.m */; };
+		FE8EC99A17D2BF1F00B48F6B /* AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8EC99917D2BF1F00B48F6B /* AppSettings.m */; };
+		FE8EC9A117D2C5EC00B48F6B /* UserClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8EC9A017D2C5EC00B48F6B /* UserClient.m */; };
+		FE8ECA1117D2D2E800B48F6B /* SelfPublishClientBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */; };
+		FE8ECA1417D2DED100B48F6B /* BookClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA1317D2DED100B48F6B /* BookClient.m */; };
 		FEAE1B8C1793BEA0008E0DAA /* MyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */; };
 		FEAE1B8F1793BEA0008E0DAA /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B8E1793BEA0008E0DAA /* Profile.m */; };
 		FEAE1B921793BEA1008E0DAA /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B911793BEA1008E0DAA /* Section.m */; };
@@ -130,6 +134,15 @@
 		FE7592D717935F100018D4AB /* BodyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyViewController.m; sourceTree = "<group>"; };
 		FE7592D917936BAC0018D4AB /* Section+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Section+Methods.h"; sourceTree = "<group>"; };
 		FE7592DA17936BAC0018D4AB /* Section+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Section+Methods.m"; sourceTree = "<group>"; };
+		FE8EC99817D2BF1F00B48F6B /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
+		FE8EC99917D2BF1F00B48F6B /* AppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettings.m; sourceTree = "<group>"; };
+		FE8EC99F17D2C5EC00B48F6B /* UserClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserClient.h; sourceTree = "<group>"; };
+		FE8EC9A017D2C5EC00B48F6B /* UserClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserClient.m; sourceTree = "<group>"; };
+		FE8EC9A217D2C5FE00B48F6B /* ApiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
+		FE8ECA0F17D2D2E800B48F6B /* SelfPublishClientBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfPublishClientBase.h; sourceTree = "<group>"; };
+		FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfPublishClientBase.m; sourceTree = "<group>"; };
+		FE8ECA1217D2DED100B48F6B /* BookClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookClient.h; sourceTree = "<group>"; };
+		FE8ECA1317D2DED100B48F6B /* BookClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookClient.m; sourceTree = "<group>"; };
 		FEAE1B8A1793BEA0008E0DAA /* MyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfile.h; sourceTree = "<group>"; };
 		FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfile.m; sourceTree = "<group>"; };
 		FEAE1B8D1793BEA0008E0DAA /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
@@ -277,10 +290,11 @@
 		FE72E1A7177FC82E0032F3B3 /* SelfPublisher */ = {
 			isa = PBXGroup;
 			children = (
+				FE8EC99B17D2C5B400B48F6B /* ApiClient */,
 				FEE360531780DC83007C8D0B /* CoreModel */,
 				FEE3603C178002B1007C8D0B /* UIModel */,
-				FEE36032177FFA47007C8D0B /* Resources */,
 				FE3C1016177FF694005DFE04 /* View */,
+				FEE36032177FFA47007C8D0B /* Resources */,
 				FE72E1B0177FC82E0032F3B3 /* MonoAppDelegate.h */,
 				FE72E1B1177FC82E0032F3B3 /* MonoAppDelegate.m */,
 				FE72E1B9177FC82E0032F3B3 /* Images.xcassets */,
@@ -298,6 +312,20 @@
 				FE72E1AF177FC82E0032F3B3 /* SelfPublisher-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE8EC99B17D2C5B400B48F6B /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				FE8ECA0F17D2D2E800B48F6B /* SelfPublishClientBase.h */,
+				FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */,
+				FE8EC9A217D2C5FE00B48F6B /* ApiClient.h */,
+				FE8EC99F17D2C5EC00B48F6B /* UserClient.h */,
+				FE8EC9A017D2C5EC00B48F6B /* UserClient.m */,
+				FE8ECA1217D2DED100B48F6B /* BookClient.h */,
+				FE8ECA1317D2DED100B48F6B /* BookClient.m */,
+			);
+			path = ApiClient;
 			sourceTree = "<group>";
 		};
 		FEE36029177FF898007C8D0B /* Book */ = {
@@ -419,6 +447,8 @@
 			children = (
 				FEE70AD5179028FC00C6DF8F /* UIViewController+SP.h */,
 				FEE70AD6179028FC00C6DF8F /* UIViewController+SP.m */,
+				FE8EC99817D2BF1F00B48F6B /* AppSettings.h */,
+				FE8EC99917D2BF1F00B48F6B /* AppSettings.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -646,14 +676,18 @@
 				FEAE1B981793BEA1008E0DAA /* Chapter.m in Sources */,
 				FEE3603B177FFD7E007C8D0B /* MonoBookRootViewController.m in Sources */,
 				FEEF275A178FAEA20056B4CF /* UIMyProfile.m in Sources */,
+				FE8ECA1417D2DED100B48F6B /* BookClient.m in Sources */,
 				FEE36038177FFCB2007C8D0B /* MonoBookViewController.m in Sources */,
 				FE72E1AE177FC82E0032F3B3 /* main.m in Sources */,
+				FE8EC9A117D2C5EC00B48F6B /* UserClient.m in Sources */,
 				FEEF275E178FAF5D0056B4CF /* NSManagedObjectContext+SP.m in Sources */,
 				FE75926D17929BE60018D4AB /* UISectionBase.m in Sources */,
 				FEAE1B921793BEA1008E0DAA /* Section.m in Sources */,
+				FE8EC99A17D2BF1F00B48F6B /* AppSettings.m in Sources */,
 				FEE3602F177FF9A7007C8D0B /* MonoBookCell.m in Sources */,
 				FE7592B61792C3540018D4AB /* Book+Methods.m in Sources */,
 				FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */,
+				FE8ECA1117D2D2E800B48F6B /* SelfPublishClientBase.m in Sources */,
 				FEEF2757178FAE910056B4CF /* UIProfile.m in Sources */,
 				FEAE1C081793D4FB008E0DAA /* Book.m in Sources */,
 				FEE36042178002F5007C8D0B /* UIBook.m in Sources */,
