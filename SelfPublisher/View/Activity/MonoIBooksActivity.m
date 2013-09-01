@@ -1,20 +1,19 @@
 //
-//  MonoKindleActivity.m
+//  MonoIBooksActivity.m
 //  SelfPublisher
 //
-//  Created by mono on 7/1/13.
+//  Created by mono on 9/1/13.
 //  Copyright (c) 2013 mono. All rights reserved.
 //
 
-#import "MonoKindleActivity.h"
+#import "MonoIBooksActivity.h"
 #import "MonoUI.h"
 
-@interface MonoKindleActivity ()
+@interface MonoIBooksActivity ()
 @property (nonatomic) UIBook* book;
 @end
 
-@implementation MonoKindleActivity
-
+@implementation MonoIBooksActivity
 - (id)initWithBook:(UIBook*)book
 {
     self = [super init];
@@ -25,15 +24,15 @@
 }
 
 -(NSString *)activityType {
-    return @"Kindle";
+    return @"iBooks";
 }
 
 -(NSString *)activityTitle {
-    return @"Kindle";
+    return @"iBooks";
 }
 
 -(UIImage *)activityImage {
-    return [UIImage imageNamed:@"amazon.png"];
+    return [UIImage imageNamed:@"ibooks.png"];
 }
 
 -(BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
@@ -42,7 +41,7 @@
 
 -(void)performActivity {
     
-    [_book convertToMobi:^(NSError *error) {
+    [_book convertToEpub:^(NSError *error) {
         if (error) {
             [SVProgressHUD showErrorWithStatus:error.description];
             return;
@@ -53,5 +52,4 @@
     [SVProgressHUD showSuccessWithStatus:@"Wait for a book published."];
     [self activityDidFinish:YES];
 }
-
 @end

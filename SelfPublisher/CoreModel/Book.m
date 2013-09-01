@@ -2,7 +2,7 @@
 //  Book.m
 //  SelfPublisher
 //
-//  Created by mono on 7/15/13.
+//  Created by mono on 9/1/13.
 //  Copyright (c) 2013 mono. All rights reserved.
 //
 
@@ -13,8 +13,10 @@
 
 @implementation Book
 
-@dynamic title;
+@dynamic coverImage;
 @dynamic epub;
+@dynamic title;
+@dynamic mobi;
 @dynamic author;
 @dynamic chapters;
 

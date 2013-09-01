@@ -10,4 +10,5 @@
 @class MyProfile;
 
 @interface UIMyProfile : UIProfile
+@property (nonatomic, readonly) NSString* accessToken;
 @end

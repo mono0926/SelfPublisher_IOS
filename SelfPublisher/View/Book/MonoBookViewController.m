@@ -10,6 +10,7 @@
 #import "MonoUI.h"
 #import "MonoChapterVIewController.h"
 #import "MonoKindleActivity.h"
+#import "MonoIBooksActivity.h"
 
 @interface MonoBookViewController ()
 
@@ -42,6 +43,7 @@
     _book.chapterList.delegate = self;
     [self.tableView reloadData];
     [_book addObserver:self forKeyPath:@"epubPath" options:NSKeyValueObservingOptionNew context:nil];
+    [_book addObserver:self forKeyPath:@"mobiPath" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -54,6 +56,7 @@
 -(void)viewWillDisappear:(BOOL)animated {
     _book.chapterList.delegate = nil;
     [_book removeObserver:self forKeyPath:@"epubPath"];
+    [_book removeObserver:self forKeyPath:@"mobiPath"];
 }
 
 -(void)showInputTitleView {
@@ -66,6 +69,7 @@
             if (book) {
                 _book = book;
                 [_book addObserver:self forKeyPath:@"epubPath" options:NSKeyValueObservingOptionNew context:nil];
+                [_book addObserver:self forKeyPath:@"mobiPath" options:NSKeyValueObservingOptionNew context:nil];
                 self.title = _book.title;
                 return;
             }
@@ -106,20 +110,15 @@
         [vc setBook:_book chapter:self.selectedChapter];
     }
 }
-- (IBAction)actionTapped:(id)sender {
-//    NSArray *activityItems = [NSArray arrayWithObjects:@"hoge", nil];
-    /*
-    if (_postImage.image != nil) {
-        activityItems = @[_postText.text, _postImage.image];
-    } else {
-        activityItems = @[_postText.text];
-    }
-    */
-    
-    NSArray* myActivityItems = @[[[MonoKindleActivity alloc]initWithBook:self.book]];
-    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:nil applicationActivities:myActivityItems];
+- (IBAction)actionTapped:(id)sender
+{
+    NSArray* myActivityItems = @[[[MonoIBooksActivity alloc]initWithBook:self.book],
+                                 [[MonoKindleActivity alloc]initWithBook:self.book]];
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:nil
+                                                                                     applicationActivities:myActivityItems];
     [self presentViewController:activityController animated:YES completion:nil];
 }
+
 - (IBAction)addNewChapterTapped:(id)sender {
     _selectedChapter = nil;
     [self performSegueWithIdentifier:@"showChapter" sender:self];
@@ -147,22 +146,39 @@
 
 - (void)openEpub {
     NSURL *url = [NSURL fileURLWithPath:_book.epubPath];
+    [self openImplWithUrl:url];
+}
+- (void)openMobi {
+    NSURL *url = [NSURL fileURLWithPath:_book.mobiPath];
+    [self openImplWithUrl:url];
+}
+
+-(void)openImplWithUrl:(NSURL*)url
+{
     _documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:url];
     _documentInteractionController.delegate = self;
     
     BOOL isValid;
     isValid = [_documentInteractionController presentOpenInMenuFromRect:self.view.frame inView:self.view animated:YES];
     if (!isValid) {
-        NSLog(@"データを開けるアプリケーションが見つかりません。");
+        NSLog(@"No applications found to open %@", url.description);
     }
+    
 }
 - (IBAction)iBooksTapped:(id)sender {
     [self openEpub];
+}
+- (IBAction)kindleTapped:(id)sender {
+    [self openMobi];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (object == _book && [keyPath isEqualToString:@"epubPath"]) {
         _iBooksButton.enabled = YES;
+        return;
+    }
+    if (object == _book && [keyPath isEqualToString:@"mobiPath"]) {
+        _kindleButton.enabled = YES;
         return;
     }
 }

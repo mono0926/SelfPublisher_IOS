@@ -2,7 +2,7 @@
 //  Book.h
 //  SelfPublisher
 //
-//  Created by mono on 7/15/13.
+//  Created by mono on 9/1/13.
 //  Copyright (c) 2013 mono. All rights reserved.
 //
 
@@ -13,8 +13,10 @@
 
 @interface Book : NSManagedObject
 
-@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSData * coverImage;
 @property (nonatomic, retain) NSData * epub;
+@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSData * mobi;
 @property (nonatomic, retain) Profile *author;
 @property (nonatomic, retain) NSSet *chapters;
 @end
