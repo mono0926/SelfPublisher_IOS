@@ -81,30 +81,17 @@
     return _chapterList;
 }
 
--(void)convertToEpub:(void(^)(NSString*, NSError*))resultBlock {
-    NSString* jsonString = [NSString stringWithFormat:@"=%@", self.jsonString];    
-    NSData *requestData =[jsonString dataUsingEncoding:NSUTF8StringEncoding];
+-(void)convertToEpub:(void(^)(NSError*))resultBlock {
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://apps.mono-comp.com/SelfPublish/api/values"]
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    
-    [request setHTTPMethod:@"POST"];
-    [request setValue:[NSString stringWithFormat:@"%d",
-                       [requestData length]] forHTTPHeaderField:@"Content-Length"];
-    [request setHTTPBody: requestData];
-    
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue new]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               NSString* r = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                               NSData* bookData = [NSData dataFromBase64String:r];
-                               [_book.managedObjectContext performBlock:^{
-                                   _book.epub = bookData;
-                                   [_book.managedObjectContext save:nil];
-                                   resultBlock(r, connectionError);
-                               }];
-                               
-//                               [bookData writeToFile:@"/Users/mono/Desktop/aaa.epub" atomically:YES];
-                           }];
+    BookClient* bookClient = inject(BookClient);
+    [bookClient convertToEpub:@""
+              completionBlock:^(NSData *epubData, NSError *error) {
+                  [_book.managedObjectContext performBlock:^{
+                      _book.epub = epubData;
+                      [_book.managedObjectContext save:nil];
+                      resultBlock(error);
+                  }];
+              }];
 }
 
 +(NSDictionary *)JSONKeyPathsByPropertyKey {

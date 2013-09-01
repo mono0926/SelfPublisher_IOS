@@ -12,12 +12,13 @@
 @class UIBook;
 @class UIMyProfile;
 @class UIModelList;
+@class UserClient;
+@class BookClient;
 
 @interface UIModelAccessor : NSObject<Injectable>
 
 @property (nonatomic) UIMyProfile* myProfile;
 @property (nonatomic) UIModelList* bookList;
-
 -(void)createMyProfile:(NSString*)name accessToken:(NSString*)accessToken result:(void(^)(UIMyProfile*))result;
 
 @end

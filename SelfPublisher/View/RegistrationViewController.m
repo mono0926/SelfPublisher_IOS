@@ -23,32 +23,23 @@
     
     [SVProgressHUD showWithStatus:@"Registering..." maskType:SVProgressHUDMaskTypeGradient];
     
-    NSString* jsonString = [NSString stringWithFormat:@"{\'name':'%@'", _nameTextField.text];
-    NSData *requestData =[jsonString dataUsingEncoding:NSUTF8StringEncoding];    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://apps.mono-comp.com/SelfPublish/api/users"]
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    [request setHTTPMethod:@"POST"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:[NSString stringWithFormat:@"%d",
-                       [requestData length]] forHTTPHeaderField:@"Content-Length"];
-    [request setHTTPBody: requestData];
-    
-    //レスポンス
-    NSURLResponse *resp;
-    NSError *err;
-    //HTTPリクエスト送信
-    NSData *result = [NSURLConnection sendSynchronousRequest:request
-                                           returningResponse:&resp error:&err];
-    NSString* accessToken = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
-    
-     [self.modelAccessor createMyProfile:_nameTextField.text accessToken:accessToken result:^(UIMyProfile *myProfile) {
-         if (myProfile) {
-             [SVProgressHUD showSuccessWithStatus:@"Registered successfully!"];
-             [self dismissViewControllerAnimated:YES completion:nil];
-             return;
-         }
-         [SVProgressHUD showErrorWithStatus:@"Error occured :("];
-     }];
+    UserClient* userClient = inject(UserClient);
+    [userClient registerWithName:_nameTextField.text
+                                    completionBlock:^(NSString *accessToken, NSError *error) {
+                                        if (error) {
+                                            [SVProgressHUD showErrorWithStatus:error.description];
+                                        }
+                                        [self.modelAccessor createMyProfile:_nameTextField.text
+                                                                accessToken:accessToken
+                                                                     result:^(UIMyProfile *myProfile) {
+                                            if (myProfile) {
+                                                [SVProgressHUD showSuccessWithStatus:@"Registered successfully!"];
+                                                [self dismissViewControllerAnimated:YES completion:nil];
+                                                return;
+                                            }
+                                            [SVProgressHUD showErrorWithStatus:@"Error occured :("];
+                                        }];
+                                    }];
 }
 
 @end
