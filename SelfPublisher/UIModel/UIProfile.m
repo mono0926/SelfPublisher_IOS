@@ -9,7 +9,7 @@
 #import "UIProfile.h"
 #import "MonoUI.h"
 @interface UIProfile ()
-@property (nonatomic) Profile* profile;
+@property (nonatomic) NSString* name;
 @end
 
 @implementation UIProfile
@@ -25,4 +25,9 @@
 -(NSString *)name {
     return _profile.name;
 }
+
++(NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{};
+}
+
 @end

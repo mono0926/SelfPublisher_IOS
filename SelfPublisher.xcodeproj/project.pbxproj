@@ -43,6 +43,7 @@
 		FE8EC9A117D2C5EC00B48F6B /* UserClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8EC9A017D2C5EC00B48F6B /* UserClient.m */; };
 		FE8ECA1117D2D2E800B48F6B /* SelfPublishClientBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */; };
 		FE8ECA1417D2DED100B48F6B /* BookClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA1317D2DED100B48F6B /* BookClient.m */; };
+		FE8ECA3617D2F6DC00B48F6B /* Profile+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA3517D2F6DC00B48F6B /* Profile+Methods.m */; };
 		FEAE1B8C1793BEA0008E0DAA /* MyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */; };
 		FEAE1B8F1793BEA0008E0DAA /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B8E1793BEA0008E0DAA /* Profile.m */; };
 		FEAE1B921793BEA1008E0DAA /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B911793BEA1008E0DAA /* Section.m */; };
@@ -143,6 +144,8 @@
 		FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfPublishClientBase.m; sourceTree = "<group>"; };
 		FE8ECA1217D2DED100B48F6B /* BookClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookClient.h; sourceTree = "<group>"; };
 		FE8ECA1317D2DED100B48F6B /* BookClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookClient.m; sourceTree = "<group>"; };
+		FE8ECA3417D2F6DC00B48F6B /* Profile+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Profile+Methods.h"; sourceTree = "<group>"; };
+		FE8ECA3517D2F6DC00B48F6B /* Profile+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Profile+Methods.m"; sourceTree = "<group>"; };
 		FEAE1B8A1793BEA0008E0DAA /* MyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfile.h; sourceTree = "<group>"; };
 		FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfile.m; sourceTree = "<group>"; };
 		FEAE1B8D1793BEA0008E0DAA /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
@@ -317,9 +320,9 @@
 		FE8EC99B17D2C5B400B48F6B /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				FE8EC9A217D2C5FE00B48F6B /* ApiClient.h */,
 				FE8ECA0F17D2D2E800B48F6B /* SelfPublishClientBase.h */,
 				FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */,
-				FE8EC9A217D2C5FE00B48F6B /* ApiClient.h */,
 				FE8EC99F17D2C5EC00B48F6B /* UserClient.h */,
 				FE8EC9A017D2C5EC00B48F6B /* UserClient.m */,
 				FE8ECA1217D2DED100B48F6B /* BookClient.h */,
@@ -464,6 +467,8 @@
 				FE7592B51792C3540018D4AB /* Book+Methods.m */,
 				FE7592D917936BAC0018D4AB /* Section+Methods.h */,
 				FE7592DA17936BAC0018D4AB /* Section+Methods.m */,
+				FE8ECA3417D2F6DC00B48F6B /* Profile+Methods.h */,
+				FE8ECA3517D2F6DC00B48F6B /* Profile+Methods.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -685,6 +690,7 @@
 				FEAE1B921793BEA1008E0DAA /* Section.m in Sources */,
 				FE8EC99A17D2BF1F00B48F6B /* AppSettings.m in Sources */,
 				FEE3602F177FF9A7007C8D0B /* MonoBookCell.m in Sources */,
+				FE8ECA3617D2F6DC00B48F6B /* Profile+Methods.m in Sources */,
 				FE7592B61792C3540018D4AB /* Book+Methods.m in Sources */,
 				FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */,
 				FE8ECA1117D2D2E800B48F6B /* SelfPublishClientBase.m in Sources */,

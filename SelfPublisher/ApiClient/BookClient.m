@@ -7,13 +7,25 @@
 //
 
 #import "BookClient.h"
+#import "MonoUI.h"
 
 @implementation BookClient
 
--(void)convertToEpub:(NSString*)name
-        completionBlock:(void (^)(NSData* epubData, NSError* error)) completionBlock
+
+-(id)init
 {
-    [self requestAsynchronousWithJsonString:nil
+    UIModelAccessor* modelAccesor = inject(UIModelAccessor);
+    self = [super initWithPath:@"books" accessToken:modelAccesor.myProfile.accessToken];
+    if (self) {
+        
+    }
+    return self;
+}
+
+-(void)convertToEpubWithBook:(UIBook*)book
+             completionBlock:(void (^)(NSData* epubData, NSError* error)) completionBlock
+{
+    [self requestAsynchronousWithJsonString:[NSString stringWithFormat:@"%@", book.jsonString]
                             completionBlock:^(NSURLResponse *response, NSData *epubData, NSError *connectionError) {
                                 completionBlock(epubData, connectionError);
                             }];

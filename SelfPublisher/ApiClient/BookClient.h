@@ -7,9 +7,10 @@
 //
 
 #import "SelfPublishClientBase.h"
+@class UIBook;
 
 @interface BookClient : SelfPublishClientBase
 
--(void)convertToEpub:(NSString*)name
+-(void)convertToEpubWithBook:(UIBook*)book
      completionBlock:(void (^)(NSData* epubData, NSError* error)) completionBlock;
 @end

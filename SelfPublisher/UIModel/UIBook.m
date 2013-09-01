@@ -11,7 +11,7 @@
 
 @interface UIBook ()
 @property (nonatomic) NSString* title;
-@property (nonatomic) NSString* author;
+@property (nonatomic) UIProfile* author;
 @property (nonatomic) NSArray* chapters;
 @end
 
@@ -50,8 +50,8 @@
     }];
 }
 
--(NSString *)author {
-    return _book.author.name;
+-(UIProfile *)author {
+    return _book.author.uiProfile;
 }
 
 -(NSString *)title {
@@ -84,14 +84,14 @@
 -(void)convertToEpub:(void(^)(NSError*))resultBlock {
     
     BookClient* bookClient = inject(BookClient);
-    [bookClient convertToEpub:@""
-              completionBlock:^(NSData *epubData, NSError *error) {
-                  [_book.managedObjectContext performBlock:^{
-                      _book.epub = epubData;
-                      [_book.managedObjectContext save:nil];
-                      resultBlock(error);
-                  }];
-              }];
+    [bookClient convertToEpubWithBook:self
+                      completionBlock:^(NSData *epubData, NSError *error) {
+                          [_book.managedObjectContext performBlock:^{
+                              _book.epub = epubData;
+                              [_book.managedObjectContext save:nil];
+                              resultBlock(error);
+                          }];
+                      }];
 }
 
 +(NSDictionary *)JSONKeyPathsByPropertyKey {
@@ -100,12 +100,17 @@
 +(NSValueTransformer*)chaptersJSONTransformer {
     return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:UIChapter.class];
 }
++(NSValueTransformer*)authorJSONTransformer {
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:UIProfile.class];
+}
 
 -(NSString *)jsonString {
     MTLJSONAdapter *adapter = [[MTLJSONAdapter alloc] initWithModel:self];
     NSDictionary*jsonDict = adapter.JSONDictionary;
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:0 error:nil];
-    NSString* jsonString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
+    NSString* jsonString = [[NSString alloc] initWithBytes:jsonData.bytes
+                                                    length:jsonData.length
+                                                  encoding:NSUTF8StringEncoding];
     return jsonString;
 }
 

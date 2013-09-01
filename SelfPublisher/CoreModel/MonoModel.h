@@ -21,5 +21,6 @@
 #import "Chapter+Methods.h"
 #import "Section.h"
 #import "Section+Methods.h"
+#import "Profile+Methods.h"
 #import "Profile.h"
 #import "MyProfile.h"
