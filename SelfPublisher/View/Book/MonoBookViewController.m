@@ -65,6 +65,7 @@
         [UIBook createWithTitle:tf.text resultBlock:^(UIBook *book, NSError *error) {
             if (book) {
                 _book = book;
+                [_book addObserver:self forKeyPath:@"epubPath" options:NSKeyValueObservingOptionNew context:nil];
                 self.title = _book.title;
                 return;
             }

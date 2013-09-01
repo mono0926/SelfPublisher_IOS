@@ -18,3 +18,7 @@
 #import "UISection.h"
 #import "UIProfile.h"
 #import "UIMyProfile.h"
+// others
+#import "AppSettings.h"
+// client
+#import "UserClient.h"
