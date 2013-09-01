@@ -42,9 +42,12 @@
 
 -(void)performActivity {
     
-    [_book convertToEpub:^(NSString *result, NSError *error) {
+    [_book convertToEpub:^(NSError *error) {
+        if (error) {
+            [SVProgressHUD showErrorWithStatus:error.description];
+            return;
+        }
         [SVProgressHUD showSuccessWithStatus:@"Your book has been published successfully!"];
-        id hoge = nil;
     }];
     
     [SVProgressHUD showSuccessWithStatus:@"Wait for a book published."];

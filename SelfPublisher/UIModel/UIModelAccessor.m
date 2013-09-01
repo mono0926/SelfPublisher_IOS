@@ -60,11 +60,6 @@
     return _bookList;
 }
 
--(UserClient *)userClient
-{
-    return [[UserClient alloc]init];
-}
-
 -(NSManagedObjectContext*)moc {
     return [inject(ModelManager) managedObjectContext];
 }

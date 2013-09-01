@@ -8,4 +8,5 @@
 
 #import "JsonClientBase.h"
 #import "UserClient.h"
+#import "BookClient.h"
 #import "AppSettings.h"

@@ -7,7 +7,8 @@
 //
 
 #import "JSONClientBase.h"
+#import <Syringe/Syringe.h>
 
-@interface SelfPublishClientBase : JSONClientBase
+@interface SelfPublishClientBase : JSONClientBase<Injectable>
 
 @end

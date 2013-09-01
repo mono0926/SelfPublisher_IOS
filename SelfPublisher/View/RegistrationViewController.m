@@ -23,7 +23,8 @@
     
     [SVProgressHUD showWithStatus:@"Registering..." maskType:SVProgressHUDMaskTypeGradient];
     
-    [self.modelAccessor.userClient registerWithName:_nameTextField.text
+    UserClient* userClient = inject(UserClient);
+    [userClient registerWithName:_nameTextField.text
                                     completionBlock:^(NSString *accessToken, NSError *error) {
                                         if (error) {
                                             [SVProgressHUD showErrorWithStatus:error.description];
