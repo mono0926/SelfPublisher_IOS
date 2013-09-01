@@ -25,9 +25,18 @@
 -(void)convertToEpubWithBook:(UIBook*)book
              completionBlock:(void (^)(NSData* epubData, NSError* error)) completionBlock
 {
-    [self requestAsynchronousWithJsonString:[NSString stringWithFormat:@"%@", book.jsonString]
+    [self requestAsynchronousWithJsonString:[NSString stringWithFormat:@"%@", book.jsonStringWithEpubFormat]
                             completionBlock:^(NSURLResponse *response, NSData *epubData, NSError *connectionError) {
-                                completionBlock(epubData, connectionError);
+                                completionBlock([NSData dataFromBase64String:epubData.decodeAsUTF8String], connectionError);
+                            }];
+}
+
+-(void)convertToMobiWithBook:(UIBook*)book
+             completionBlock:(void (^)(NSData* mobiData, NSError* error)) completionBlock
+{
+    [self requestAsynchronousWithJsonString:[NSString stringWithFormat:@"%@", book.jsonStringWithMobiFormat]
+                            completionBlock:^(NSURLResponse *response, NSData *mobiData, NSError *connectionError) {
+                                completionBlock([NSData dataFromBase64String:mobiData.decodeAsUTF8String], connectionError);
                             }];
 }
 @end

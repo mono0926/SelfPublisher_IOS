@@ -14,6 +14,7 @@
 @interface UIBook : MTLModel<MTLJSONSerializing>
 - (id)initWithBook:(Book*)book;
 -(void)convertToEpub:(void(^)(NSError*))resultBlock;
+-(void)convertToMobi:(void(^)(NSError*))resultBlock;
 +(void)createWithTitle:(NSString*)title resultBlock:(void (^)(UIBook*, NSError*))resultBlock;
 
 @property (nonatomic, readonly) NSString* title;
@@ -21,7 +22,10 @@
 @property (nonatomic, readonly) NSArray* chapters;
 @property (nonatomic, readonly) UIModelList* chapterList;
 @property (nonatomic, readonly) NSString* jsonString;
+@property (nonatomic, readonly) NSString* jsonStringWithMobiFormat;
+@property (nonatomic, readonly) NSString* jsonStringWithEpubFormat;
 @property (nonatomic, readonly) NSManagedObjectID* objectID;
 @property (nonatomic, readonly) NSString* epubPath;
+@property (nonatomic, readonly) NSString* mobiPath;
 
 @end

@@ -12,5 +12,7 @@
 @interface BookClient : SelfPublishClientBase
 
 -(void)convertToEpubWithBook:(UIBook*)book
-     completionBlock:(void (^)(NSData* epubData, NSError* error)) completionBlock;
+             completionBlock:(void (^)(NSData* epubData, NSError* error)) completionBlock;
+-(void)convertToMobiWithBook:(UIBook*)book
+             completionBlock:(void (^)(NSData* mobiData, NSError* error)) completionBlock;
 @end

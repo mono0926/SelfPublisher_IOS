@@ -25,12 +25,14 @@
     if (self) {
         _book = book;
         [_book addObserver:self forKeyPath:@"epub" options:NSKeyValueObservingOptionNew context:nil];
+        [_book addObserver:self forKeyPath:@"mobi" options:NSKeyValueObservingOptionNew context:nil];
     }
     return self;
 }
 
 -(void)dealloc {
     [_book removeObserver:self forKeyPath:@"epub"];
+    [_book removeObserver:self forKeyPath:@"mobi"];
 }
 
 +(void)createWithTitle:(NSString*)title resultBlock:(void (^)(UIBook*, NSError*))resultBlock {
@@ -94,6 +96,20 @@
                       }];
 }
 
+-(void)convertToMobi:(void(^)(NSError*))resultBlock
+{
+    
+    BookClient* bookClient = inject(BookClient);
+    [bookClient convertToMobiWithBook:self
+                      completionBlock:^(NSData *mobiData, NSError *error) {
+                          [_book.managedObjectContext performBlock:^{
+                              _book.mobi = mobiData;
+                              [_book.managedObjectContext save:nil];
+                              resultBlock(error);
+                          }];
+                      }];
+}
+
 +(NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{};
 }
@@ -107,11 +123,41 @@
 -(NSString *)jsonString {
     MTLJSONAdapter *adapter = [[MTLJSONAdapter alloc] initWithModel:self];
     NSDictionary*jsonDict = adapter.JSONDictionary;
+    return [self jsonStringWithJsonDict:jsonDict];
+}
+-(NSString*)jsonStringWithMobiFormat
+{
+    return [self jsonStringWithJsonDict:[self createMobiFormatDictionary]];
+}
+
+-(NSString*)jsonStringWithEpubFormat
+{
+    return [self jsonStringWithJsonDict:[self createEpubFormatDictionary]];
+}
+
+-(NSString *)jsonStringWithJsonDict:(NSDictionary*)jsonDict
+{
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:0 error:nil];
     NSString* jsonString = [[NSString alloc] initWithBytes:jsonData.bytes
                                                     length:jsonData.length
                                                   encoding:NSUTF8StringEncoding];
     return jsonString;
+}
+
+-(NSDictionary*)createEpubFormatDictionary
+{
+    MTLJSONAdapter *adapter = [[MTLJSONAdapter alloc] initWithModel:self];
+    NSMutableDictionary*jsonDict = adapter.JSONDictionary.mutableCopy;
+    jsonDict[@"format"] = @"epub";
+    return jsonDict;
+}
+
+-(NSDictionary*)createMobiFormatDictionary
+{
+    MTLJSONAdapter *adapter = [[MTLJSONAdapter alloc] initWithModel:self];
+    NSMutableDictionary*jsonDict = adapter.JSONDictionary.mutableCopy;
+    jsonDict[@"format"] = @"mobi";
+    return jsonDict;
 }
 
 -(NSManagedObjectID *)objectID {
@@ -123,10 +169,23 @@
         [self willChangeValueForKey:@"epubPath"];        
         NSData* epubData = _book.epub;
         NSString* tmpDir = NSTemporaryDirectory();
-        NSString* path = [tmpDir stringByAppendingString:@"a.epub"];
+        NSString* filename = [NSString stringWithFormat:@"%@.epub", [NSDate date]];
+        NSString* path = [tmpDir stringByAppendingString:filename];
         [epubData writeToFile:path atomically:YES];
         _epubPath = path;
         [self didChangeValueForKey:@"epubPath"];
+        return;
+    }
+    if (object == _book && [keyPath isEqualToString:@"mobi"] && _book.mobi) {
+        [self willChangeValueForKey:@"mobiPath"];
+        NSData* mobiData = _book.mobi;
+        NSString* tmpDir = NSTemporaryDirectory();
+        NSString* filename = [NSString stringWithFormat:@"%@.mobi", [NSDate date]];
+        NSString* path = [tmpDir stringByAppendingString:filename];
+        [mobiData writeToFile:path atomically:YES];
+        _mobiPath = path;
+        [self didChangeValueForKey:@"mobiPath"];
+        return;
     }
 }
 @end
