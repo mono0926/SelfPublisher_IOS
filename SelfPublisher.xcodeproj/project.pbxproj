@@ -166,6 +166,7 @@
 		FEAE1C091793D88D008E0DAA /* epub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = epub.png; sourceTree = "<group>"; };
 		FEBBD8F417902EE100DAFCC9 /* addChapter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addChapter.png; sourceTree = "<group>"; };
 		FED7DDA417892CC200D1ADDA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FEE179BB17DAC0FA00239C3C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		FEE36026177FF877007C8D0B /* MonoMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoMainViewController.h; sourceTree = "<group>"; };
 		FEE36027177FF877007C8D0B /* MonoMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoMainViewController.m; sourceTree = "<group>"; };
 		FEE3602A177FF8C1007C8D0B /* Book.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Book.storyboard; sourceTree = "<group>"; };
@@ -246,15 +247,15 @@
 		FE3C1016177FF694005DFE04 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FEE70AC2179027B000C6DF8F /* Utils */,
+				FEE3602C177FF97A007C8D0B /* Cell */,
 				FE3C1017177FF724005DFE04 /* Main.storyboard */,
 				FEE36026177FF877007C8D0B /* MonoMainViewController.h */,
 				FEE36027177FF877007C8D0B /* MonoMainViewController.m */,
 				FEEF2762178FB1A50056B4CF /* RegistrationViewController.h */,
 				FEEF2763178FB1A50056B4CF /* RegistrationViewController.m */,
-				FEE70AC2179027B000C6DF8F /* Utils */,
-				FEE3604F1780DB83007C8D0B /* Activity */,
-				FEE3602C177FF97A007C8D0B /* Cell */,
 				FEE36029177FF898007C8D0B /* Book */,
+				FEE3604F1780DB83007C8D0B /* Activity */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,6 +284,7 @@
 		FE72E1A0177FC82E0032F3B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEE179BB17DAC0FA00239C3C /* Reveal.framework */,
 				FEFA5F6917927A9F005C34D5 /* libPods-SelfPublisherTests-Kiwi.a */,
 				FE5AA47A1782419A00C99921 /* SenTestingKit.framework */,
 				FE72E1A1177FC82E0032F3B3 /* Foundation.framework */,
@@ -839,9 +841,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mono/Documents/Git/Private/SelfPublisher_IOS,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SelfPublisher/SelfPublisher-Prefix.pch";
 				INFOPLIST_FILE = "SelfPublisher/SelfPublisher-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"${PODS_SELFPUBLISHER_AFNETWORKING_OTHER_LDFLAGS}",
+					"${PODS_SELFPUBLISHER_BLOCKSKIT_OTHER_LDFLAGS}",
+					"${PODS_SELFPUBLISHER_MKNETWORKKIT_OTHER_LDFLAGS}",
+					"${PODS_SELFPUBLISHER_MANTLE_OTHER_LDFLAGS}",
+					"${PODS_SELFPUBLISHER_REACHABILITY_OTHER_LDFLAGS}",
+					"${PODS_SELFPUBLISHER_RESTKIT_OTHER_LDFLAGS}",
+					"${PODS_SELFPUBLISHER_SDWEBIMAGE_OTHER_LDFLAGS}",
+					"${PODS_SELFPUBLISHER_SVPROGRESSHUD_OTHER_LDFLAGS}",
+					"${PODS_SELFPUBLISHER_LIBFFI_OTHER_LDFLAGS}",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -853,6 +873,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mono/Documents/Git/Private/SelfPublisher_IOS,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SelfPublisher/SelfPublisher-Prefix.pch";
 				INFOPLIST_FILE = "SelfPublisher/SelfPublisher-Info.plist";

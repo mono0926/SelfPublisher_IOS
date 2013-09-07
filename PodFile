@@ -11,6 +11,7 @@ target :SelfPublisher, :exclusive => true do
   pod 'SDWebImage'
   pod 'Mantle'
   pod 'CocoaCommonLib', :path => '../CocoaCommonLib'
+  pod 'iOS7Colors', :git => 'https://github.com/mono0926/iOS7Colors.git'
 end
 
 # Testing framework for Test target.
