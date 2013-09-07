@@ -12,6 +12,7 @@ typedef NS_ENUM (NSUInteger, ServerEnvironment)
 {
 	ServerEnvironmentRelease = 0,
     ServerEnvironmentDevelopHome = 1,
+    ServerEnvironmentDevelopOffice = 2,
 };
 
 static ServerEnvironment _serverEnvironment;
@@ -30,7 +31,11 @@ static ServerEnvironment _serverEnvironment;
             return @"http://apps.mono-comp.com/SelfPublish/api/";
             break;
         case ServerEnvironmentDevelopHome:
-            return @"http://192.168.0.13//Mono.API.SelfPublish/api/";
+            return @"http://192.168.0.13/Mono.API.SelfPublish/api/";
+            break;
+        case ServerEnvironmentDevelopOffice:
+            return @"http://192.168.100.111/Mono.API.SelfPublish/api/";
+            break;
         default:
             return nil;
     }
