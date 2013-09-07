@@ -123,6 +123,11 @@
     }];
 }
 
+-(UIImage *)coverImage
+{
+    return [UIImage imageWithData:_book.coverImage] ?: [UIImage imageNamed:@"cover_not_set.png"];
+}
+
 +(NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{};
 }

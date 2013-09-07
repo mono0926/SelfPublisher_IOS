@@ -44,6 +44,7 @@ static const CGFloat CoverImageRatio = 1.414;
     [super viewDidLoad];
     self.title = self.book.title ?: @"";
     self.authorLabel.text = self.modelAccessor.myProfile.name;
+    [_coverImageButton setImage:_book.coverImage forState:UIControlStateNormal];
 //    _coverImageButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
 //    _coverImageButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
 }

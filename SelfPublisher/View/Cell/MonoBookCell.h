@@ -10,5 +10,4 @@
 @class UIBook;
 @interface MonoBookCell : UICollectionViewCell
 @property (nonatomic) UIBook* book;
-@property (nonatomic) UIImage* image;
 @end

@@ -50,7 +50,6 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MonoBookCell* cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"MonoBookCell" forIndexPath:indexPath];
     cell.book = [self.modelAccessor.bookList entityAtIndex:indexPath.row];
-    cell.image = [UIImage imageNamed:[NSString stringWithFormat:@"b%d.jpg", indexPath.row + 1]];
     return cell;
 }
 
