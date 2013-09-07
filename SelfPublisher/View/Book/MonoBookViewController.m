@@ -19,11 +19,17 @@
 @property (weak, nonatomic) IBOutlet UILabel *authorLabel;
 @property (weak, nonatomic) IBOutlet UIButton *kindleButton;
 @property (weak, nonatomic) IBOutlet UIButton *iBooksButton;
+@property (weak, nonatomic) IBOutlet UIButton *coverImageButton;
 @end
 
-@implementation MonoBookViewController {
+@implementation MonoBookViewController
+{
     UIDocumentInteractionController* _documentInteractionController;
+    UIImagePickerController* _picker;
 }
+
+static const NSInteger CoverImageMaxSize = 500;
+static const CGFloat CoverImageRatio = 1.414;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +44,8 @@
     [super viewDidLoad];
     self.title = self.book.title ?: @"";
     self.authorLabel.text = self.modelAccessor.myProfile.name;
+//    _coverImageButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+//    _coverImageButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
 }
 -(void)viewWillAppear:(BOOL)animated {
     _book.chapterList.delegate = self;
@@ -181,5 +189,82 @@
         _kindleButton.enabled = YES;
         return;
     }
+}
+
+#pragma mark - image
+- (IBAction)coverImageTapped:(id)sender
+{
+    [self showImagePickerController:UIImagePickerControllerSourceTypePhotoLibrary];
+}
+-(void)showImagePickerController:(UIImagePickerControllerSourceType)sourceType {
+    // 毎回初期化しないと落ちることがある
+    _picker = [UIImagePickerController new];
+    _picker.delegate = self;
+    _picker.allowsEditing = YES;
+    
+    switch (sourceType) {
+        case UIImagePickerControllerSourceTypeCamera:
+            _picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront])  {
+                _picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+            }
+            break;
+        case UIImagePickerControllerSourceTypePhotoLibrary:
+            _picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        default:
+            break;
+    }
+    [self presentViewController:_picker animated:YES completion:nil];
+}
+
+#pragma mark - ImagePickerViewDelegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage* originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage* editedImage = [info objectForKey:UIImagePickerControllerEditedImage];
+	CGRect croppingRect = [[info objectForKey:UIImagePickerControllerCropRect] CGRectValue];
+    
+    
+    UIImage *imageClipped = [self cropAndResizeImage:originalImage croppingRect:croppingRect editedImage:editedImage];
+    
+    [_coverImageButton setImage:imageClipped forState:UIControlStateNormal];
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (UIImage *)cropAndResizeImage:(UIImage *)originalImage croppingRect:(CGRect)croppingRect editedImage:(UIImage *)editedImage
+{
+    UIGraphicsBeginImageContext(originalImage.size);
+    [originalImage drawInRect:CGRectMake(0, 0, originalImage.size.width, originalImage.size.height)];
+    originalImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    
+    CGImageRef imageRef = CGImageCreateWithImageInRect(originalImage.CGImage, croppingRect);
+    UIImage *imageCropped =[UIImage imageWithCGImage:imageRef];
+    
+    CGImageRelease(imageRef);
+    
+    CGFloat width = CoverImageMaxSize;
+    CGFloat height = CoverImageMaxSize;
+    CGFloat x = 0;
+    CGFloat y = 0;
+    
+    if (croppingRect.size.width > croppingRect.size.height) {
+        height = CoverImageMaxSize * croppingRect.size.height / croppingRect.size.width;
+        y =  CoverImageMaxSize * (croppingRect.size.width - croppingRect.size.height) / croppingRect.size.width / 2;
+    } else if (croppingRect.size.width < croppingRect.size.height) {
+        width = CoverImageMaxSize * croppingRect.size.width / croppingRect.size.height;
+        x =  CoverImageMaxSize * (croppingRect.size.height - croppingRect.size.width) / croppingRect.size.height / 2;
+    }
+    
+    UIGraphicsBeginImageContext(CGSizeMake(CoverImageMaxSize - 146, CoverImageMaxSize));
+    [[UIColor whiteColor] setFill];
+    UIRectFill(CGRectMake(0, 0, CoverImageMaxSize - 146, CoverImageMaxSize));
+    [editedImage drawInRect:CGRectMake(x - 73, y, width + 146, height)];
+    imageCropped = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return imageCropped;
 }
 @end
