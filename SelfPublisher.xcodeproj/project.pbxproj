@@ -39,6 +39,14 @@
 		FE7592B61792C3540018D4AB /* Book+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592B51792C3540018D4AB /* Book+Methods.m */; };
 		FE7592D817935F100018D4AB /* BodyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592D717935F100018D4AB /* BodyViewController.m */; };
 		FE7592DB17936BAC0018D4AB /* Section+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7592DA17936BAC0018D4AB /* Section+Methods.m */; };
+		FE75AF4E17DB04F4002B28EB /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF4D17DB04F4002B28EB /* SettingViewController.m */; };
+		FE75AF5017DB0D3E002B28EB /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF4F17DB0D3E002B28EB /* Dropbox.framework */; };
+		FE75AF5217DB0E43002B28EB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF5117DB0E43002B28EB /* CFNetwork.framework */; };
+		FE75AF5417DB0E4C002B28EB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF5317DB0E4C002B28EB /* Security.framework */; };
+		FE75AF5617DB0E62002B28EB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF5517DB0E62002B28EB /* SystemConfiguration.framework */; };
+		FE75AF5817DB0E6A002B28EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF5717DB0E6A002B28EB /* QuartzCore.framework */; };
+		FE75AF5A17DB0E77002B28EB /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF5917DB0E77002B28EB /* libc++.dylib */; };
+		FE75AF5D17DB3B55002B28EB /* MyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF5C17DB3B55002B28EB /* MyProfile.m */; };
 		FE8EC99A17D2BF1F00B48F6B /* AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8EC99917D2BF1F00B48F6B /* AppSettings.m */; };
 		FE8EC9A117D2C5EC00B48F6B /* UserClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8EC9A017D2C5EC00B48F6B /* UserClient.m */; };
 		FE8ECA1117D2D2E800B48F6B /* SelfPublishClientBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */; };
@@ -47,7 +55,6 @@
 		FE8ECA5517D3089C00B48F6B /* MonoIBooksActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA5417D3089C00B48F6B /* MonoIBooksActivity.m */; };
 		FE8ECA5817D3090800B48F6B /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA5717D3090800B48F6B /* Book.m */; };
 		FE8ECA5A17D30CA200B48F6B /* ibooks.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8ECA5917D30CA200B48F6B /* ibooks.png */; };
-		FEAE1B8C1793BEA0008E0DAA /* MyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */; };
 		FEAE1B8F1793BEA0008E0DAA /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B8E1793BEA0008E0DAA /* Profile.m */; };
 		FEAE1B921793BEA1008E0DAA /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B911793BEA1008E0DAA /* Section.m */; };
 		FEAE1B951793BEA1008E0DAA /* SectionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAE1B941793BEA1008E0DAA /* SectionBase.m */; };
@@ -56,6 +63,7 @@
 		FEBBD8F517902EE100DAFCC9 /* addChapter.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBBD8F417902EE100DAFCC9 /* addChapter.png */; };
 		FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */; };
 		FEE179BE17DAF1AE00239C3C /* cover_not_set.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE179BD17DAF1AE00239C3C /* cover_not_set.png */; };
+		FEE179C117DB03BE00239C3C /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE179C017DB03BE00239C3C /* Setting.storyboard */; };
 		FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE36027177FF877007C8D0B /* MonoMainViewController.m */; };
 		FEE3602B177FF8EF007C8D0B /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE3602A177FF8C1007C8D0B /* Book.storyboard */; };
 		FEE3602F177FF9A7007C8D0B /* MonoBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE3602E177FF9A7007C8D0B /* MonoBookCell.m */; };
@@ -138,6 +146,16 @@
 		FE7592D717935F100018D4AB /* BodyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyViewController.m; sourceTree = "<group>"; };
 		FE7592D917936BAC0018D4AB /* Section+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Section+Methods.h"; sourceTree = "<group>"; };
 		FE7592DA17936BAC0018D4AB /* Section+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Section+Methods.m"; sourceTree = "<group>"; };
+		FE75AF4C17DB04F4002B28EB /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		FE75AF4D17DB04F4002B28EB /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		FE75AF4F17DB0D3E002B28EB /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		FE75AF5117DB0E43002B28EB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FE75AF5317DB0E4C002B28EB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FE75AF5517DB0E62002B28EB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FE75AF5717DB0E6A002B28EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FE75AF5917DB0E77002B28EB /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		FE75AF5B17DB3B55002B28EB /* MyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfile.h; sourceTree = "<group>"; };
+		FE75AF5C17DB3B55002B28EB /* MyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfile.m; sourceTree = "<group>"; };
 		FE8EC99817D2BF1F00B48F6B /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
 		FE8EC99917D2BF1F00B48F6B /* AppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettings.m; sourceTree = "<group>"; };
 		FE8EC99F17D2C5EC00B48F6B /* UserClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserClient.h; sourceTree = "<group>"; };
@@ -154,8 +172,6 @@
 		FE8ECA5617D3090800B48F6B /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		FE8ECA5717D3090800B48F6B /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		FE8ECA5917D30CA200B48F6B /* ibooks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ibooks.png; sourceTree = "<group>"; };
-		FEAE1B8A1793BEA0008E0DAA /* MyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfile.h; sourceTree = "<group>"; };
-		FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfile.m; sourceTree = "<group>"; };
 		FEAE1B8D1793BEA0008E0DAA /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		FEAE1B8E1793BEA0008E0DAA /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		FEAE1B901793BEA1008E0DAA /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
@@ -169,6 +185,7 @@
 		FED7DDA417892CC200D1ADDA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FEE179BB17DAC0FA00239C3C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		FEE179BD17DAF1AE00239C3C /* cover_not_set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover_not_set.png; sourceTree = "<group>"; };
+		FEE179C017DB03BE00239C3C /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		FEE36026177FF877007C8D0B /* MonoMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoMainViewController.h; sourceTree = "<group>"; };
 		FEE36027177FF877007C8D0B /* MonoMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoMainViewController.m; sourceTree = "<group>"; };
 		FEE3602A177FF8C1007C8D0B /* Book.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Book.storyboard; sourceTree = "<group>"; };
@@ -217,8 +234,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE75AF5A17DB0E77002B28EB /* libc++.dylib in Frameworks */,
+				FE75AF5817DB0E6A002B28EB /* QuartzCore.framework in Frameworks */,
+				FE75AF5617DB0E62002B28EB /* SystemConfiguration.framework in Frameworks */,
+				FE75AF5417DB0E4C002B28EB /* Security.framework in Frameworks */,
+				FE75AF5217DB0E43002B28EB /* CFNetwork.framework in Frameworks */,
 				FE72E1A4177FC82E0032F3B3 /* CoreGraphics.framework in Frameworks */,
 				FE72E1A6177FC82E0032F3B3 /* UIKit.framework in Frameworks */,
+				FE75AF5017DB0D3E002B28EB /* Dropbox.framework in Frameworks */,
 				FE72E1A2177FC82E0032F3B3 /* Foundation.framework in Frameworks */,
 				D84CF061E47742DC9F68FE90 /* libPods-SelfPublisher.a in Frameworks */,
 			);
@@ -257,6 +280,7 @@
 				FEEF2762178FB1A50056B4CF /* RegistrationViewController.h */,
 				FEEF2763178FB1A50056B4CF /* RegistrationViewController.m */,
 				FEE36029177FF898007C8D0B /* Book */,
+				FEE179BF17DB039800239C3C /* Setting */,
 				FEE3604F1780DB83007C8D0B /* Activity */,
 			);
 			path = View;
@@ -286,6 +310,12 @@
 		FE72E1A0177FC82E0032F3B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE75AF5917DB0E77002B28EB /* libc++.dylib */,
+				FE75AF5717DB0E6A002B28EB /* QuartzCore.framework */,
+				FE75AF5517DB0E62002B28EB /* SystemConfiguration.framework */,
+				FE75AF5317DB0E4C002B28EB /* Security.framework */,
+				FE75AF5117DB0E43002B28EB /* CFNetwork.framework */,
+				FE75AF4F17DB0D3E002B28EB /* Dropbox.framework */,
 				FEE179BB17DAC0FA00239C3C /* Reveal.framework */,
 				FEFA5F6917927A9F005C34D5 /* libPods-SelfPublisherTests-Kiwi.a */,
 				FE5AA47A1782419A00C99921 /* SenTestingKit.framework */,
@@ -338,6 +368,16 @@
 				FE8ECA1317D2DED100B48F6B /* BookClient.m */,
 			);
 			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		FEE179BF17DB039800239C3C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				FEE179C017DB03BE00239C3C /* Setting.storyboard */,
+				FE75AF4C17DB04F4002B28EB /* SettingViewController.h */,
+				FE75AF4D17DB04F4002B28EB /* SettingViewController.m */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		FEE36029177FF898007C8D0B /* Book */ = {
@@ -442,8 +482,6 @@
 				FEEF275B178FAF1E0056B4CF /* Utils */,
 				FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */,
 				FEE360541780DCAE007C8D0B /* MonoModel.h */,
-				FEAE1B8A1793BEA0008E0DAA /* MyProfile.h */,
-				FEAE1B8B1793BEA0008E0DAA /* MyProfile.m */,
 				FEAE1B8D1793BEA0008E0DAA /* Profile.h */,
 				FEAE1B8E1793BEA0008E0DAA /* Profile.m */,
 				FEAE1B901793BEA1008E0DAA /* Section.h */,
@@ -454,6 +492,8 @@
 				FEAE1B971793BEA1008E0DAA /* Chapter.m */,
 				FE8ECA5617D3090800B48F6B /* Book.h */,
 				FE8ECA5717D3090800B48F6B /* Book.m */,
+				FE75AF5B17DB3B55002B28EB /* MyProfile.h */,
+				FE75AF5C17DB3B55002B28EB /* MyProfile.m */,
 			);
 			path = CoreModel;
 			sourceTree = "<group>";
@@ -610,6 +650,7 @@
 				FE5AA46F178237A800C99921 /* b11.jpg in Resources */,
 				FE5AA474178237A800C99921 /* b6.jpg in Resources */,
 				FE72E1BA177FC82E0032F3B3 /* Images.xcassets in Resources */,
+				FEE179C117DB03BE00239C3C /* Setting.storyboard in Resources */,
 				FEAE1C0A1793D88D008E0DAA /* epub.png in Resources */,
 				FE72E1AC177FC82E0032F3B3 /* InfoPlist.strings in Resources */,
 				FE7592611792950E0018D4AB /* ArrowHead-Right.png in Resources */,
@@ -694,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEAE1B981793BEA1008E0DAA /* Chapter.m in Sources */,
+				FE75AF5D17DB3B55002B28EB /* MyProfile.m in Sources */,
 				FEE3603B177FFD7E007C8D0B /* MonoBookRootViewController.m in Sources */,
 				FEEF275A178FAEA20056B4CF /* UIMyProfile.m in Sources */,
 				FE8ECA1417D2DED100B48F6B /* BookClient.m in Sources */,
@@ -713,9 +755,9 @@
 				FEEF2757178FAE910056B4CF /* UIProfile.m in Sources */,
 				FEE36042178002F5007C8D0B /* UIBook.m in Sources */,
 				FEAE1B951793BEA1008E0DAA /* SectionBase.m in Sources */,
-				FEAE1B8C1793BEA0008E0DAA /* MyProfile.m in Sources */,
 				FEE3604917800791007C8D0B /* UISection.m in Sources */,
 				FE7592D817935F100018D4AB /* BodyViewController.m in Sources */,
+				FE75AF4E17DB04F4002B28EB /* SettingViewController.m in Sources */,
 				FE72E1B2177FC82E0032F3B3 /* MonoAppDelegate.m in Sources */,
 				FEE3604C17801070007C8D0B /* MonoChapterVIewController.m in Sources */,
 				FEE3604517800318007C8D0B /* UIModelAccessor.m in Sources */,

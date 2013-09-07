@@ -14,11 +14,15 @@
 @class UIModelList;
 @class UserClient;
 @class BookClient;
+@class DBFilesystem;
 
 @interface UIModelAccessor : NSObject<Injectable>
 
 @property (nonatomic) UIMyProfile* myProfile;
 @property (nonatomic) UIModelList* bookList;
--(void)createMyProfile:(NSString*)name accessToken:(NSString*)accessToken result:(void(^)(UIMyProfile*))result;
-
+@property (nonatomic) DBFilesystem* dbFileSystem;
+-(void)createMyProfile:(NSString*)name
+           accessToken:(NSString*)accessToken
+                result:(void(^)(UIMyProfile*))result;
+-(BOOL)authorizeWithNavigationController:(UINavigationController*)navigationController;
 @end

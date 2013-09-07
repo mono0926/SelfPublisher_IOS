@@ -22,3 +22,5 @@
 #import "AppSettings.h"
 // client
 #import "ApiClient.h"
+// SDK
+#import <Dropbox/Dropbox.h>

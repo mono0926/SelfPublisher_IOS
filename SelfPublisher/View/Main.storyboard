@@ -114,9 +114,14 @@
                     </collectionView>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="My Books" id="9XN-W7-AHZ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tgw-Wg-zdq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="gr3-wd-SvF">
                             <connections>
                                 <action selector="addTapped:" destination="Off-Ir-9eA" id="b62-fj-ds4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="tgw-Wg-zdq">
+                            <connections>
+                                <action selector="settingTapped:" destination="Off-Ir-9eA" id="Bd2-m5-TD8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

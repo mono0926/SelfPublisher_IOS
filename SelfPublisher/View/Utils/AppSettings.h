@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString* const DropboxAppKey;
+extern NSString* const DropboxSecret;
+
 @interface AppSettings : NSObject
 +(NSString*)baseUrl;
 @end

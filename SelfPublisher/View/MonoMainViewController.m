@@ -27,6 +27,14 @@
     [self.collectionView registerClass:[MonoBookCell class] forCellWithReuseIdentifier:@"MonoBookCell"];
     self.collectionView.alwaysBounceVertical = YES;
     
+    
+    if (self.modelAccessor.myProfile.isDropboxEnabled)
+    {
+        // DropboxのfileSystemを取得
+        // ただし、認証が切れていたら設定を戻す
+        [self.modelAccessor authorizeWithNavigationController:self.navigationController];
+    }
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -63,6 +71,12 @@
 }
 - (IBAction)addTapped:(id)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Book" bundle:nil];
+    UINavigationController *vc = [sb instantiateInitialViewController];
+    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:vc animated:YES completion:nil];
+}
+- (IBAction)settingTapped:(id)sender {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Setting" bundle:nil];
     UINavigationController *vc = [sb instantiateInitialViewController];
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:vc animated:YES completion:nil];

@@ -11,4 +11,5 @@
 
 @interface UIMyProfile : UIProfile
 @property (nonatomic, readonly) NSString* accessToken;
+@property (nonatomic) BOOL isDropboxEnabled;
 @end

@@ -231,7 +231,7 @@ static const CGFloat CoverImageRatio = 1.414;
     [_coverImageButton setImage:imageClipped forState:UIControlStateNormal];
     
     NSData* coverImage = [[NSData alloc]initWithData:UIImageJPEGRepresentation(imageClipped, 0.7)];
-    [_book setCoverImage:coverImage];
+    [_book setCoverImageData:coverImage];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }

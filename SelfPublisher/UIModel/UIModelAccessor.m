@@ -60,6 +60,21 @@
     return _bookList;
 }
 
+-(BOOL)authorizeWithNavigationController:(UINavigationController*)navigationController
+{
+    DBAccountManager* accountManager = DBAccountManager.sharedManager;
+    DBAccount *account = accountManager.linkedAccounts[0];
+    if (account) {
+        _dbFileSystem = [[DBFilesystem alloc] initWithAccount:account];
+        return YES;
+    }
+    // 未認証なら認証画面へ
+    if (navigationController) {
+        [accountManager linkFromController:navigationController];
+    }
+    return NO;
+}
+
 -(NSManagedObjectContext*)moc {
     return [inject(ModelManager) managedObjectContext];
 }

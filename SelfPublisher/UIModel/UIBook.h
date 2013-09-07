@@ -16,7 +16,7 @@
 -(void)convertToEpub:(void(^)(NSError*))resultBlock;
 -(void)convertToMobi:(void(^)(NSError*))resultBlock;
 +(void)createWithTitle:(NSString*)title resultBlock:(void (^)(UIBook*, NSError*))resultBlock;
--(void)setCoverImage:(NSData*)coverImage;
+-(void)setCoverImageData:(NSData*)coverImageData;
 
 @property (nonatomic, readonly) NSString* title;
 @property (nonatomic, readonly) UIProfile* author;

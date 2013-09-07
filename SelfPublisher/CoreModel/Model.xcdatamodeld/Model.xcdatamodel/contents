@@ -14,6 +14,7 @@
     </entity>
     <entity name="MyProfile" representedClassName="MyProfile" parentEntity="Profile" syncable="YES">
         <attribute name="accessToken" attributeType="String" syncable="YES"/>
+        <attribute name="isDropboxEnabled" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
     </entity>
     <entity name="Profile" representedClassName="Profile" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>

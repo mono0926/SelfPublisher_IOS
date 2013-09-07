@@ -115,10 +115,10 @@
                       }];
 }
 
--(void)setCoverImage:(NSData *)coverImage
+-(void)setCoverImageData:(NSData *)coverImageData
 {
     [_book.managedObjectContext performBlock:^{
-        _book.coverImage = coverImage;
+        _book.coverImage = coverImageData;
         [_book.managedObjectContext save:nil];
     }];
 }

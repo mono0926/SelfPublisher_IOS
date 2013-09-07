@@ -8,6 +8,9 @@
 
 #import "AppSettings.h"
 
+NSString* const DropboxAppKey = @"j55215vf75hur2l";
+NSString* const DropboxSecret = @"ukzqht19mebjm8x";
+
 typedef NS_ENUM (NSUInteger, ServerEnvironment)
 {
 	ServerEnvironmentRelease = 0,

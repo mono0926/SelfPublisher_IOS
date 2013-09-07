@@ -21,6 +21,19 @@
     return self.myProfile.accessToken;
 }
 
+-(BOOL)isDropboxEnabled
+{
+    return self.myProfile.isDropboxEnabled.boolValue;
+}
+
+-(void)setIsDropboxEnabled:(BOOL)isDropboxEnabled
+{
+    [_profile.managedObjectContext performBlock:^{
+        self.myProfile.isDropboxEnabled = @(isDropboxEnabled);
+        [_profile.managedObjectContext save:nil];
+    }];
+}
+
 -(MyProfile*)myProfile
 {
     return (MyProfile*)_profile;
