@@ -22,6 +22,7 @@
 @property (nonatomic, readonly) UIProfile* author;
 @property (nonatomic, readonly) NSArray* chapters;
 @property (nonatomic, readonly) UIModelList* chapterList;
+@property (nonatomic, readonly) UIImage* coverImage;
 @property (nonatomic, readonly) NSString* jsonString;
 @property (nonatomic, readonly) NSString* jsonStringWithMobiFormat;
 @property (nonatomic, readonly) NSString* jsonStringWithEpubFormat;

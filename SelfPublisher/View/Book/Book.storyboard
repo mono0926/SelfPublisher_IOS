@@ -127,7 +127,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miK-rV-7yh">
                                 <rect key="frame" x="5" y="5" width="100" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="b1.jpg">
+                                <state key="normal" title="Button" image="cover_not_set.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -290,7 +290,7 @@
     <resources>
         <image name="ArrowHead-Right.png" width="200" height="200"/>
         <image name="addChapter.png" width="30" height="30"/>
-        <image name="b1.jpg" width="100" height="141"/>
+        <image name="cover_not_set.png" width="256" height="256"/>
         <image name="epub.png" width="200" height="200"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
