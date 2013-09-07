@@ -13,6 +13,7 @@
 @property (nonatomic) NSString* title;
 @property (nonatomic) UIProfile* author;
 @property (nonatomic) NSArray* chapters;
+@property (nonatomic) NSString* coverImageBase64;
 @end
 
 @implementation UIBook {
@@ -65,6 +66,10 @@
     return self.chapterList.allEntities;
 }
 
+-(NSString *)coverImageBase64 {
+    return [_book.coverImage base64EncodedString];
+}
+
 -(UIModelList *)chapterList {
     if (_chapterList) {
         return _chapterList;
@@ -108,6 +113,14 @@
                               resultBlock(error);
                           }];
                       }];
+}
+
+-(void)setCoverImage:(NSData *)coverImage
+{
+    [_book.managedObjectContext performBlock:^{
+        _book.coverImage = coverImage;
+        [_book.managedObjectContext save:nil];
+    }];
 }
 
 +(NSDictionary *)JSONKeyPathsByPropertyKey {
