@@ -55,6 +55,7 @@
 		FEAE1C0A1793D88D008E0DAA /* epub.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAE1C091793D88D008E0DAA /* epub.png */; };
 		FEBBD8F517902EE100DAFCC9 /* addChapter.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBBD8F417902EE100DAFCC9 /* addChapter.png */; };
 		FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FED7DDA317892CC200D1ADDA /* Model.xcdatamodeld */; };
+		FEE179BE17DAF1AE00239C3C /* cover_not_set.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE179BD17DAF1AE00239C3C /* cover_not_set.png */; };
 		FEE36028177FF877007C8D0B /* MonoMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE36027177FF877007C8D0B /* MonoMainViewController.m */; };
 		FEE3602B177FF8EF007C8D0B /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE3602A177FF8C1007C8D0B /* Book.storyboard */; };
 		FEE3602F177FF9A7007C8D0B /* MonoBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE3602E177FF9A7007C8D0B /* MonoBookCell.m */; };
@@ -167,6 +168,7 @@
 		FEBBD8F417902EE100DAFCC9 /* addChapter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addChapter.png; sourceTree = "<group>"; };
 		FED7DDA417892CC200D1ADDA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FEE179BB17DAC0FA00239C3C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		FEE179BD17DAF1AE00239C3C /* cover_not_set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover_not_set.png; sourceTree = "<group>"; };
 		FEE36026177FF877007C8D0B /* MonoMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonoMainViewController.h; sourceTree = "<group>"; };
 		FEE36027177FF877007C8D0B /* MonoMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonoMainViewController.m; sourceTree = "<group>"; };
 		FEE3602A177FF8C1007C8D0B /* Book.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Book.storyboard; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 		FEE36033177FFA57007C8D0B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FEE179BD17DAF1AE00239C3C /* cover_not_set.png */,
 				FEAE1C091793D88D008E0DAA /* epub.png */,
 				FE7592601792950E0018D4AB /* ArrowHead-Right.png */,
 				FE75925C179294830018D4AB /* edit_body.png */,
@@ -594,6 +597,7 @@
 				FE3C1018177FF724005DFE04 /* Main.storyboard in Resources */,
 				FE5AA472178237A800C99921 /* b8.jpg in Resources */,
 				FEE36035177FFA78007C8D0B /* book.png in Resources */,
+				FEE179BE17DAF1AE00239C3C /* cover_not_set.png in Resources */,
 				FE5AA471178237A800C99921 /* b9.jpg in Resources */,
 				FE759257179288190018D4AB /* user.png in Resources */,
 				FE8ECA5A17D30CA200B48F6B /* ibooks.png in Resources */,

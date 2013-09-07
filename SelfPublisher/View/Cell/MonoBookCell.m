@@ -28,10 +28,7 @@
 -(void)setBook:(UIBook *)book {
     _book = book;
     _titleLabel.text = book.title;
+    _imageView.image = book.coverImage;
 }
 
-
--(void)setImage:(UIImage *)image {
-    _imageView.image = image;
-}
 @end
