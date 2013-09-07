@@ -246,6 +246,7 @@
 		FE3C1016177FF694005DFE04 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FEE3602C177FF97A007C8D0B /* Cell */,
 				FE3C1017177FF724005DFE04 /* Main.storyboard */,
 				FEE36026177FF877007C8D0B /* MonoMainViewController.h */,
 				FEE36027177FF877007C8D0B /* MonoMainViewController.m */,
@@ -253,7 +254,6 @@
 				FEEF2763178FB1A50056B4CF /* RegistrationViewController.m */,
 				FEE70AC2179027B000C6DF8F /* Utils */,
 				FEE3604F1780DB83007C8D0B /* Activity */,
-				FEE3602C177FF97A007C8D0B /* Cell */,
 				FEE36029177FF898007C8D0B /* Book */,
 			);
 			path = View;
