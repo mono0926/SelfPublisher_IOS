@@ -47,6 +47,10 @@
 		FE75AF5817DB0E6A002B28EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF5717DB0E6A002B28EB /* QuartzCore.framework */; };
 		FE75AF5A17DB0E77002B28EB /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF5917DB0E77002B28EB /* libc++.dylib */; };
 		FE75AF5D17DB3B55002B28EB /* MyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF5C17DB3B55002B28EB /* MyProfile.m */; };
+		FE75AF6017DBF289002B28EB /* BodyEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF5F17DBF289002B28EB /* BodyEditViewController.m */; };
+		FE75AF6317DBF3C3002B28EB /* BodyPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF6217DBF3C3002B28EB /* BodyPreviewViewController.m */; };
+		FE75AF6717DC02C1002B28EB /* BodyStringCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF6617DC02C1002B28EB /* BodyStringCell.m */; };
+		FE75AF6917DC02D6002B28EB /* BodyStringCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE75AF6817DC02D6002B28EB /* BodyStringCell.xib */; };
 		FE8EC99A17D2BF1F00B48F6B /* AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8EC99917D2BF1F00B48F6B /* AppSettings.m */; };
 		FE8EC9A117D2C5EC00B48F6B /* UserClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8EC9A017D2C5EC00B48F6B /* UserClient.m */; };
 		FE8ECA1117D2D2E800B48F6B /* SelfPublishClientBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */; };
@@ -156,6 +160,13 @@
 		FE75AF5917DB0E77002B28EB /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		FE75AF5B17DB3B55002B28EB /* MyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfile.h; sourceTree = "<group>"; };
 		FE75AF5C17DB3B55002B28EB /* MyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfile.m; sourceTree = "<group>"; };
+		FE75AF5E17DBF289002B28EB /* BodyEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyEditViewController.h; sourceTree = "<group>"; };
+		FE75AF5F17DBF289002B28EB /* BodyEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyEditViewController.m; sourceTree = "<group>"; };
+		FE75AF6117DBF3C3002B28EB /* BodyPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyPreviewViewController.h; sourceTree = "<group>"; };
+		FE75AF6217DBF3C3002B28EB /* BodyPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyPreviewViewController.m; sourceTree = "<group>"; };
+		FE75AF6517DC02C1002B28EB /* BodyStringCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyStringCell.h; sourceTree = "<group>"; };
+		FE75AF6617DC02C1002B28EB /* BodyStringCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyStringCell.m; sourceTree = "<group>"; };
+		FE75AF6817DC02D6002B28EB /* BodyStringCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BodyStringCell.xib; sourceTree = "<group>"; };
 		FE8EC99817D2BF1F00B48F6B /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
 		FE8EC99917D2BF1F00B48F6B /* AppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettings.m; sourceTree = "<group>"; };
 		FE8EC99F17D2C5EC00B48F6B /* UserClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserClient.h; sourceTree = "<group>"; };
@@ -356,6 +367,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FE75AF6417DC0296002B28EB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE75AF6517DC02C1002B28EB /* BodyStringCell.h */,
+				FE75AF6617DC02C1002B28EB /* BodyStringCell.m */,
+				FE75AF6817DC02D6002B28EB /* BodyStringCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FE8EC99B17D2C5B400B48F6B /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +404,7 @@
 		FEE36029177FF898007C8D0B /* Book */ = {
 			isa = PBXGroup;
 			children = (
+				FE75AF6417DC0296002B28EB /* Cell */,
 				FEE3602A177FF8C1007C8D0B /* Book.storyboard */,
 				FEE36039177FFD7E007C8D0B /* MonoBookRootViewController.h */,
 				FEE3603A177FFD7E007C8D0B /* MonoBookRootViewController.m */,
@@ -392,6 +414,10 @@
 				FEE3604B17801070007C8D0B /* MonoChapterVIewController.m */,
 				FE7592D617935F100018D4AB /* BodyViewController.h */,
 				FE7592D717935F100018D4AB /* BodyViewController.m */,
+				FE75AF6117DBF3C3002B28EB /* BodyPreviewViewController.h */,
+				FE75AF6217DBF3C3002B28EB /* BodyPreviewViewController.m */,
+				FE75AF5E17DBF289002B28EB /* BodyEditViewController.h */,
+				FE75AF5F17DBF289002B28EB /* BodyEditViewController.m */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -653,6 +679,7 @@
 				FEE179C117DB03BE00239C3C /* Setting.storyboard in Resources */,
 				FEAE1C0A1793D88D008E0DAA /* epub.png in Resources */,
 				FE72E1AC177FC82E0032F3B3 /* InfoPlist.strings in Resources */,
+				FE75AF6917DC02D6002B28EB /* BodyStringCell.xib in Resources */,
 				FE7592611792950E0018D4AB /* ArrowHead-Right.png in Resources */,
 				FE759258179288190018D4AB /* user@2x.png in Resources */,
 			);
@@ -749,11 +776,14 @@
 				FE8EC99A17D2BF1F00B48F6B /* AppSettings.m in Sources */,
 				FEE3602F177FF9A7007C8D0B /* MonoBookCell.m in Sources */,
 				FE8ECA3617D2F6DC00B48F6B /* Profile+Methods.m in Sources */,
+				FE75AF6317DBF3C3002B28EB /* BodyPreviewViewController.m in Sources */,
+				FE75AF6017DBF289002B28EB /* BodyEditViewController.m in Sources */,
 				FE7592B61792C3540018D4AB /* Book+Methods.m in Sources */,
 				FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */,
 				FE8ECA1117D2D2E800B48F6B /* SelfPublishClientBase.m in Sources */,
 				FEEF2757178FAE910056B4CF /* UIProfile.m in Sources */,
 				FEE36042178002F5007C8D0B /* UIBook.m in Sources */,
+				FE75AF6717DC02C1002B28EB /* BodyStringCell.m in Sources */,
 				FEAE1B951793BEA1008E0DAA /* SectionBase.m in Sources */,
 				FEE3604917800791007C8D0B /* UISection.m in Sources */,
 				FE7592D817935F100018D4AB /* BodyViewController.m in Sources */,

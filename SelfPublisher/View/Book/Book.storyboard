@@ -259,7 +259,55 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-gC-3ea">
+                            <containerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ipm-Jo-dLk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="2xs-SF-cuy" kind="embed" id="2EA-f4-Lbl"/>
+                                </connections>
+                            </containerView>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVE-Dd-kCG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="1cf-d7-VJm" kind="embed" id="Pnp-hW-lon"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Body of Introduction" id="KtF-ny-WQ4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="oBi-gL-MOa">
+                            <connections>
+                                <action selector="editTapped:" destination="aWj-Wf-fdv" id="sCs-ZG-cyv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editContainerView" destination="Ipm-Jo-dLk" id="0AE-Wq-rqE"/>
+                        <outlet property="previewContainerView" destination="vVE-Dd-kCG" id="Yoe-DP-Wnc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABA-Xk-XBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425" y="194"/>
+        </scene>
+        <!--Body Edit View Controller-->
+        <scene sceneID="8ja-BD-9TW">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="2xs-SF-cuy" customClass="BodyEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FE8-A7-ujI"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ac-8s-nAz"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iqY-KW-fRJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBA-JT-Jmt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -267,24 +315,42 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PV6-gC-3ea" firstAttribute="leading" secondItem="Slv-3f-gdb" secondAttribute="leading" id="Szp-U7-0Mw"/>
-                            <constraint firstItem="PV6-gC-3ea" firstAttribute="trailing" secondItem="Slv-3f-gdb" secondAttribute="trailing" id="cpq-Tj-HBC"/>
-                            <constraint firstItem="PV6-gC-3ea" firstAttribute="bottom" secondItem="Slv-3f-gdb" secondAttribute="bottom" id="ku0-HR-Hwg"/>
-                            <constraint firstItem="PV6-gC-3ea" firstAttribute="top" secondItem="Slv-3f-gdb" secondAttribute="top" id="vYV-GT-lIT"/>
+                            <constraint firstItem="3ac-8s-nAz" firstAttribute="top" secondItem="lBA-JT-Jmt" secondAttribute="bottom" id="3tL-0q-k2n"/>
+                            <constraint firstAttribute="trailing" secondItem="lBA-JT-Jmt" secondAttribute="trailing" id="4Lk-bf-gyN"/>
+                            <constraint firstItem="lBA-JT-Jmt" firstAttribute="leading" secondItem="iqY-KW-fRJ" secondAttribute="leading" id="FKh-OG-9nC"/>
+                            <constraint firstItem="lBA-JT-Jmt" firstAttribute="top" secondItem="FE8-A7-ujI" secondAttribute="bottom" id="s4G-DP-aVR"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Body of Introduction" id="KtF-ny-WQ4"/>
+                    <toolbarItems/>
                     <connections>
-                        <outlet property="bodyTextField" destination="PV6-gC-3ea" id="TYV-Hz-tt5"/>
-                        <outlet property="bottomSpaceConstraint" destination="ku0-HR-Hwg" id="DBC-hz-HWF"/>
+                        <outlet property="bodyTextField" destination="lBA-JT-Jmt" id="jgo-9M-Fd9"/>
+                        <outlet property="bottomSpaceConstraint" destination="3tL-0q-k2n" id="VAh-do-8Ys"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ABA-Xk-XBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nZ-Ip-K1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="194"/>
+            <point key="canvasLocation" x="1984" y="651"/>
+        </scene>
+        <!--Body Preview View Controller-->
+        <scene sceneID="6dc-Ef-yTk">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="1cf-d7-VJm" customClass="BodyPreviewViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kgZ-oZ-faW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="1cf-d7-VJm" id="Iya-Pt-F72"/>
+                            <outlet property="delegate" destination="1cf-d7-VJm" id="FuK-Y0-h3E"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZI2-It-g3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984" y="33"/>
         </scene>
     </scenes>
     <resources>

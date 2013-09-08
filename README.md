@@ -5,7 +5,7 @@ SelfPublisher_IOS
 
 ## 認証無しの時
 
-- 章・節・文章という構成で、本を書ける
+- 章・節・文章という構成で、本を書ける 
 - 画像はカバー写真のみ指定出来るが、本文への挿入は不可
 - 完成した本は発行できる
   * 文の情報をJSONで[SelfPublishAPI](https://github.com/mono0926/SelfPublishAPI)に送る

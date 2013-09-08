@@ -11,6 +11,6 @@
 @class UIChapter;
 
 @interface BodyViewController : UIViewController
-@property (nonatomic, readonly) UISectionBase* sectionBase;
+@property (nonatomic) UISectionBase* sectionBase;
 -(void)setParent:(UIChapter *)parent sectionBase:(UISectionBase*)sectionBase;
 @end

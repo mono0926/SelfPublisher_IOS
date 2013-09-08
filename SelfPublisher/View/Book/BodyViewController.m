@@ -8,15 +8,26 @@
 
 #import "BodyViewController.h"
 #import "MonoUI.h"
+#import "BodyEditViewController.h"
+#import "BodyPreviewViewController.h"
+
+typedef NS_ENUM (NSUInteger, BodyModeType) {
+	BodyModeTypePreview = 0,
+    BodyModeTypeEdit = 1,
+};
 
 @interface BodyViewController ()
-@property (weak, nonatomic) IBOutlet UITextView *bodyTextField;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpaceConstraint;
 @property (nonatomic, readonly) UIChapter* parentChapter;
-
+@property (weak, nonatomic) IBOutlet UIView *editContainerView;
+@property (weak, nonatomic) IBOutlet UIView *previewContainerView;
+@property (nonatomic) BodyModeType mode;
 @end
 
 @implementation BodyViewController
+{
+    BodyEditViewController* _editViewController;
+    BodyPreviewViewController* _previewViewController;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +40,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _mode = BodyModeTypePreview;
 }
 
 -(void)setParent:(UIChapter *)parent sectionBase:(UISectionBase *)sectionBase {
@@ -44,14 +56,11 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    [self configureTitleAndBody];
-    [self observeKeyboard];
-    [_bodyTextField becomeFirstResponder];
+    [self configureTitle];
 }
 
--(void)configureTitleAndBody {
+-(void)configureTitle {
     self.title = _sectionBase.caption ? [NSString stringWithFormat:@"Body of %@", _sectionBase.caption] : @"";
-    _bodyTextField.text = _sectionBase.body ?: @"";
 }
 
 -(void)showInputTitleView {
@@ -63,7 +72,9 @@
         [UISection createWithUIChapter:_parentChapter caption:tf.text resultBlock:^(UISection *section, NSError *error) {
             if (section) {
                 _sectionBase = section;
-                [self configureTitleAndBody];
+                _editViewController.sectionBase = section;
+                _previewViewController.sectionBase = section;
+                [self configureTitle];
                 return;
             }
             [SVProgressHUD showErrorWithStatus:error.description];
@@ -80,44 +91,57 @@
     
     [super viewWillDisappear:animated];
     
-    NSError* error = [_sectionBase saveCaption:nil body:_bodyTextField.text];
-    if (error) {
-        
+}
+
+
+- (IBAction)editTapped:(UIBarButtonItem *)sender {
+    if (_mode == BodyModeTypePreview) {
+        _mode = BodyModeTypeEdit;
+        [_editViewController viewWillAppear:YES];
+        _editContainerView.hidden = NO;
+        [_editViewController viewDidAppear:YES];
+        [_previewViewController viewWillDisappear:YES];
+        _previewContainerView.hidden = YES;
+        [_previewViewController viewDidDisappear:YES];
+        __weak BodyViewController* weakSelf = self;
+        UIBarButtonItem* item = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone handler:^(id sender) {
+            [weakSelf editTapped:sender];
+        }];
+        self.navigationItem.rightBarButtonItem = item;
+        return;
     }
-    [self stopObervingKeyboard];
-}
-
-- (void)observeKeyboard {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-}
-
-- (void)stopObervingKeyboard {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
-}
-
-- (void)keyboardWillShow:(NSNotification *)notification {
-    NSDictionary *info = notification.userInfo;
-    CGRect keyboardFrame= [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    CGFloat height = keyboardFrame.size.height;
-    
-    _bottomSpaceConstraint.constant = - height;
-    [UIView animateWithDuration:animationDuration animations:^{
-        [self.view layoutIfNeeded];
+    _mode = BodyModeTypePreview;
+    [_editViewController viewWillDisappear:YES];
+    _editContainerView.hidden = YES;
+    [_editViewController viewDidDisappear:YES];
+    [_previewViewController viewWillAppear:YES];
+    _previewContainerView.hidden = NO;
+    [_previewViewController viewDidAppear:YES];
+    __weak BodyViewController* weakSelf = self;
+    UIBarButtonItem* item = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit handler:^(id sender) {
+        [weakSelf editTapped:sender];
     }];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
-- (void)keyboardWillHide:(NSNotification *)notification {
-    NSDictionary *info = notification.userInfo;
-    NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    _bottomSpaceConstraint.constant = 0;
-    [UIView animateWithDuration:animationDuration animations:^{
-        [self.view layoutIfNeeded];
-    }];
-    
+-(void)dealloc
+{
+    NSLog(@"body dealloc called.");
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController* destVC = segue.destinationViewController;
+    if ([destVC isKindOfClass:[BodyEditViewController class]]) {
+        _editViewController = (BodyEditViewController*)destVC;
+        _editViewController.sectionBase = _sectionBase;
+        return;
+    }
+    if ([destVC isKindOfClass:[BodyPreviewViewController class]]) {
+        _previewViewController = (BodyPreviewViewController*)destVC;
+        _previewViewController.sectionBase = _sectionBase;
+        return;
+    }
 }
 
 @end
