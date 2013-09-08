@@ -2,7 +2,7 @@
 //  MyProfile.h
 //  SelfPublisher
 //
-//  Created by mono on 9/7/13.
+//  Created by mono on 9/8/13.
 //  Copyright (c) 2013 mono. All rights reserved.
 //
 
@@ -15,5 +15,7 @@
 
 @property (nonatomic, retain) NSString * accessToken;
 @property (nonatomic, retain) NSNumber * isDropboxEnabled;
+@property (nonatomic, retain) NSString * dbUserToken;
+@property (nonatomic, retain) NSString * dbUserSecret;
 
 @end

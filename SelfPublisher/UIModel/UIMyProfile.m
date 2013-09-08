@@ -12,6 +12,8 @@
 
 @interface UIMyProfile ()
 @property (nonatomic) NSString* accessToken;
+@property (nonatomic) NSString* dbUserSecret;
+@property (nonatomic) NSString* dbUserToken;
 @end
 
 @implementation UIMyProfile
@@ -32,6 +34,25 @@
         self.myProfile.isDropboxEnabled = @(isDropboxEnabled);
         [_profile.managedObjectContext save:nil];
     }];
+}
+
+-(void)updateWithDBUserToken:(NSString *)dbUserToken dbUserSecret:(NSString *)dbUserSecret
+{
+    [_profile.managedObjectContext performBlock:^{
+        self.myProfile.dbUserToken = dbUserToken;
+        self.myProfile.dbUserSecret = dbUserSecret;
+        [_profile.managedObjectContext save:nil];
+    }];
+}
+
+-(NSString *)dbUserToken
+{
+    return self.myProfile.dbUserToken;
+}
+
+-(NSString *)dbUserSecret
+{
+    return self.myProfile.dbUserSecret;
 }
 
 -(MyProfile*)myProfile

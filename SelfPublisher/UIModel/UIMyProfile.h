@@ -12,4 +12,5 @@
 @interface UIMyProfile : UIProfile
 @property (nonatomic, readonly) NSString* accessToken;
 @property (nonatomic) BOOL isDropboxEnabled;
+-(void)updateWithDBUserToken:(NSString*)dbUserToken dbUserSecret:(NSString*)dbUserSecret;
 @end

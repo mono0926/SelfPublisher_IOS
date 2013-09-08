@@ -46,7 +46,6 @@
 		FE75AF5617DB0E62002B28EB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF5517DB0E62002B28EB /* SystemConfiguration.framework */; };
 		FE75AF5817DB0E6A002B28EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF5717DB0E6A002B28EB /* QuartzCore.framework */; };
 		FE75AF5A17DB0E77002B28EB /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF5917DB0E77002B28EB /* libc++.dylib */; };
-		FE75AF5D17DB3B55002B28EB /* MyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF5C17DB3B55002B28EB /* MyProfile.m */; };
 		FE75AF6017DBF289002B28EB /* BodyEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF5F17DBF289002B28EB /* BodyEditViewController.m */; };
 		FE75AF6317DBF3C3002B28EB /* BodyPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF6217DBF3C3002B28EB /* BodyPreviewViewController.m */; };
 		FE75AF6717DC02C1002B28EB /* BodyStringCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF6617DC02C1002B28EB /* BodyStringCell.m */; };
@@ -88,6 +87,7 @@
 		FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE360511780DBA6007C8D0B /* MonoKindleActivity.m */; };
 		FEE360581780DD54007C8D0B /* amazon.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE360571780DD54007C8D0B /* amazon.png */; };
 		FEE70AD7179028FC00C6DF8F /* UIViewController+SP.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE70AD6179028FC00C6DF8F /* UIViewController+SP.m */; };
+		FEE8FF2017DC5F3600C8A587 /* MyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE8FF1F17DC5F3600C8A587 /* MyProfile.m */; };
 		FEEF2757178FAE910056B4CF /* UIProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF2756178FAE8B0056B4CF /* UIProfile.m */; };
 		FEEF275A178FAEA20056B4CF /* UIMyProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF2759178FAEA20056B4CF /* UIMyProfile.m */; };
 		FEEF275E178FAF5D0056B4CF /* NSManagedObjectContext+SP.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEF275D178FAF5D0056B4CF /* NSManagedObjectContext+SP.m */; };
@@ -165,8 +165,6 @@
 		FE75AF5517DB0E62002B28EB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FE75AF5717DB0E6A002B28EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FE75AF5917DB0E77002B28EB /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		FE75AF5B17DB3B55002B28EB /* MyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfile.h; sourceTree = "<group>"; };
-		FE75AF5C17DB3B55002B28EB /* MyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfile.m; sourceTree = "<group>"; };
 		FE75AF5E17DBF289002B28EB /* BodyEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyEditViewController.h; sourceTree = "<group>"; };
 		FE75AF5F17DBF289002B28EB /* BodyEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyEditViewController.m; sourceTree = "<group>"; };
 		FE75AF6117DBF3C3002B28EB /* BodyPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyPreviewViewController.h; sourceTree = "<group>"; };
@@ -239,6 +237,8 @@
 		FEE360571780DD54007C8D0B /* amazon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amazon.png; sourceTree = "<group>"; };
 		FEE70AD5179028FC00C6DF8F /* UIViewController+SP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SP.h"; sourceTree = "<group>"; };
 		FEE70AD6179028FC00C6DF8F /* UIViewController+SP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SP.m"; sourceTree = "<group>"; };
+		FEE8FF1E17DC5F3600C8A587 /* MyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfile.h; sourceTree = "<group>"; };
+		FEE8FF1F17DC5F3600C8A587 /* MyProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfile.m; sourceTree = "<group>"; };
 		FEEF2755178FAE8B0056B4CF /* UIProfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIProfile.h; sourceTree = "<group>"; };
 		FEEF2756178FAE8B0056B4CF /* UIProfile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIProfile.m; sourceTree = "<group>"; };
 		FEEF2758178FAEA20056B4CF /* UIMyProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMyProfile.h; sourceTree = "<group>"; };
@@ -546,8 +546,8 @@
 				FEAE1B971793BEA1008E0DAA /* Chapter.m */,
 				FE8ECA5617D3090800B48F6B /* Book.h */,
 				FE8ECA5717D3090800B48F6B /* Book.m */,
-				FE75AF5B17DB3B55002B28EB /* MyProfile.h */,
-				FE75AF5C17DB3B55002B28EB /* MyProfile.m */,
+				FEE8FF1E17DC5F3600C8A587 /* MyProfile.h */,
+				FEE8FF1F17DC5F3600C8A587 /* MyProfile.m */,
 			);
 			path = CoreModel;
 			sourceTree = "<group>";
@@ -792,7 +792,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEAE1B981793BEA1008E0DAA /* Chapter.m in Sources */,
-				FE75AF5D17DB3B55002B28EB /* MyProfile.m in Sources */,
 				FEE3603B177FFD7E007C8D0B /* MonoBookRootViewController.m in Sources */,
 				FEEF275A178FAEA20056B4CF /* UIMyProfile.m in Sources */,
 				FE8ECA1417D2DED100B48F6B /* BookClient.m in Sources */,
@@ -823,6 +822,7 @@
 				FE72E1B2177FC82E0032F3B3 /* MonoAppDelegate.m in Sources */,
 				FEE3604C17801070007C8D0B /* MonoChapterVIewController.m in Sources */,
 				FEE3604517800318007C8D0B /* UIModelAccessor.m in Sources */,
+				FEE8FF2017DC5F3600C8A587 /* MyProfile.m in Sources */,
 				FEAE1B8F1793BEA0008E0DAA /* Profile.m in Sources */,
 				FE7592941792C0240018D4AB /* Chapter+Methods.m in Sources */,
 				FEE3603F178002DF007C8D0B /* UIChapter.m in Sources */,

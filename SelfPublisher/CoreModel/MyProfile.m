@@ -2,7 +2,7 @@
 //  MyProfile.m
 //  SelfPublisher
 //
-//  Created by mono on 9/7/13.
+//  Created by mono on 9/8/13.
 //  Copyright (c) 2013 mono. All rights reserved.
 //
 
@@ -13,5 +13,7 @@
 
 @dynamic accessToken;
 @dynamic isDropboxEnabled;
+@dynamic dbUserToken;
+@dynamic dbUserSecret;
 
 @end

@@ -23,9 +23,18 @@
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     
 	DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
+    NSArray* queryList = [url.query componentsSeparatedByString:@"&"];
+    NSMutableDictionary* queryDictionary = [NSMutableDictionary new];
+    for(NSString* query in queryList) {
+        NSArray* dictList = [query componentsSeparatedByString:@"="];
+        [queryDictionary setObject:[dictList lastObject] forKey:[dictList objectAtIndex:0]];
+    }
+    NSString* userToken = queryDictionary[@"oauth_token"];
+    NSString* userSecret = queryDictionary[@"oauth_token_secret"];
 	if (account) {
 		DBFilesystem *fileSystem = [[DBFilesystem alloc] initWithAccount:account];
         UIModelAccessor* modelAccessor = inject(UIModelAccessor);
+        [modelAccessor.myProfile updateWithDBUserToken:userToken dbUserSecret:userSecret];
         modelAccessor.dbFileSystem = fileSystem;
 	}
 	return YES;
