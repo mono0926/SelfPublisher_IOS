@@ -7,6 +7,7 @@
 //
 
 #import "BodyStringCell.h"
+#import "MonoUI.h"
 
 @interface BodyStringCell ()
 @property (weak, nonatomic) IBOutlet UILabel *sentenceLabel;
@@ -30,10 +31,10 @@
     return self;
 }
 
--(void)setSentence:(NSString *)sentence
+-(void)setPlainPart:(UIPlainPart *)plainPart
 {
-    _sentence = sentence;
-    _sentenceLabel.text = sentence;
+    _plainPart = plainPart;
+    _sentenceLabel.text = plainPart.sentence;
 }
 
 -(CGFloat)cellHeight

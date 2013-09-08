@@ -17,7 +17,6 @@
     UIModelList* _bookList;
     UIMyProfile* _myProfile;
 }
-
 -(UIMyProfile *)myProfile {
     if (_myProfile) {
         return _myProfile;

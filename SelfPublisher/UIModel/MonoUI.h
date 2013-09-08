@@ -12,12 +12,16 @@
 #import "MonoModel.h"
 #import "Mantle.h"
 #import "Syringe.h"
+#import "UIColor+iOS7Colors.h"
 // model
 #import "UIChapter.h"
 #import "UIBook.h"
 #import "UISection.h"
 #import "UIProfile.h"
 #import "UIMyProfile.h"
+#import "UISentencePart.h"
+#import "UIPlainPart.h"
+#import "UIPicturePart.h"
 // others
 #import "AppSettings.h"
 // client

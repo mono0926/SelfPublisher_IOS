@@ -48,7 +48,7 @@
         actionSheet.title = @"Your all inserted images will be cleared.";
         [actionSheet setDestructiveButtonWithTitle:@"Disable"
                                            handler:^{
-#warning TODO 認証を切る
+#warning 認証を切る
                                                self.modelAccessor.myProfile.isDropboxEnabled = NO;
                                            }];
         

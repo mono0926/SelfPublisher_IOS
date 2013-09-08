@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="8hs-uq-K7S">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="8hs-uq-K7S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -22,8 +22,10 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="8hs-uq-K7S" firstAttribute="leading" secondItem="ADL-dI-e7t" secondAttribute="leading" id="KRt-1M-u8g"/>
                     <constraint firstItem="8hs-uq-K7S" firstAttribute="top" secondItem="ADL-dI-e7t" secondAttribute="top" id="cbN-UP-ypM"/>
                     <constraint firstAttribute="bottom" secondItem="8hs-uq-K7S" secondAttribute="bottom" id="ihl-JO-nvl"/>
+                    <constraint firstAttribute="trailing" secondItem="8hs-uq-K7S" secondAttribute="trailing" id="jaa-JJ-vRh"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

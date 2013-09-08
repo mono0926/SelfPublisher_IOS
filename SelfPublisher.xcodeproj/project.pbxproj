@@ -51,6 +51,11 @@
 		FE75AF6317DBF3C3002B28EB /* BodyPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF6217DBF3C3002B28EB /* BodyPreviewViewController.m */; };
 		FE75AF6717DC02C1002B28EB /* BodyStringCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF6617DC02C1002B28EB /* BodyStringCell.m */; };
 		FE75AF6917DC02D6002B28EB /* BodyStringCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE75AF6817DC02D6002B28EB /* BodyStringCell.xib */; };
+		FE75AF6B17DC1CAE002B28EB /* add_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = FE75AF6A17DC1CAE002B28EB /* add_picture.png */; };
+		FE75AF8E17DC2834002B28EB /* UIPlainPart.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF8D17DC2834002B28EB /* UIPlainPart.m */; };
+		FE75AF9117DC2840002B28EB /* UIPicturePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF9017DC2840002B28EB /* UIPicturePart.m */; };
+		FE75AF9317DC29FC002B28EB /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE75AF4F17DB0D3E002B28EB /* Dropbox.framework */; };
+		FE75AF9517DC2A27002B28EB /* UISectionBaseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = FE75AF9417DC2A27002B28EB /* UISectionBaseSpec.m */; };
 		FE8EC99A17D2BF1F00B48F6B /* AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8EC99917D2BF1F00B48F6B /* AppSettings.m */; };
 		FE8EC9A117D2C5EC00B48F6B /* UserClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8EC9A017D2C5EC00B48F6B /* UserClient.m */; };
 		FE8ECA1117D2D2E800B48F6B /* SelfPublishClientBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8ECA1017D2D2E800B48F6B /* SelfPublishClientBase.m */; };
@@ -91,6 +96,8 @@
 		FEF9282817927D7C00241297 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A1177FC82E0032F3B3 /* Foundation.framework */; };
 		FEF9282917927D7C00241297 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE72E1A5177FC82E0032F3B3 /* UIKit.framework */; };
 		FEF9282F17927D7C00241297 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF9282D17927D7C00241297 /* InfoPlist.strings */; };
+		FEFD327A17DC407400590FE1 /* BodyPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD327917DC407400590FE1 /* BodyPictureCell.m */; };
+		FEFD327C17DC408C00590FE1 /* BodyPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEFD327B17DC408C00590FE1 /* BodyPictureCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +174,13 @@
 		FE75AF6517DC02C1002B28EB /* BodyStringCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyStringCell.h; sourceTree = "<group>"; };
 		FE75AF6617DC02C1002B28EB /* BodyStringCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyStringCell.m; sourceTree = "<group>"; };
 		FE75AF6817DC02D6002B28EB /* BodyStringCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BodyStringCell.xib; sourceTree = "<group>"; };
+		FE75AF6A17DC1CAE002B28EB /* add_picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_picture.png; sourceTree = "<group>"; };
+		FE75AF8917DC27DB002B28EB /* UISentencePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISentencePart.h; sourceTree = "<group>"; };
+		FE75AF8C17DC2834002B28EB /* UIPlainPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlainPart.h; sourceTree = "<group>"; };
+		FE75AF8D17DC2834002B28EB /* UIPlainPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlainPart.m; sourceTree = "<group>"; };
+		FE75AF8F17DC2840002B28EB /* UIPicturePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPicturePart.h; sourceTree = "<group>"; };
+		FE75AF9017DC2840002B28EB /* UIPicturePart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPicturePart.m; sourceTree = "<group>"; };
+		FE75AF9417DC2A27002B28EB /* UISectionBaseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISectionBaseSpec.m; sourceTree = "<group>"; };
 		FE8EC99817D2BF1F00B48F6B /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
 		FE8EC99917D2BF1F00B48F6B /* AppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettings.m; sourceTree = "<group>"; };
 		FE8EC99F17D2C5EC00B48F6B /* UserClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserClient.h; sourceTree = "<group>"; };
@@ -238,6 +252,9 @@
 		FEF9282E17927D7C00241297 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FEF9283217927D7C00241297 /* SelfPublisherTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SelfPublisherTests-Prefix.pch"; sourceTree = "<group>"; };
 		FEFA5F6917927A9F005C34D5 /* libPods-SelfPublisherTests-Kiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-SelfPublisherTests-Kiwi.a"; path = "Pods/build/Debug-iphoneos/libPods-SelfPublisherTests-Kiwi.a"; sourceTree = "<group>"; };
+		FEFD327817DC407400590FE1 /* BodyPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyPictureCell.h; sourceTree = "<group>"; };
+		FEFD327917DC407400590FE1 /* BodyPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyPictureCell.m; sourceTree = "<group>"; };
+		FEFD327B17DC408C00590FE1 /* BodyPictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BodyPictureCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE75AF9317DC29FC002B28EB /* Dropbox.framework in Frameworks */,
 				FEF9282717927D7C00241297 /* SenTestingKit.framework in Frameworks */,
 				FEF9282917927D7C00241297 /* UIKit.framework in Frameworks */,
 				FEF9282817927D7C00241297 /* Foundation.framework in Frameworks */,
@@ -276,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				FE22635F179280A800BDA527 /* UIBookSpec.m */,
+				FE75AF9417DC2A27002B28EB /* UISectionBaseSpec.m */,
 			);
 			path = UIModel;
 			sourceTree = "<group>";
@@ -373,6 +392,9 @@
 				FE75AF6517DC02C1002B28EB /* BodyStringCell.h */,
 				FE75AF6617DC02C1002B28EB /* BodyStringCell.m */,
 				FE75AF6817DC02D6002B28EB /* BodyStringCell.xib */,
+				FEFD327817DC407400590FE1 /* BodyPictureCell.h */,
+				FEFD327917DC407400590FE1 /* BodyPictureCell.m */,
+				FEFD327B17DC408C00590FE1 /* BodyPictureCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -443,6 +465,7 @@
 		FEE36033177FFA57007C8D0B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FE75AF6A17DC1CAE002B28EB /* add_picture.png */,
 				FEE179BD17DAF1AE00239C3C /* cover_not_set.png */,
 				FEAE1C091793D88D008E0DAA /* epub.png */,
 				FE7592601792950E0018D4AB /* ArrowHead-Right.png */,
@@ -487,6 +510,11 @@
 				FEEF2759178FAEA20056B4CF /* UIMyProfile.m */,
 				FE75926B17929BE60018D4AB /* UISectionBase.h */,
 				FE75926C17929BE60018D4AB /* UISectionBase.m */,
+				FE75AF8917DC27DB002B28EB /* UISentencePart.h */,
+				FE75AF8C17DC2834002B28EB /* UIPlainPart.h */,
+				FE75AF8D17DC2834002B28EB /* UIPlainPart.m */,
+				FE75AF8F17DC2840002B28EB /* UIPicturePart.h */,
+				FE75AF9017DC2840002B28EB /* UIPicturePart.m */,
 			);
 			path = UIModel;
 			sourceTree = "<group>";
@@ -661,6 +689,7 @@
 				FE5AA470178237A800C99921 /* b10.jpg in Resources */,
 				FEE36031177FF9BD007C8D0B /* MonoBookCell.xib in Resources */,
 				FE3C1018177FF724005DFE04 /* Main.storyboard in Resources */,
+				FE75AF6B17DC1CAE002B28EB /* add_picture.png in Resources */,
 				FE5AA472178237A800C99921 /* b8.jpg in Resources */,
 				FEE36035177FFA78007C8D0B /* book.png in Resources */,
 				FEE179BE17DAF1AE00239C3C /* cover_not_set.png in Resources */,
@@ -674,6 +703,7 @@
 				FE5AA478178237A800C99921 /* b2.jpg in Resources */,
 				FEE360581780DD54007C8D0B /* amazon.png in Resources */,
 				FE5AA46F178237A800C99921 /* b11.jpg in Resources */,
+				FEFD327C17DC408C00590FE1 /* BodyPictureCell.xib in Resources */,
 				FE5AA474178237A800C99921 /* b6.jpg in Resources */,
 				FE72E1BA177FC82E0032F3B3 /* Images.xcassets in Resources */,
 				FEE179C117DB03BE00239C3C /* Setting.storyboard in Resources */,
@@ -768,6 +798,7 @@
 				FE8ECA1417D2DED100B48F6B /* BookClient.m in Sources */,
 				FEE36038177FFCB2007C8D0B /* MonoBookViewController.m in Sources */,
 				FE8ECA5817D3090800B48F6B /* Book.m in Sources */,
+				FE75AF8E17DC2834002B28EB /* UIPlainPart.m in Sources */,
 				FE72E1AE177FC82E0032F3B3 /* main.m in Sources */,
 				FE8EC9A117D2C5EC00B48F6B /* UserClient.m in Sources */,
 				FEEF275E178FAF5D0056B4CF /* NSManagedObjectContext+SP.m in Sources */,
@@ -778,6 +809,7 @@
 				FE8ECA3617D2F6DC00B48F6B /* Profile+Methods.m in Sources */,
 				FE75AF6317DBF3C3002B28EB /* BodyPreviewViewController.m in Sources */,
 				FE75AF6017DBF289002B28EB /* BodyEditViewController.m in Sources */,
+				FE75AF9117DC2840002B28EB /* UIPicturePart.m in Sources */,
 				FE7592B61792C3540018D4AB /* Book+Methods.m in Sources */,
 				FEE360521780DBA6007C8D0B /* MonoKindleActivity.m in Sources */,
 				FE8ECA1117D2D2E800B48F6B /* SelfPublishClientBase.m in Sources */,
@@ -795,6 +827,7 @@
 				FE7592941792C0240018D4AB /* Chapter+Methods.m in Sources */,
 				FEE3603F178002DF007C8D0B /* UIChapter.m in Sources */,
 				FE7592DB17936BAC0018D4AB /* Section+Methods.m in Sources */,
+				FEFD327A17DC407400590FE1 /* BodyPictureCell.m in Sources */,
 				FEE70AD7179028FC00C6DF8F /* UIViewController+SP.m in Sources */,
 				FE8ECA5517D3089C00B48F6B /* MonoIBooksActivity.m in Sources */,
 				FED7DDA517892CC200D1ADDA /* Model.xcdatamodeld in Sources */,
@@ -808,6 +841,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE226360179280A800BDA527 /* UIBookSpec.m in Sources */,
+				FE75AF9517DC2A27002B28EB /* UISectionBaseSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,7 +1003,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP6.app/Contents/Developer/Library/Frameworks",
+					/Users/mono/Documents/Git/Private/SelfPublisher_IOS,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SelfPublisherTests/SelfPublisherTests-Prefix.pch";
@@ -992,7 +1027,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP6.app/Contents/Developer/Library/Frameworks",
+					/Users/mono/Documents/Git/Private/SelfPublisher_IOS,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SelfPublisherTests/SelfPublisherTests-Prefix.pch";

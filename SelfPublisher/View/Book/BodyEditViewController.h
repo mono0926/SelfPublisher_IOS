@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 @class UISectionBase;
 
-@interface BodyEditViewController : UIViewController
+@interface BodyEditViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic) UISectionBase* sectionBase;
 @end
