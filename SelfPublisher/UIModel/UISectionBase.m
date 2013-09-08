@@ -32,7 +32,7 @@
 -(NSArray *)bodies
 {
     NSError* error = nil;
-    NSRegularExpression *regexp = [NSRegularExpression regularExpressionWithPattern:@"\\!\\[\\]\\(/([a-zA-Z0-9.]*)\\)"
+    NSRegularExpression *regexp = [NSRegularExpression regularExpressionWithPattern:@"\\!\\[\\]\\(([a-zA-Z0-9.]*)\\)"
                                                                             options:0
                                                                               error:&error];
     NSString* body = self.body;
@@ -105,7 +105,8 @@
 {
     NSString* shortUUID = [[NSString uuidString] substringToIndex:5];
     NSData* imageData = [[NSData alloc]initWithData:UIImageJPEGRepresentation(image, 0.7)];
-    DBPath* dbPath =  [[DBPath root]childPath:[NSString stringWithFormat:@"%@.jpg", shortUUID]];
+    NSString* localPath = [NSString stringWithFormat:@"%@.jpg", shortUUID];
+    DBPath* dbPath =  [[DBPath root]childPath:localPath];
     UIModelAccessor* modelAccessor = inject(UIModelAccessor);
     DBFilesystem* fileSystem = modelAccessor.dbFileSystem;
     NSError* error = nil;
@@ -115,6 +116,6 @@
     if (error) {
         return nil;
     }
-    return [NSString stringWithFormat:@"![](%@)", dbPath.stringValue];
+    return [NSString stringWithFormat:@"![](%@)", localPath];
 }
 @end

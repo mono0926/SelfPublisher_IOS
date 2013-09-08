@@ -48,25 +48,25 @@ describe(@"UISectionBase", ^{
         });
         context(@"画像だけ", ^{
             beforeEach(^{
-                section.body = @"![](/hoge.jpg)";
+                section.body = @"![](hoge.jpg)";
             });
             it(@"bodyはabc", ^{
-                [[target.body should]equal:@"![](/hoge.jpg)"];
+                [[target.body should]equal:@"![](hoge.jpg)"];
             });
             it(@"bodiesは1", ^{
                 [[theValue(target.bodies.count)should]equal:theValue(1u)];
                 UIPicturePart* picturePart = target.bodies[0];
                 [[picturePart should]beKindOfClass:[UIPicturePart class]];
-                [[picturePart.imagePath should]equal:@"![](/hoge.jpg)"];
+                [[picturePart.imagePath should]equal:@"![](hoge.jpg)"];
             });
         });
         
         context(@"画像・文字", ^{
             beforeEach(^{
-                section.body = @"![](/hoge.jpg)hello";
+                section.body = @"![](hoge.jpg)hello";
             });
             it(@"bodyはabc", ^{
-                [[target.body should]equal:@"![](/hoge.jpg)hello"];
+                [[target.body should]equal:@"![](hoge.jpg)hello"];
             });
             it(@"bodiesは2", ^{                
                 [[theValue(target.bodies.count)should]equal:theValue(2u)];
@@ -74,7 +74,7 @@ describe(@"UISectionBase", ^{
             it(@"bodiesの1つめは画像", ^{
                 UIPicturePart* picturePart = target.bodies[0];
                 [[picturePart should]beKindOfClass:[UIPicturePart class]];
-                [[picturePart.imagePath should]equal:@"![](/hoge.jpg)"];
+                [[picturePart.imagePath should]equal:@"![](hoge.jpg)"];
             });
             it(@"bodiesの2つめは文字", ^{
                 UIPlainPart* plainPart = target.bodies[1];
@@ -85,10 +85,10 @@ describe(@"UISectionBase", ^{
         
         context(@"画像・文字", ^{
             beforeEach(^{
-                section.body = @"hello![](/hoge.jpg)";
+                section.body = @"hello![](hoge.jpg)";
             });
             it(@"bodyはabc", ^{
-                [[target.body should]equal:@"hello![](/hoge.jpg)"];
+                [[target.body should]equal:@"hello![](hoge.jpg)"];
             });
             it(@"bodiesは2", ^{
                 [[theValue(target.bodies.count)should]equal:theValue(2u)];
@@ -101,7 +101,7 @@ describe(@"UISectionBase", ^{
             it(@"bodiesの2つめは画像", ^{
                 UIPicturePart* picturePart = target.bodies[1];
                 [[picturePart should]beKindOfClass:[UIPicturePart class]];
-                [[picturePart.imagePath should]equal:@"![](/hoge.jpg)"];
+                [[picturePart.imagePath should]equal:@"![](hoge.jpg)"];
             });
         });
     });

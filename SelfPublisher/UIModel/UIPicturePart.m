@@ -22,7 +22,8 @@
 -(void)loadImage:(void (^)(UIImage* image, NSError* error))resultBlock
 {
     UIModelAccessor* modelAccessor = inject(UIModelAccessor);
-    DBPath* dbPath = [[DBPath alloc]initWithString:[_imagePath substringWithRange:NSMakeRange(4, _imagePath.length - 5)]];
+    NSString* localPath = [_imagePath substringWithRange:NSMakeRange(4, _imagePath.length - 5)];
+    DBPath* dbPath = [[DBPath root]childPath:localPath];
     DBFile* dbFile = [modelAccessor.dbFileSystem openFile:dbPath error:nil];
     NSData* data = [dbFile readData:nil];
     UIImage* image = [UIImage imageWithData:data];
